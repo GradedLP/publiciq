@@ -1,0 +1,81 @@
+{
+  "addendum_hash": "sha256:3680f6513dbdd712ea738f49a6cdc762ae2e77087ba196d54ae375c85449a740",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+    "note": "Recompute from this committed file alone; depends on every field except addendum_hash.",
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_number": "family-1",
+  "amendment_rule": "Sealed before the first effective freeze instant; governs only forecasts frozen at or after it. Any further change is another dated addendum.",
+  "applies_to": [
+    {
+      "addendum_hash": "sha256:15f28985adf632bc8ca3232eb31ecc61c8255ef86aa1ab7b21310eb2326fdb7b",
+      "artifact": "prereg/disclosures/20260921_135454_standing_acceptance_standard_mw_v1_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_mw_v1"
+    },
+    {
+      "addendum_hash": "sha256:5fd224392408673a6af303fe1b7f575041f2479fd3cba4135e48f74473fa3bf5",
+      "artifact": "prereg/disclosures/20260924_153852_standing_acceptance_standard_mw_grid_v1_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_mw_grid_v1"
+    },
+    {
+      "addendum_hash": "sha256:83377977f089c5da18bec663b14bf773de6d030a7035cfd521650cdd151d37a6",
+      "artifact": "prereg/disclosures/20260922_133230_standing_acceptance_standard_op_v2_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_op_v2"
+    },
+    {
+      "addendum_hash": "sha256:6b47740f593f3b408346a3e11b49ded9fd3659c3bb3b6e50a42c242a67869a03",
+      "artifact": "prereg/disclosures/20260923_151756_standing_acceptance_standard_xrpl_v2_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_xrpl_v2"
+    },
+    {
+      "addendum_hash": "sha256:f734678a452d9e8401ddd2b7295219f97e3d6b737546a0e8db2170c72af8e7f2",
+      "artifact": "prereg/disclosures/20260924_074559_standing_acceptance_standard_poolwatch_v2_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_poolwatch_v2"
+    },
+    {
+      "addendum_hash": "sha256:f9961a9a4b6bdb93e77e7ce7c696bdc209ac0f7bc76dcaf2fb338e5119f7c345",
+      "artifact": "prereg/disclosures/20260925_085128_standing_acceptance_standard_sui_v2_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_sui_v2"
+    },
+    {
+      "addendum_hash": "sha256:5d27195f6079773f16b0c959d000eb0b55198905b32f1d506114023a0de15cfb",
+      "artifact": "prereg/disclosures/20260925_085128_standing_acceptance_standard_avax_v2_sealed.json",
+      "effective_from_freeze_day": "2026-09-29",
+      "standard_id": "standing_acceptance_standard_avax_v2"
+    }
+  ],
+  "artifact": "prereg_addendum_standing_standard",
+  "confident_calls_rule": {
+    "ci": 0.99,
+    "high_min": 0.98,
+    "low_max": 0.02,
+    "min_abs_gap": 0.05,
+    "min_items": 30,
+    "min_matured_days": 42,
+    "seed_offset": 7
+  },
+  "issued_utc": "2026-09-28T16:27:19Z",
+  "not_covered": "The retired MC-forecast family (SOL v1 cohorts) keeps its sealed rule for the cohorts it still governs: their verdicts continue to report coverage misses and are not re-tiered. SOL v2 (BBM tier family) is not listed: its claims are binary tier claims already judged on every OK-tier breach (ok_false_safe, missed_severe), with no near-certain exclusion.",
+  "scope": "breach-probability-family",
+  "stamp": "20260928_162719_breach_probability_family_addendum_1_confident_calls",
+  "title": "Breach-probability family addendum 1: confident calls count (a near-certain forecast that is wrong is now tested)",
+  "what_changes": {
+    "evaluation_order": "Unchanged: INVALID, then EVIDENCE AGAINST (now including confident_calls), then CALIBRATED, else UNTESTED. A fired confident_calls trigger therefore also blocks CALIBRATED.",
+    "new_against_trigger": "confident_calls: EVIDENCE AGAINST if, for ANY group (the standard's own groups: band widths, the XRPL lose / lose1 events, the grid's p-bins) and EITHER side - CONFIDENT-SAFE items (p < low_max) or CONFIDENT-BREACH items (p > high_min) - frozen on or after the standard's effective_from_freeze_day: the side has >= min_items resolved items, the stream has >= min_matured_days matured freeze days since the effective day, the side's gap = mean(outcome - p) is WRONG-WAY by at least min_abs_gap (safe side: gap >= +min_abs_gap, the outcome happened more than claimed; breach side: gap <= -min_abs_gap), and the ci block-bootstrap interval of that gap excludes 0 on the wrong-way side. Resampling is the standard's own: whole freeze days in moving blocks of block_days, resamples draws, seed = the standard's seed + seed_offset.",
+    "reported_not_gated": "Every verdict reports, per group and side since the effective day: n, outcomes, expected outcomes (sum of p), gap and the interval - whether or not the trigger can fire yet."
+  },
+  "what_does_not_change": "Everything else in each standard: forecast objects, outcomes, informative-item calibration tests and their thresholds, INVALID battery, CALIBRATED conditions, cadence, models. Items frozen BEFORE a standard's effective day are never tested by this trigger - it is not applied to any outcome or forecast that existed when it was sealed.",
+  "why": "Every standard listed tests calibration only on 'informative' items (0.02 <= p <= 0.98); near-certain forecasts are shown in the reliability table but never gated. So a stream whose 'will not break' calls (p < 0.02) break often, or whose 'will break' calls (p > 0.98) do not, could never be judged wrong on that - the same blind spot that let the retired SOL v1 cohorts read UNTESTED under the MC-forecast standing standard while 5, 7, 9 and 11 of 23 realized outcomes fell outside their forecast ranges. The confident call is the claim a user leans on hardest ('safe to hold'), so it must be falsifiable."
+}
