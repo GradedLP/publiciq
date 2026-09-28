@@ -1,3 +1,21 @@
+## About this repository (updated 2026-09-28)
+
+This is GradedLP's public, append-only pre-registration record: <https://gradedlp.com>.
+It began on 2026-07-06 with the XRPL AMM forward test described below and now carries every
+GradedLP stream: acceptance standards, frozen predictions, manifests and verdicts under `prereg/`.
+
+- **Check every hash yourself:** <https://gradedlp.com/verification.html> (verifier in `verifier/`).
+- **Independent timestamps:** every change to `main` is anchored on the XRP Ledger; see [ANCHORS.md](ANCHORS.md).
+- **Home:** this repository moved from `github.com/sinfun46290-bit/publiciq` to `github.com/GradedLP/publiciq`
+  on 2026-09-28. Old links redirect. Files sealed before the move keep the old URL on purpose: changing
+  them would change their hashes.
+- **License:** Copyright (c) 2026 Nathen Wright, operating as GradedLP. Everything here except `verifier/` is
+  [CC BY 4.0](LICENSE): share and adapt for any purpose with credit ("GradedLP, github.com/GradedLP/publiciq").
+  `verifier/` is [MIT](verifier/LICENSE).
+- Analytics, not financial advice: <https://gradedlp.com/terms.html>.
+
+---
+
 # Pool IQ (XRPL) — Public Pre-Registration & Grade Ledger
 
 **Published 2026-07-06.** This repository is the public, tamper-evident record of a

@@ -24,7 +24,7 @@ existence rests on GitHub's push history, not on the ledger.
 
 ## Verify it yourself (Python 3 standard library + git; trusts no GradedLP server)
 
-    git clone https://github.com/sinfun46290-bit/publiciq.git
+    git clone https://github.com/GradedLP/publiciq.git
     curl -O https://gradedlp.com/anchors/verify_anchor.py
     python3 verify_anchor.py --repo publiciq
     python3 verify_anchor.py --repo publiciq --file prereg/<some file>.json   # earliest proof for that file
