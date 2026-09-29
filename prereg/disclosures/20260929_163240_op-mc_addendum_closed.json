@@ -1,0 +1,64 @@
+{
+  "addendum_hash": "sha256:b6dc08d0bf71d2e7a5a4a67eb5d237652e3ff201c86190fdf2346d8c70672105",
+  "addendum_hash_recipe": {
+    "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "artifact": "prereg_addendum",
+  "chain": "op-mc",
+  "disclosure": {
+    "collector": {
+      "archive": {
+        "bytes": 52467326,
+        "file": "op_snapshots_20260929.db.gz",
+        "server_copy_removed_utc": "2026-09-29T16:32Z",
+        "sha256_database": "2717d0f729ac97fc668ac7ad1abac8b6fa6cf5477958a8c3ffdcbc9d2bfbf311",
+        "sha256_gz": "b8735d2c57173188f7f3d5704be44f37b07151202235a3864822f7915ac12338",
+        "verified": "gz hash, decompressed database hash, row count (1,169,671) and integrity_check matched the server copy before it was removed"
+      },
+      "collection_stopped_utc": "2026-09-29T16:30:06Z (last sample; op-capture.timer disabled by the operator minutes later)",
+      "database": "op_snapshots.db (table pool_snapshots)",
+      "first_sample_utc": "2026-07-29T19:21:59Z",
+      "last_sample_utc": "2026-09-29T16:30:06Z",
+      "note": "The raw snapshots were an input to OP-MC research, not a pre-registered artifact; no published hash depends on them.",
+      "pools": 51,
+      "retention": "Archived to operator storage, verified by sha256 and row count against the live file, then removed from the server. The server copy was never VACUUMed.",
+      "rows": 1169671,
+      "unit_stopped": "op-capture.timer (every 3 minutes)"
+    },
+    "header": "scope: op-mc (Optimism forward-MC grader) | closed 2026-09-29 | superseded by op-v2",
+    "immutability": "Additive only. The OP-MC acceptance standard, the genesis manifest and the genesis verdict stand exactly as published and remain independently fetchable and hashable. Nothing is re-scored.",
+    "op_mc": {
+      "acceptance_standard": "prereg/disclosures/20260825_210800_op-mc_acceptance_standard_v1.json",
+      "cohorts_owing_a_verdict": 0,
+      "genesis_manifest": "prereg/op-mc/genesis/genesis_manifest.json",
+      "note": "The verdict stands as published. It is not revised, softened or withdrawn by this addendum.",
+      "published_verdict": "prereg/op-mc/20260910_114213_op-mc_verdict_20260908.json",
+      "published_verdict_hash": "sha256:cf7ef246034d60cd5b1ecb451d37e28fed9383e9652bb202f17766cc1532e86b",
+      "verdict": "NO_EDGE_DETECTED (cohort 2026-08-25 -> 2026-09-08)"
+    },
+    "successor": {
+      "board": "https://gradedlp.com/op-v2/",
+      "chain": "op-v2",
+      "fee_sanity_2026-09-29": "7 collector days in: the collector's decoded fee growth, summed over each pool's active liquidity for 7 days, matches DexScreener's 24h volume x fee tier x 7 within 3x on 17 of 21 pools (the largest pools within 0.96-1.54x). The 4 outside are two Velodrome Slipstream pools with dynamic fees and staked liquidity (whose fees go to the gauge, so total-liquidity x fee growth overstates them) and two pools with under $50 of weekly fees. Fee estimates are displayed, not graded.",
+      "first_batch_root": "2ad5f5e6adbee41620b65498ed91a771c7fb533f4d940a9893d1ce31250c123d",
+      "first_manifest": "prereg/op-v2/20260922_152504_op-v2_preregistered_at_prediction.json",
+      "first_manifest_rows": 63,
+      "standard": "prereg/disclosures/20260922_133230_standing_acceptance_standard_op_v2_sealed.json",
+      "standard_hash": "sha256:83377977f089c5da18bec663b14bf773de6d030a7035cfd521650cdd151d37a6",
+      "standard_issued_utc": "2026-09-22T13:32:30Z",
+      "standard_sealed_before_first_forecast": true
+    },
+    "summary": "OP-MC froze one genesis cohort (2026-08-25) under its own acceptance standard and published one verdict on 2026-09-10: NO_EDGE_DETECTED. No further OP-MC cohort was pre-registered, so no other OP-MC verdict is owed. The raw collector behind it (op-capture, every 3 minutes since 2026-07-29) is stopped here; its database is archived, hash-verified and then removed from the server. OP v2 - probability-of-breach forecasts on Optimism pools, graded on each pool's own on-chain price under a standard sealed before its first forecast - is the successor."
+  },
+  "issued_utc": "2026-09-29T16:32:40Z",
+  "outcomes_known_at_issue": true,
+  "scope": "op-mc",
+  "stamp": "20260929_163240_op-mc_addendum_closed",
+  "title": "OP-MC closed: collection stopped; the genesis verdict stands; superseded by OP v2"
+}
