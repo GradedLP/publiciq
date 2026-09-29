@@ -1,0 +1,398 @@
+{
+  "addendum_hash": "sha256:f2f222b220e183fe9cc09bc46d3d8854940985ae646c16a70e2aa66c918f611b",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+    "note": "Recompute from this committed file alone; depends on every field except addendum_hash.",
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "artifact": "prereg_verdict_standing_standard_applied",
+  "build_checks_passed": [
+    "retirement disclosure self-hash recomputes",
+    "sealed standard hash == retirement citation; repo fixed_rule JCS-identical",
+    "row set recomputed from first-published and final manifests == pre-committed hash",
+    "ledger rows == manifest store_record_ids (23/23), y_prob identical, all integrated >= 13.9583d"
+  ],
+  "chain": "solana",
+  "cohort_id": "solana_v1_20260915",
+  "frozen_cohort": {
+    "binding": "ledger record_id == manifest store_record_id for all rows; y_prob identical row by row.",
+    "cohort_batch_root": "91af767da5c212da9a2907a7c1ca9c48e2721b93be6c34dc37953ab2177dff6f",
+    "cohort_size": 23,
+    "freeze_ts": 1789474708,
+    "freeze_utc": "2026-09-15T12:18:28Z",
+    "manifest_final": "prereg/solana/20260921_122210_solana_preregistered_at_prediction.json",
+    "manifest_first_published": "prereg/solana/20260915_122049_solana_preregistered_at_prediction.json",
+    "prediction_hash_set_sha256": "9d09580ad9e852a61615628a929dcd2e99396789b7b55abb6e5ceb59d747988a"
+  },
+  "governing_standard": {
+    "addendum_hash": "sha256:56455e37a9f70d7af3349518e4cda04a258dde7b855ed0f7b0fdad32e7d7a765",
+    "artifact": "prereg/disclosures/20260910_162245_standing_acceptance_standard_v1_sealed.json",
+    "hash_verified_at_build": true,
+    "logic_source": "Tier and every threshold were computed by prereg_common/standing/standing_evaluator.py parsing this standard's fixed_rule; nothing was re-implemented in this emitter.",
+    "standard_id": "standing_acceptance_standard_v1"
+  },
+  "issued_utc": "2026-09-29T18:25:02Z",
+  "maturity_epoch": 1790684308,
+  "maturity_ts": {
+    "anchor": "cohort_freeze",
+    "anchor_epoch": 1789474708,
+    "anchor_utc": "2026-09-15T12:18:28Z",
+    "derivation": "maturity = freeze + 14 days = 1789474708 + 1209600 = 1790684308 = 2026-09-29T12:18:28Z",
+    "epoch": 1790684308,
+    "horizon_days": 14,
+    "utc": "2026-09-29T12:18:28Z"
+  },
+  "maturity_utc": "2026-09-29T12:18:28Z",
+  "outcomes_known_at_issue": true,
+  "per_pool_outcomes": [
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+      "prediction_lower": 0.0,
+      "prediction_upper": 0.0,
+      "realized_net_return_window": 0.0,
+      "record_id": "f6accaac60864d82d6f41a9c26d2a0f4879644534a6a3162190211331b4c8c3b",
+      "window_completeness": 0.9986772268059988,
+      "y_prob": 0.0096
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "4Ui9QdDNuUaAGqCPcDSp191QrixLzQiLxJ1Gnqvz3szP",
+      "prediction_lower": -0.11009954225637009,
+      "prediction_upper": 0.024244950003596565,
+      "realized_net_return_window": -0.022887922312435076,
+      "record_id": "0c3a98c38da7af40471fd87e0c584eae8233a46040614804ae5748a0c82d6ff3",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.1191
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "above",
+      "is_trap": false,
+      "pool_id": "4fuUiYxTQ6QCrdSq9ouBYcTM7bqSwYTSyLueGZLTy4T4",
+      "prediction_lower": 1.090206025286976e-05,
+      "prediction_upper": 1.7523920702391692e-05,
+      "realized_net_return_window": 3.038876973274554e-05,
+      "record_id": "76c865892d53955d781802683d8aab3b8addd93d758e40340fe2a23609986c61",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "55BrDTCLWayM16GwrMEQU57o4PTm6ceF9wavSdNZcEiy",
+      "prediction_lower": -0.0062648233000735165,
+      "prediction_upper": 0.0019420171301638494,
+      "realized_net_return_window": 0.0,
+      "record_id": "1d9cba3752152461a9bbb89e5909ef13c7e725aad608e5ee13dbd2c5679ff6b5",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "above",
+      "is_trap": false,
+      "pool_id": "5Z66YYYaTmmx1R4mATAGLSc8aV4Vfy5tNdJQzk1GP9RF",
+      "prediction_lower": -0.01619715665914605,
+      "prediction_upper": 0.007313522045638693,
+      "realized_net_return_window": 0.017259024220641104,
+      "record_id": "7ce203c85f2cc6347de2222540076f284409a66ef8d3b11db97ce01ab2a93a0b",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0017
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "5hWJUNTtEtKmKgDXpthJXXRRmJrz5vJ7uJzrUNVdrwLg",
+      "prediction_lower": -0.011926649516297303,
+      "prediction_upper": 0.002947416264832064,
+      "realized_net_return_window": 0.0,
+      "record_id": "0120f3d698399f8856b96525f5c3e0151aa0eef14df4aca85126730d58dd15f3",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0066
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "below",
+      "is_trap": false,
+      "pool_id": "6pLFuygN2yLg6fAJ4JRtdDfKaugcY51ZYK5PTjFZMa5s",
+      "prediction_lower": -0.00390076118652064,
+      "prediction_upper": 0.008320998311229106,
+      "realized_net_return_window": -0.020893786547719062,
+      "record_id": "bb6fc1d185670f37bdf3d11e9f7d7d9151d7af98614845604f49e979cea3fd15",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "82vnbMa6vxm1a9TWy54s1dYRCYeGYZUPQnn7iVLBvmtx",
+      "prediction_lower": -0.018419727584766846,
+      "prediction_upper": 0.006107399516451644,
+      "realized_net_return_window": -0.0013125835487479889,
+      "record_id": "30d0be0879e1ac296fbfe85f52f6bd9d4d031e17294477346cdcc35cde031d03",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0035
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "8QaXeHBrShJTdtN1rWCccBxpSVvKksQ2PCu5nufb2zbk",
+      "prediction_lower": -0.02801248604322863,
+      "prediction_upper": 0.013248570524445823,
+      "realized_net_return_window": -0.01890996857068875,
+      "record_id": "6fc498f54f8e2b6615d8aea0bc0aa35718b58d579088c1bd5bbc97ed965a213a",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.015
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "below",
+      "is_trap": false,
+      "pool_id": "91E61RiGhH9b9Ns8wrb4E3oBNdtkQx2k4xb33pSqt5am",
+      "prediction_lower": -0.009637236768085321,
+      "prediction_upper": 0.007352593557695324,
+      "realized_net_return_window": -0.04332972715736204,
+      "record_id": "9f7b6b4f378b5559f32a52b0b3e6a21bd1f8774b8bf3e26f50b1a93d45e55dbd",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0003
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "A2J7vmG9xAdWUzYscN7oQssxZBFihwD3UonkWB8Kod1A",
+      "prediction_lower": -0.014144908813726948,
+      "prediction_upper": 0.010794238101071753,
+      "realized_net_return_window": -0.004544897273713704,
+      "record_id": "77d5cb96bc4713eec9adbd5ffae22ec8322a30b7abac5813e0ac992fe50814a4",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0022
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "AU971DrPyhhrpRnmEBp5pDTWL2ny7nofb5vYBjDJkR2E",
+      "prediction_lower": -0.0008340296879977029,
+      "prediction_upper": 0.0010056826466925243,
+      "realized_net_return_window": 0.0,
+      "record_id": "42f139ae124af3853e2febf01ea381f5dfbce1166783dfbb73303f8dd6273684",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0001
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "AqJ5JYNb7ApkJwvbuXxPnTtKeuizjvC1s2fkp382y9LC",
+      "prediction_lower": -0.010798592584712809,
+      "prediction_upper": 0.002425757065887523,
+      "realized_net_return_window": 0.0,
+      "record_id": "1e720abb022927b320040a14c7bbaac52c6fe730ae22c39e9083ea289389a3f8",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0044
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "AwBhvNXf5X5hNbC1jAqrJ7Stx5xLuG97xDjJ9PNy1h65",
+      "prediction_lower": -0.02725271319217831,
+      "prediction_upper": 0.01253787113616087,
+      "realized_net_return_window": -0.0037477495275821254,
+      "record_id": "bb1dcd8f91d66f9f84cb8c22d664806d4d400104a11eaee210dfa853c5b35dd6",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0134
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "above",
+      "is_trap": false,
+      "pool_id": "AxqAWNZqozhTn2pkDPgpf5kc5DeBuhLKKNWnt3dLrxdi",
+      "prediction_lower": -3.4548938946230654e-06,
+      "prediction_upper": 7.22450042977753e-06,
+      "realized_net_return_window": 1.3806190342961012e-05,
+      "record_id": "681661b9ab5340ff5f98e4a086c23d290da1efabf858e787ecb549c3e7b8aa96",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "above",
+      "is_trap": false,
+      "pool_id": "CN8M75cH57DuZNzW5wSUpTXtMrSfXBFScJoQxVCgAXes",
+      "prediction_lower": 0.00120316597586967,
+      "prediction_upper": 0.031179580087701497,
+      "realized_net_return_window": 0.05970163499496482,
+      "record_id": "6a6e8763f2e50e6c4f07f82c5a4a1a648f86e367824e7f6a7a20164084243fc6",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0019
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "below",
+      "is_trap": false,
+      "pool_id": "Cr78qJXZwLFfYTTsLzqeRuRDDRGvQCKXZ3M1G42rr2nV",
+      "prediction_lower": -0.012417743552551635,
+      "prediction_upper": 0.0018618232309180807,
+      "realized_net_return_window": -0.030258380737178896,
+      "record_id": "afbd15518607329609488b55c4ad22d4541bedd94372964975c6c01f6bc14de1",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0001
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+      "prediction_lower": -0.002846097747922498,
+      "prediction_upper": 0.001134183345000193,
+      "realized_net_return_window": 0.0,
+      "record_id": "5094243d70d9b5acc535b2b4cf221adc27ddbcfd4c7b7c22645963290b8b230e",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0027
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "FoXLQ28dLdQanraVjXFeunGfwyWFjeF8fJZvLFHqmWi1",
+      "prediction_lower": -0.006454950057793404,
+      "prediction_upper": 0.005121293629143831,
+      "realized_net_return_window": 0.0018393099234063522,
+      "record_id": "baf42bf4b434c8f2513b2a4f264527bb59bdd801c88dc8c3ce822675fbde4f54",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "below",
+      "is_trap": false,
+      "pool_id": "Fra9rBL1F5eAgtoqjXsBzZocD1UKbxXoERKVs6e23ixn",
+      "prediction_lower": -0.0007999666351169013,
+      "prediction_upper": 0.007958668035267995,
+      "realized_net_return_window": -0.019167569551005213,
+      "record_id": "a119ffbbb57c270b7c35fa73ab82283f1893ec50c460cd9fca34b3d508b44380",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "below",
+      "is_trap": false,
+      "pool_id": "HAWNPF6UZ8YgWisd2gsECNSchdn3hQTEujsZtGxKM1MW",
+      "prediction_lower": -0.011508979442663695,
+      "prediction_upper": 0.0058908847151432206,
+      "realized_net_return_window": -0.03643586027565472,
+      "record_id": "7cd7344f43402942d663daf4716139facf1a4766573b1823e68a62159ce93d9e",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0005
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "HGw4exa5vdxhJHNVyyxhCc6ZwycwHQEVzpRXMDPDAmVP",
+      "prediction_lower": -0.007176421888654057,
+      "prediction_upper": 0.005230411700860984,
+      "realized_net_return_window": -0.003617882502941287,
+      "record_id": "c0c07a86e62ce8cb916a4d073d98ee2c8c569747f4d37805795c946ed5e208f8",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0
+    },
+    {
+      "integration_duration_days": 13.999768518518518,
+      "interval_position": "inside",
+      "is_trap": false,
+      "pool_id": "HxA6SKW5qA4o12fjVgTpXdq2YnZ5Zv1s7SB4FFomsyLM",
+      "prediction_lower": -0.007241775336955547,
+      "prediction_upper": 0.0023829690709617603,
+      "realized_net_return_window": 0.0,
+      "record_id": "a5a3a54f1d7c0e3e69a01567d3b660a729463998ef62b673bd919ff424ec7ca3",
+      "window_completeness": 0.998826038790324,
+      "y_prob": 0.0005
+    }
+  ],
+  "precommitment": {
+    "addendum_hash": "sha256:25687e385be736c29ffe26ea183836dad67af682728bb23e5acfc6b6a939d78c",
+    "artifact": "prereg/disclosures/20260921_174238_solana_addendum_v1_retirement.json",
+    "cohort_entry": {
+      "N": 23,
+      "allowed_missing": 2,
+      "completeness_floor": 0.8,
+      "first_published_in": "prereg/solana/20260915_122049_solana_preregistered_at_prediction.json",
+      "freeze_ts": 1789474708,
+      "freeze_utc": "2026-09-15T12:18:28Z",
+      "maturity_days_floor": 13.9583,
+      "maturity_utc": "2026-09-29T12:18:28Z",
+      "n_floor": 21,
+      "prediction_hash_set_sha256": "9d09580ad9e852a61615628a929dcd2e99396789b7b55abb6e5ceb59d747988a",
+      "y_prob_sum": 0.1816
+    },
+    "note": "Every per-cohort parameter below was read from this pre-commitment, published 2026-09-21 before this cohort matured."
+  },
+  "resolved_ledger": {
+    "data_quality": {
+      "calculation_error": 0,
+      "immature_window": 138,
+      "insufficient_completeness": 0,
+      "missing_pool": 0,
+      "window_empty": 0,
+      "window_span_short": 0
+    },
+    "file": "sol_ledger_20260929.json",
+    "grading_status": {
+      "n_graded": 1058,
+      "n_predictions_considered": 1196,
+      "n_rejected": 138,
+      "state": "graded"
+    },
+    "ledger_hash": "c0770b4b12858000f111478fbe4250dd02fed407357336d3143a998fae454b0a",
+    "ledger_uuid": "9da226b9-d0b8-5bb9-92ff-091ed8c2fbf3",
+    "outcome_field": "realized_net_return_window",
+    "trap_rule": "realized_net_return_window < decision_threshold (-0.05)"
+  },
+  "scope": "solana",
+  "stamp": "20260929_182502_solana_verdict_20260915",
+  "title": "SOL v1 cohort 20260915 verdict \u2014 resolved against the STANDING acceptance standard, as pre-committed in the SOL v1 retirement disclosure",
+  "verdict": {
+    "E": 0.1816,
+    "above": 4,
+    "against_triggers": {},
+    "below": 5,
+    "coverage_misses": 9,
+    "deciding_condition": "could not be shown wrong: 0 realized traps and the all-safe outcome was not surprising (P(0 traps)=0.827282 > 0.05)",
+    "emitter_disclosures": [
+      "n_graded in the ledger's grading_status is ledger-wide (the SOL ledger is cumulative: 1058 graded rows across all cohorts); the cohort-level count was checked separately here: 23/23 rows resolved, n_floor 21.",
+      "7/23 rows resolved to a realized net of exactly 0.0 (no fee accrual and no price move recorded in the window). Reported as the ledger states them; they are not traps.",
+      "Interval coverage: 9/23 realized outcomes fell outside their frozen range (below 5, above 4); the standard's interval_coverage trigger threshold for this cohort is k_weak=6. The sealed standing standard v1 decides UNTESTED-narrow BEFORE its EVIDENCE AGAINST battery runs, so these misses are reported here and do not move the tier. The rule stands for every cohort it governs; later standards test confident calls on their own (breach-probability family addendum 1).",
+      "1 row(s) carry a zero-width interval (lower == upper); their coverage position is whatever the ledger's realized net gives, counted by the evaluator like any other row."
+    ],
+    "evaluator_disclosures": [
+      "ts-coupling re-check: required fields not attached for this cohort; not performed here."
+    ],
+    "interpretation_limits": "Tiers are assigned in the order fixed by the standing standard: INVALID, then UNTESTED-narrow (0 traps and an unsurprising all-safe outcome), then EVIDENCE AGAINST (any battery trigger), then EVIDENCE OF SKILL, else UNTESTED-residual. UNTESTED is NOT a win and NOT evidence supporting the model; EVIDENCE AGAINST identifies contradiction on the tested axis, not general failure.",
+    "k_weak": 6,
+    "mean_bottom_third": -0.0090067643069203,
+    "mean_top_third": -0.005857277994931743,
+    "one_over_hhi": 2.231909441971206,
+    "p_zero_traps": 0.827282430482637,
+    "realized_traps": 0,
+    "skill_available": false,
+    "verdict": "UNTESTED"
+  }
+}
