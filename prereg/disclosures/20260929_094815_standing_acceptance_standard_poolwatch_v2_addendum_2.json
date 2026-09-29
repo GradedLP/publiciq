@@ -1,0 +1,389 @@
+{
+  "addendum_hash": "sha256:d7eec825d2d7bec68ffa8dd488e494a782759fac04e061e35f27e54339ebb770",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "addendum_number": 2,
+  "amendment_rule": "Sealed before its effective freeze instant; governs only forecasts frozen at or after it. Any further change is another dated addendum.",
+  "amends": {
+    "addendum_hash": "sha256:f734678a452d9e8401ddd2b7295219f97e3d6b737546a0e8db2170c72af8e7f2",
+    "artifact": "prereg/disclosures/20260924_074559_standing_acceptance_standard_poolwatch_v2_sealed.json",
+    "standard_id": "standing_acceptance_standard_poolwatch_v2"
+  },
+  "artifact": "prereg_addendum_standing_standard",
+  "effective_from_freeze_day": "2026-09-30",
+  "effective_from_utc": "2026-09-30T09:30:00Z",
+  "issued_utc": "2026-09-29T09:48:15Z",
+  "price_meta_sha256": "a2e8ebeb95fec2ba7daade03673baac849833cf9a147096372098138f33c973a",
+  "qualification": {
+    "results": {
+      "checked_utc": "2026-09-29T09:47:33Z",
+      "collector_runs_since_2026-09-28T16:33Z": {
+        "pool_samples_failed": 0,
+        "pool_samples_ok": 4264,
+        "runs": 104
+      },
+      "compared_with_poolwatch": 40,
+      "fixes": "41/41 universe pools have a 2026-09-29 fix (last sample with block time in [09:00, 09:30) UTC)",
+      "max_abs_deviation": 0.01084,
+      "max_deviation_pool": "CHIP / USDC 0.01%",
+      "no_poolwatch_snapshot_that_day": [
+        "ADI / USDC 0.05%"
+      ],
+      "per_pool": [
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2710.293536,
+          "name": "WETH / USDC 0.3%",
+          "pool_key": "base:0x6c561b446416e1a00e8e93e221854d6ea4171372",
+          "poolwatch_price": 2712.69,
+          "ratio": 0.99912
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 2711.242407,
+          "name": "WETH / USDT 0.3%",
+          "pool_key": "eth:0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
+          "poolwatch_price": 2716.65,
+          "ratio": 0.99801
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 2703.901234,
+          "name": "WETH / USDC 0.05%",
+          "pool_key": "eth:0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+          "poolwatch_price": 2717.71,
+          "ratio": 0.99492
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 2710.593566,
+          "name": "USDC / WETH 0.3%",
+          "pool_key": "eth:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "poolwatch_price": 2718.08,
+          "ratio": 0.99725
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2704.178751,
+          "name": "USDC / WETH 0.05%",
+          "pool_key": "arbitrum:0xc6962004f452be9203591991d15f6b388e09e8d0",
+          "poolwatch_price": 2714.37,
+          "ratio": 0.99625
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 83783.213196,
+          "name": "WBTC / USDT 0.05%",
+          "pool_key": "eth:0x56534741cd8b152df6d48adf7ac51f75169a83b2",
+          "poolwatch_price": 84030.0209868184,
+          "ratio": 0.99706
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 83992.253597,
+          "name": "WBTC / USDT 0.3%",
+          "pool_key": "eth:0x9db9e0e53058c89e5b94e29621a205198648425b",
+          "poolwatch_price": 83901.395664508,
+          "ratio": 1.00108
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 83956.537707,
+          "name": "WBTC / USDC 0.3%",
+          "pool_key": "eth:0x99ac8ca7087fa4a2a1fb6357269965a2014abc35",
+          "poolwatch_price": 83901.395664508,
+          "ratio": 1.00066
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 2705.150252,
+          "name": "WETH / USDT 0.05%",
+          "pool_key": "eth:0x11b815efb8f581194ae79006d24e0d814b7697f6",
+          "poolwatch_price": 2718.08,
+          "ratio": 0.99524
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2704.050051,
+          "name": "USDC / WETH 0.05%",
+          "pool_key": "base:0xd0b53d9277642d899df5c87a3966a349a798f224",
+          "poolwatch_price": 2713.15,
+          "ratio": 0.99665
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 1.061792,
+          "name": "PRIME / USDC 0.01%",
+          "pool_key": "eth:0x5b70a1582135bd04e39ca94a6a56fc3a828e3115",
+          "poolwatch_price": 1.06229249092392,
+          "ratio": 0.99953
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 83771.155407,
+          "name": "USDC / WBTC 0.05%",
+          "pool_key": "arbitrum:0x0e4831319a50228b9e450861297ab92dee15b44f",
+          "poolwatch_price": 83976.9728458402,
+          "ratio": 0.99755
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 83766.213604,
+          "name": "cbBTC / USDC 0.05%",
+          "pool_key": "base:0xfbb6eed8e7aa03b138556eedaf5d271a5e1e43ef",
+          "poolwatch_price": 83892.2227439783,
+          "ratio": 0.9985
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2705.029884,
+          "name": "WETH / USDT 0.05%",
+          "pool_key": "arbitrum:0x641c00a822e8b671738d32a431a4fb6074e5c79d",
+          "poolwatch_price": 2714.37,
+          "ratio": 0.99656
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 2704.47032,
+          "name": "USDC / WETH 0.01%",
+          "pool_key": "eth:0xe0554a476a092703abdb3ef35c80e0d76d32939f",
+          "poolwatch_price": 2717.71,
+          "ratio": 0.99513
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2710.034702,
+          "name": "USDC / WETH 0.3%",
+          "pool_key": "arbitrum:0xc473e2aee3441bf9240be85eb122abb059a3b57c",
+          "poolwatch_price": 2712.8,
+          "ratio": 0.99898
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2710.289605,
+          "name": "USDC / WETH 0.3%",
+          "pool_key": "optimism:0xc1738d90e2e26c35784a0d3e3d8a9f795074bca4",
+          "poolwatch_price": 2718.28,
+          "ratio": 0.99706
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 83800.503741,
+          "name": "WBTC / USDT 0.05%",
+          "pool_key": "arbitrum:0x5969efdde3cf5c0d9a88ae51e47d721096a97203",
+          "poolwatch_price": 83976.9728458402,
+          "ratio": 0.9979
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 2705.753621,
+          "name": "WETH / USDT 0.01%",
+          "pool_key": "eth:0xc7bbec68d12a0d1830360f8ec58fa599ba1b0e9b",
+          "poolwatch_price": 2717.71,
+          "ratio": 0.9956
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 83981.671058,
+          "name": "cbBTC / USDC 0.3%",
+          "pool_key": "base:0xec558e484cc9f2210714e345298fdc53b253c27d",
+          "poolwatch_price": 84297.9802027967,
+          "ratio": 0.99625
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 4146.170433,
+          "name": "XAUt / USDT 0.05%",
+          "pool_key": "eth:0x6546055f46e866a4b9a4a13e81273e3152bae5da",
+          "poolwatch_price": 4170.08869576712,
+          "ratio": 0.99426
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 8.240902,
+          "name": "ADI / USDC 0.05%",
+          "pool_key": "eth:0x41a561b972039a9ccb975a4c17b84c9f95099e15",
+          "poolwatch_price": null,
+          "ratio": null
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 8.98102,
+          "name": "UNI / USDT 0.3%",
+          "pool_key": "eth:0x3470447f3cecffac709d3e783a307790b0208d60",
+          "poolwatch_price": 9.05645615315425,
+          "ratio": 0.99167
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 4150.38645,
+          "name": "PAXG / USDC 0.05%",
+          "pool_key": "eth:0x5ae13baaef0620fdae1d355495dc51a17adb4082",
+          "poolwatch_price": 4157.51395236172,
+          "ratio": 0.99829
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 0.562456,
+          "name": "MAG7.ssi / USDC 0.3%",
+          "pool_key": "base:0xd364eb55e17700b54bd75feb3f14582ed7a29444",
+          "poolwatch_price": 0.55880687562535,
+          "ratio": 1.00653
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 770.916901,
+          "name": "deSPXA / USDC 0.05%",
+          "pool_key": "base:0xd08f1fb797bfacded23323178672557034c64cfa",
+          "poolwatch_price": 770.076484448979,
+          "ratio": 1.00109
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:47Z",
+          "fix_price": 0.116194,
+          "name": "WPOL / USDT 0.05%",
+          "pool_key": "polygon_pos:0x9b08288c3be4f62bbf8d1c20ac9c5e6f9467d8b7",
+          "poolwatch_price": 0.115886784443922,
+          "ratio": 1.00265
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2703.850101,
+          "name": "WETH / USDC 0.05%",
+          "pool_key": "arbitrum:0xc31e54c7a869b9fcbecc14363cf510d1c41fa443",
+          "poolwatch_price": 2714.37,
+          "ratio": 0.99612
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 0.81682,
+          "name": "VIRTUAL / USDC 0.3%",
+          "pool_key": "base:0x529d2863a1521d0b57db028168fde2e97120017c",
+          "poolwatch_price": 0.809839867904058,
+          "ratio": 1.00862
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 0.044438,
+          "name": "CHIP / USDC 0.01%",
+          "pool_key": "arbitrum:0x49340dbb8fb5ece2f9b594e77ab774e65725e9d8",
+          "poolwatch_price": 0.0449247963473037,
+          "ratio": 0.98916
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:47Z",
+          "fix_price": 2705.406616,
+          "name": "USDC / WETH 0.05%",
+          "pool_key": "polygon_pos:0x45dda9cb7c25131df268515131f647d726f50608",
+          "poolwatch_price": 2718.33,
+          "ratio": 0.99525
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:35Z",
+          "fix_price": 0.079648,
+          "name": "ZAMA / USDT 0.05%",
+          "pool_key": "eth:0x4d68b530920d26c3b01c99fecc19e21011b72bbd",
+          "poolwatch_price": 0.0802753939457807,
+          "ratio": 0.99218
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:47Z",
+          "fix_price": 2706.287686,
+          "name": "WETH / USDT 0.05%",
+          "pool_key": "polygon_pos:0xbb98b3d2b18aef63a3178023a920971cf5f29be4",
+          "poolwatch_price": 2718.33,
+          "ratio": 0.99557
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:47Z",
+          "fix_price": 83726.348486,
+          "name": "WBTC / USDC 0.05%",
+          "pool_key": "polygon_pos:0xeef1a9507b3d505f0062f2be9453981255b503c8",
+          "poolwatch_price": 84084.6801523747,
+          "ratio": 0.99574
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2.386406,
+          "name": "PENDLE / USDT 0.3%",
+          "pool_key": "arbitrum:0x50e7b9293aef80c304234e86c84a01be8401c530",
+          "poolwatch_price": 2.37964047459152,
+          "ratio": 1.00284
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 28.151468,
+          "name": "USDC / VVV 0.3%",
+          "pool_key": "base:0x67a11022b7b6ed66f81233f6c8ed6e48f7826530",
+          "poolwatch_price": 28.0655509001796,
+          "ratio": 1.00306
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:47Z",
+          "fix_price": 2705.597367,
+          "name": "USDC / WETH 0.05%",
+          "pool_key": "polygon_pos:0xa4d8c89f0c20efbe54cba9e7e7a7e509056228d9",
+          "poolwatch_price": 2718.33,
+          "ratio": 0.99532
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2705.065435,
+          "name": "WETH / USDT 0.05%",
+          "pool_key": "optimism:0xc858a329bf053be78d6239c4a4343b8fbd21472b",
+          "poolwatch_price": 2722.41,
+          "ratio": 0.99363
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2705.020955,
+          "name": "WETH / USDC 0.01%",
+          "pool_key": "base:0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+          "poolwatch_price": 2713.15,
+          "ratio": 0.997
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 0.098131,
+          "name": "ESP / USDC 0.01%",
+          "pool_key": "arbitrum:0x15eb51a325cbce6c1cc8202a6f8a76224c5b7540",
+          "poolwatch_price": 0.0980017437553159,
+          "ratio": 1.00132
+        },
+        {
+          "fix_block_utc": "2026-09-29T09:20:45Z",
+          "fix_price": 2703.968218,
+          "name": "USDC / WETH 0.05%",
+          "pool_key": "optimism:0x1fb3cf6e48f1e7b10213e7b6d87d4c073c7fdb7b",
+          "poolwatch_price": 2722.41,
+          "ratio": 0.99323
+        }
+      ],
+      "pools_over_3pct": 0,
+      "qualification_day": "2026-09-29",
+      "samples_per_day_design": 144,
+      "samples_per_pool_2026-09-29_until_check": 59
+    },
+    "rule": "Before sealing: on at least one full day, every universe pool has a collector fix, and for every pool that ALSO has a Poolwatch snapshot that day, |collector fix / Poolwatch price - 1| <= 3% (the two are read up to ~1 h apart and Poolwatch may price the leg from a different venue).",
+    "status": "PASSED"
+  },
+  "scope": "poolwatch-v2",
+  "stamp": "20260929_094815_standing_acceptance_standard_poolwatch_v2_addendum_2",
+  "standard_id": "standing_acceptance_standard_poolwatch_v2",
+  "title": "Poolwatch v2 standing standard - addendum 2: prices come from Poolwatch v2's own collector (every universe pool, every day)",
+  "what_changes": {
+    "daily_fix": "A day's price is its DAILY FIX: the last sample whose block timestamp is in [09:00:00, 09:30:00) UTC that day. A sample whose block is more than 180 s from the wall clock is discarded (stale node). A day with no fix is a missing day - it is never filled from Poolwatch or any other source.",
+    "freeze": "The 09:30 UTC freeze (addendum 1) uses TODAY's fix as the entry price; a pool without one is skipped that day, disclosed in the run log.",
+    "outcome": "breach = 1 if ANY daily fix in (freeze_day, freeze_day + 14 days] is outside the frozen band; fewer than 13 fixes in the window makes the row INCOMPLETE. Same daily sampling as before (intraday excursions still invisible; a breach can only be missed, never invented).",
+    "price_source": "From freeze day 2026-09-30, every price the standard uses - the entry price a band is centred on, and each outcome day's price - is the pool's OWN on-chain rate read by poolwatch_v2/pw_collector.py: Uniswap v3 slot0.sqrtPriceX96 converted with both tokens' decimals to the asset's price in its dollar-stable quote leg, read through Multicall3 every 10 minutes. The asset/quote orientation of every pool is fixed in pw_price_meta.json (sha256 below).",
+    "row_marker": "Rows frozen under this addendum carry snap_date = 'pw-collector fix @ <block time>' instead of a Poolwatch snapshot date, so every row names its own price source."
+  },
+  "what_does_not_change": "Universe (and its sha256), models PW-B1 / PW-B1-own / PW-P1 and model_version pw-v2.0.0 (their inputs - Market Weather candles and Poolwatch's own daily history for the own/pooled models - are unchanged), widths, tiers, the judging rule, cadence, the freeze instant (09:30 UTC, addendum 1) and the confident-calls trigger (family addendum 1). Rows frozen BEFORE 2026-09-30 keep the sealed Poolwatch-snapshot rule for their entry AND their outcome, even where their window runs past the effective day; their missing days stay missing.",
+  "why": "Poolwatch's daily snapshot records only the top pools on each network, so universe pools fall out on some days (1-6 of 41 per day since 09-26; XAUt/USDT three days running, PAXG/USDC two). A pool missing on the freeze day gets no forecast; a pool missing on 2+ days of its window makes that forecast INCOMPLETE (13 of 14 days are required). The forecast object promises every universe pool, so the price source must cover every universe pool."
+}
