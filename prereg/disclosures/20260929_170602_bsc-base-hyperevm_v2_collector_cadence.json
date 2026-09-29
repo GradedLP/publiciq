@@ -1,0 +1,64 @@
+{
+  "artifact": "prereg_disclosure",
+  "chain": "bsc-v2,base-v2,hyperevm-v2",
+  "scope": "bsc-v2,base-v2,hyperevm-v2",
+  "title": "BSC v2, Base v2, HyperEVM v2: collector cadence brought into line with the SEALED expected_sample_period_s (300 s)",
+  "outcomes_known_at_issue": false,
+  "disclosure": {
+    "summary": "The three sealed standards set protocol_constants.expected_sample_period_s = 300 and make a matured row INCOMPLETE below 90% of 'the expected ~5-minute samples'. Their collectors ran every 600 s and the resolver code expected 2016 samples per 14-day window (600 s). From 2026-09-29T17:05:00Z the collectors run every 300 s and the resolver expects 4032 samples (300 s), exactly as sealed. NO sealed text is changed by this disclosure.",
+    "standards": {
+      "standing_acceptance_standard_bsc_v2": "prereg/disclosures/20260928_172146_standing_acceptance_standard_bsc_v2_sealed.json sha256:d2824bd6d672d6ce0ea7e0287394d98f259e288d57a03d5bf6c2c5d41f6e2b93",
+      "standing_acceptance_standard_base_v2": "prereg/disclosures/20260928_172146_standing_acceptance_standard_base_v2_sealed.json sha256:d818d2ee316e670a161dc618c8e39aa54ecc92206ad31f398d542a1a0e591da3",
+      "standing_acceptance_standard_hyperevm_v2": "prereg/disclosures/20260929_112611_standing_acceptance_standard_hyperevm_v2_sealed.json sha256:075fa7cfadf859332e430afd9291f8328519f8bfc64168c7e25167654ea21bd3"
+    },
+    "how_it_happened": "The three boards were cloned from AVAX v2, whose collector does run every 300 s. The standard text kept AVAX's 300 s constant; the collector timers and resolver constant were set to 600 s. The same standards' outcome sentence describes sampling as 'one per ~10 minutes', so the sealed text is internally inconsistent; the numeric protocol constant (300 s) is the binding one and is what operations now follow.",
+    "why_not_the_other_way": "Resolving at 600 s would contradict the sealed constant: anyone re-grading from the sealed standard would count every window at ~50% coverage, i.e. INCOMPLETE, and the verdict INVALID. Changing the constant would be an amendment applied to cohorts already frozen under it. Sampling at the sealed rate needs neither.",
+    "timeline": {
+      "collection_600s": "bsc-v2 and base-v2 from 2026-09-28T17:30:00Z, hyperevm-v2 from 2026-09-29T11:30:00Z, through 2026-09-29T17:00:00Z",
+      "collection_300s_from": "2026-09-29T17:05:00Z (first 300 s run on all three: bsc 30/30, base 30/30, hyperevm 18/18 pools)",
+      "code": "gradedlp commit fb396d3 (bs/ba/hv_protocol.SAMPLE_PERIOD_S = 300; *-v2-collect.timer OnCalendar=*:0/5:00)"
+    },
+    "cohorts_frozen_before_the_switch": {
+      "bsc-v2 2026-09-29": {
+        "rows": 66,
+        "pools": 22,
+        "created_at_utc": "2026-09-29T13:12:01Z",
+        "samples_at_600s_in_window": 23,
+        "projected_samples": 4009,
+        "projected_coverage": 0.9943
+      },
+      "base-v2 2026-09-29": {
+        "rows": 90,
+        "pools": 30,
+        "created_at_utc": "2026-09-29T13:42:10Z",
+        "samples_at_600s_in_window": 20,
+        "projected_samples": 4012,
+        "projected_coverage": 0.995
+      },
+      "hyperevm-v2 2026-09-29": {
+        "rows": 39,
+        "pools": 13,
+        "created_at_utc": "2026-09-29T14:11:31Z",
+        "samples_at_600s_in_window": 17,
+        "projected_samples": 4015,
+        "projected_coverage": 0.9958
+      },
+      "treatment": "Graded unchanged under the sealed rule. Projections assume no further collector outage; any shortfall is reported by the resolver as it would be for any cohort."
+    },
+    "what_does_not_change": "Every forecast field and model (entry sample <= 900 s old, bands, p, tiers, model_version), the outcome (ANY collector sample in the window outside the band), the 90% coverage floor and every verdict rule. Denser sampling can catch a brief excursion that 600 s sampling would miss; the outcome is defined on collector samples, and the sealed expected rate is 300 s.",
+    "not_affected": "AVAX v2 (always 300 s, as sealed), OP v2 (180 s, as sealed), SUI v2 (600 s, as sealed), Monad v2 (sealed at 600 s, matching its collector).",
+    "immutability": "Sealed before any window of the three boards has matured (the first matures 2026-10-13). Any further change is another dated disclosure."
+  },
+  "stamp": "20260929_170602_bsc-base-hyperevm_v2_collector_cadence",
+  "issued_utc": "2026-09-29T17:06:02Z",
+  "addendum_hash_recipe": {
+    "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_hash": "sha256:e563e9bfdb72b65f1726f510e12102f6abd64f06b800b4e50e765e0ad9b244ff"
+}
