@@ -1,0 +1,43 @@
+{
+  "artifact": "prereg_disclosure",
+  "chain": "sol-v2",
+  "scope": "sol-v2",
+  "title": "SOL v2 (bbm-v2.2.0): the BBM prior is refreshed on a fixed monthly schedule, and a table is used only after it is published",
+  "outcomes_known_at_issue": false,
+  "disclosure": {
+    "summary": "From model bbm-v2.2.0 the BBM denominator (each asset's 2-year 14-day p90 price displacement, Kraken daily OHLC) is rebuilt at 06:05 UTC on the 1st of every month from candles that CLOSED before that day, and a sealed notice carrying the full table and its hash is pushed to publiciq. A SOL v2 freeze uses the newest table whose notice was issued before the freeze; if a refresh fails, the previous published table stays in force. Every row still pins prior_table_hash; every bbm-v2.2.0 pre-registration manifest cites the notice that published its table.",
+    "why": "The prior was a fixed constant (as of 2026-09-14) with an off-box monthly refresh left to hand. A hand refresh is a discretionary edit to the denominator of every call; this removes the discretion: the date, the data window, the formula and the publication-before-use rule are fixed here, and the job runs unattended (sol-v2-prior.timer).",
+    "what_does_not_change": "The formula (FORMULA_VERSION 1.1.0), tier map (AVOID < 1 <= WATCH < 2 <= OK; OUT_OF_RANGE at |BBM| >= 1/sqrt(14)), the prior's definition (14d rolling max excursion, p90 over daily starts, Kraken daily candles, up to 720 days, STABLE floor 0.01, pool->asset map), the resolve, and the governing standard: standing_acceptance_standard_bbm_v1_1 (prereg/disclosures/20260921_115606_standing_acceptance_standard_bbm_v1_1_sealed.json), which governs 'bbm-v2.1.0 or later'. Its INVALID rule (a row's prior_table_hash must equal the cohort's committed table) applies unchanged.",
+    "one_method_detail": "The rebuild now uses only candles that closed before as_of 00:00 UTC (Kraken also returns the in-progress day, which made a table depend on the minute it was built). The 2026-09-14 table predates this detail.",
+    "schedule": {
+      "when": "06:05 UTC on the 1st of each month (systemd sol-v2-prior.timer, Persistent)",
+      "as_of": "that day's date",
+      "data": "Kraken daily OHLC candles closed through the previous day, up to the last 720",
+      "notice": "prereg/disclosures/<stamp>_sol-v2_prior_<as_of>.json with the full table, its table_hash and the change vs the previous table",
+      "use_rule": "a freeze uses the table with the latest as_of whose notice issued_utc is before the freeze; none usable -> the freeze refuses"
+    },
+    "effective": "The first SOL v2 freeze after gradedlp's bbm-v2.2.0 code is deployed (planned 2026-10-01 15:30 UTC). Cohorts frozen before it are bbm-v2.1.0 / bbm-v2.0.0 and are untouched.",
+    "prior_tables": [
+      {
+        "table_hash": "e175f6e1b2a1121e0182c35dba909315b6a5fd979796b9f6db3caa40846776a2",
+        "as_of_utc": "2026-09-14",
+        "status": "the table in force: every sol-v2 cohort to date was frozen against it (pinned in each manifest), and it stays in force until the first scheduled refresh is published"
+      }
+    ],
+    "check_on_the_day_it_was_built": "Re-tiering the 2026-09-30 freeze's 23 pools with the new table changes no tier (4 AVOID, 6 WATCH, 5 OK, 8 OUT_OF_RANGE either way).",
+    "next_refresh": "2026-10-01 06:05 UTC (as_of 2026-10-01, candles closed through 2026-09-30), if the timer is enabled by then; otherwise the 1st of the next month",
+    "check_before_sealing": "A trial rebuild on 2026-09-30 (candles closed through 2026-09-29, table_hash 2573daad…, not published and never used) moved per-asset priors by -3.8% (POPCAT) to +5.1% (KMNO), SOL/BTC/ETH unchanged, and re-tiering that day's 23 pools with it changed no tier. It is reported so the size of a monthly refresh is on record; the first real refresh is the scheduled one."
+  },
+  "stamp": "20260930_160405_sol-v2_prior_schedule",
+  "issued_utc": "2026-09-30T16:04:05Z",
+  "addendum_hash_recipe": {
+    "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_hash": "sha256:064e375fb4e24c8f50c075bd0785f49fd67400a5d1be74881740bdb2b3b76939"
+}
