@@ -1,0 +1,86 @@
+{
+  "addendum_hash": "sha256:f53c7f1dd6d7f5fe3e7e8b20e57fd68570cc0922f96d244ffd22b131abc72b35",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_disclosure_acceptance_standard",
+  "fixed_rule": {
+    "against_battery": {
+      "confident_calls": "confident_calls: EVIDENCE AGAINST if, for ANY group (the standard's own groups: band widths, the XRPL lose / lose1 events, the grid's p-bins) and EITHER side - CONFIDENT-SAFE items (p < low_max) or CONFIDENT-BREACH items (p > high_min) - frozen under this standard (from its first freeze): the side has >= min_items resolved items, the stream has >= min_matured_days matured freeze days since the effective day, the side's gap = mean(outcome - p) is WRONG-WAY by at least min_abs_gap (safe side: gap >= +min_abs_gap, the outcome happened more than claimed; breach side: gap <= -min_abs_gap), and the ci block-bootstrap interval of that gap excludes 0 on the wrong-way side. Resampling is the standard's own: whole freeze days in moving blocks of block_days, resamples draws, seed = the standard's seed + seed_offset.",
+      "miscalibration": "EVIDENCE AGAINST if, for ANY width with >= min_informative_items informative items, the stream has >= against_min_days matured freeze days, |gap| >= against_min_abs_gap, and the against_ci block-bootstrap interval of gap excludes 0. gap > 0 = bands broke MORE often than forecast."
+    },
+    "cadence": "One verdict every 28 days on the CUMULATIVE matured record since the first freeze. Earlier verdicts are never revised.",
+    "calibrated_conditions_all_required": [
+      ">= calibrated_min_days matured freeze days",
+      "for EVERY width with >= min_informative_items informative items: the calibrated_ci block-bootstrap interval of gap lies entirely inside [-calibration_tolerance, +calibration_tolerance]",
+      "at least one width saw both outcomes among its informative items"
+    ],
+    "evaluation_order": "INVALID first; then EVIDENCE AGAINST; then CALIBRATED; else UNTESTED. The first that fires decides.",
+    "forecast_object": "p = P(breach within 14 days) for a fresh band +/-5%, +/-15%, +/-35% around the pool's own price, snapped OUTWARD to the pool's tick spacing, for every pool in base_v4/universe.json (HOOKLESS Uniswap v4 pools on Base, chain 8453, each poolId re-derived on chain from its PoolKey; the deepest 30 with TVL >= $250k at seal and one dollar-stable or ETH leg, fixed at seal; v3-style Base pools belong to standing_acceptance_standard_base_v2 and are not in this universe; the file's sha256 is in every row. A v4 pool is read through the chain's StateView lens into the same fields as a v3 pool: sqrtPriceX96 and tick from getSlot0, liquidity, feeGrowthGlobal0/1, lpFee). Frozen once per UTC day at 13:55 UTC from the latest collector sample (<= 15 min old). Three labelled models: B4-B1 = the asset's Coinbase daily candles (ETH, BTC via cbBTC / tBTC, DOT); B4-B1-x = ETH-quoted cross pools, the daily ratio series from hourly closes (understates intraday extremes slightly); B4-B1-own = pools with no candle series, from this collector's own daily closes. A pool is forecast only once it has 60 usable 14-day windows; until then it is published as 'collecting history' and given no number.",
+    "invalid_battery": [
+      "any frozen row created after its window opened (window_start_ts != created_at_ts) or whose entry sample is more than 900 s older than created_at_ts",
+      "a matured row is INCOMPLETE when its window has < 90% of the expected ~10-minute samples; INCOMPLETE rows exceeding incomplete_max_share of the stream's matured rows make the verdict INVALID",
+      "the stream froze on fewer than running_min_share of the calendar days in the judged period",
+      "any row whose prediction_hash does not recompute from its own fields"
+    ],
+    "outcome": "breach = 1 if ANY collector sample (one per ~10 minutes) with created_at_ts <= ts < created_at_ts + 14 d has tick < band_tick_lower OR tick >= band_tick_upper. 10-minute sampling can miss a brief excursion; that bias favours 'no breach' and is accepted, not corrected.",
+    "protocol_constants": {
+      "against_ci": 0.99,
+      "against_min_abs_gap": 0.1,
+      "against_min_days": 42,
+      "block_days": 14,
+      "calibrated_ci": 0.95,
+      "calibrated_min_days": 84,
+      "calibration_tolerance": 0.1,
+      "confident_calls_note": "Built in from the first freeze (the same rule as breach-probability family addendum 1, sealed 2026-09-28): near-certain calls (p < 0.02 or p > 0.98) are tested, not only 0.02 <= p <= 0.98.",
+      "confident_calls_rule": {
+        "ci": 0.99,
+        "high_min": 0.98,
+        "low_max": 0.02,
+        "min_abs_gap": 0.05,
+        "min_items": 30,
+        "min_matured_days": 42,
+        "seed_offset": 7
+      },
+      "coverage_floor": 0.9,
+      "expected_sample_period_s": 600,
+      "gap_definition": "gap(width) = mean over resolved items of (breach - p)",
+      "incomplete_max_share": 0.1,
+      "informative_item": "an item with 0.02 <= p <= 0.98 (near-certain forecasts are excluded from the tests but shown in the reliability table)",
+      "min_informative_items": 30,
+      "resamples": 2000,
+      "running_min_share": 0.7,
+      "seed": 42
+    },
+    "reported_not_gated": [
+      "Brier and Brier skill vs climatology per width",
+      "reliability table (5 bins)",
+      "gaps split BY PAIR CLASS (USD vs CROSS) and BY MODEL (B4-B1 / B4-B1-x / B4-B1-own)",
+      "fee_14d_est, exp_il and FIR are displayed economics and are NOT graded by this standard"
+    ],
+    "serial_dependence": "Daily 14-day windows overlap and Base v4 pools move together (most are the same ETH or BTC price on several pools and fee tiers, and the same prices as Base v2's pools), so rows are NOT independent. All inference resamples whole freeze DAYS in moving blocks of 14 consecutive days (2000 resamples, seed 42).",
+    "streams": [
+      "BASE_V4_POOLS"
+    ],
+    "verdicts": [
+      "INVALID",
+      "UNTESTED",
+      "EVIDENCE AGAINST",
+      "CALIBRATED"
+    ]
+  },
+  "issued_utc": "2026-09-30T16:19:14Z",
+  "notes": "Seal BEFORE the first base-v4.0.0 freeze. Spec: docs/design/BASE_V4_SPEC.md. A separate standard, not a new version of standing_acceptance_standard_base_v2: that standard's universe (30 v3-style pools, sha256 in every row) and record stay untouched. Listed as not covered, with the reason: hooked or dynamic-fee v4 pools (a hook can rewrite swap pricing, fees or liquidity accounting), pegged pairs (stable/stable, two wrappings of one asset, yield-bearing dollar tokens, non-USD fiat stablecoins, gold tokens). Discovery from GeckoTerminal's uniswap-v4-base listing; every candidate verified on chain.",
+  "one_line_commitment": "Every day, for every covered hookless Uniswap v4 pool on Base and three band widths, a probability that price leaves the band within 14 days is frozen before the window opens; the cumulative record is judged mechanically on calibration, and every result is published including misses.",
+  "scope": "base-v4",
+  "stamp": "20260930_161914_standing_acceptance_standard_base_v4_sealed",
+  "standard_id": "standing_acceptance_standard_base_v4",
+  "status": "STANDING STANDARD (Base v4 / probability-of-breach family) - COMMITTED. Governs every base-v4.0.0 forecast. Sealed before the first freeze.",
+  "title": "GradedLP STANDING Acceptance Standard - Base v4 (probability-of-breach family) v1",
+  "universe_sha256": "5be77245c95c7271f654531347e05635ece12701c7fe726b2aef6a18a3faf24a"
+}
