@@ -1,0 +1,243 @@
+{
+  "artifact": "prereg_disclosure",
+  "chain": "sol-v2",
+  "scope": "sol-v2",
+  "title": "SOL v2 prior table as of 2026-10-01 (scheduled refresh)",
+  "outcomes_known_at_issue": false,
+  "disclosure": {
+    "schedule": {
+      "artifact": "prereg/disclosures/20260930_160405_sol-v2_prior_schedule.json",
+      "addendum_hash": "sha256:064e375fb4e24c8f50c075bd0785f49fd67400a5d1be74881740bdb2b3b76939"
+    },
+    "prior_tables": [
+      {
+        "table_hash": "ca9341dd2955970cae87187ff6261cd17f4b33ac1914632444495cb00357896c",
+        "as_of_utc": "2026-10-01",
+        "closed_through_utc": "2026-09-30",
+        "in_force_from": "the first SOL v2 freeze after this notice's issued_utc",
+        "table": {
+          "meta": {
+            "as_of_utc": "2026-10-01",
+            "definition": "14d rolling max price excursion max(maxhigh/close0-1, 1-minlow/close0), p90 over daily starts",
+            "interval": "1440",
+            "quantile": 0.9,
+            "score_version": "BBM1",
+            "source": "kraken_ohlc_daily",
+            "stable_floor": 0.01,
+            "tick_base": 1.0001,
+            "window_days": 720,
+            "closed_through_utc": "2026-09-30",
+            "days_per_asset": {
+              "SOL": 720,
+              "ETH": 720,
+              "BTC": 720,
+              "mSOL": 720,
+              "JitoSOL": 462,
+              "KMNO": 720,
+              "JUP": 720,
+              "WIF": 720,
+              "PENGU": 611,
+              "ORCA": 720,
+              "W": 720,
+              "BONK": 720,
+              "TNSR": 720,
+              "POPCAT": 720,
+              "RAY": 720,
+              "RENDER": 720,
+              "DRIFT": 720,
+              "PYTH": 720,
+              "JTO": 720
+            },
+            "carried_from_previous": [],
+            "previous_table_hash": "e175f6e1b2a1121e0182c35dba909315b6a5fd979796b9f6db3caa40846776a2"
+          },
+          "asset_prior": {
+            "STABLE": 0.01,
+            "SOL": 0.3045059608001617,
+            "ETH": 0.2970140902385675,
+            "BTC": 0.1818096234309623,
+            "mSOL": 0.3446771378708551,
+            "JitoSOL": 0.29215815144072776,
+            "KMNO": 0.5599532642033007,
+            "JUP": 0.4097227717548996,
+            "WIF": 0.556179341247972,
+            "PENGU": 0.7616534740545293,
+            "ORCA": 0.7988077496274217,
+            "W": 0.43326039387308546,
+            "BONK": 0.5957261229829918,
+            "TNSR": 0.5417607223476297,
+            "POPCAT": 0.5616113744075828,
+            "RAY": 0.5682888540031397,
+            "RENDER": 0.4469967670580228,
+            "DRIFT": 0.6343612334801763,
+            "PYTH": 0.4071923162832254,
+            "JTO": 0.502721168571092
+          },
+          "pool_asset": {
+            "BONK/USDC": "BONK",
+            "DRIFT/USDC": "DRIFT",
+            "JTO/USDC": "JTO",
+            "JUP/USDC": "JUP",
+            "JitoSOL/USDC": "JitoSOL",
+            "KMNO/USDC": "KMNO",
+            "ORCA/USDC": "ORCA",
+            "PENGU/USDC": "PENGU",
+            "POPCAT/USDC": "POPCAT",
+            "PYTH/USDC": "PYTH",
+            "RAY/USDC": "RAY",
+            "RENDER/USDC": "RENDER",
+            "SOL/USDC": "SOL",
+            "TNSR/USDC": "TNSR",
+            "USDS/USDC": "STABLE",
+            "USDT/USDC": "STABLE",
+            "W/USDC": "W",
+            "WBTC/USDC": "BTC",
+            "WETH/USDC": "ETH",
+            "WIF/USDC": "WIF",
+            "bSOL/USDC": "SOL",
+            "cbBTC/USDC": "BTC",
+            "mSOL/USDC": "mSOL"
+          },
+          "asset_class": {
+            "BONK": "meme",
+            "BTC": "major",
+            "DRIFT": "largealt",
+            "ETH": "major",
+            "JTO": "largealt",
+            "JUP": "largealt",
+            "JitoSOL": "lst",
+            "KMNO": "largealt",
+            "ORCA": "largealt",
+            "PENGU": "meme",
+            "POPCAT": "meme",
+            "PYTH": "largealt",
+            "RAY": "largealt",
+            "RENDER": "largealt",
+            "SOL": "major",
+            "STABLE": "stable",
+            "TNSR": "largealt",
+            "W": "largealt",
+            "WIF": "meme",
+            "mSOL": "lst"
+          },
+          "table_hash": "ca9341dd2955970cae87187ff6261cd17f4b33ac1914632444495cb00357896c"
+        }
+      }
+    ],
+    "previous_table_hash": "e175f6e1b2a1121e0182c35dba909315b6a5fd979796b9f6db3caa40846776a2",
+    "change_vs_previous": {
+      "BONK": {
+        "previous": 0.5951531553696643,
+        "new": 0.5957261229829918,
+        "change_pct": 0.1
+      },
+      "BTC": {
+        "previous": 0.1818096234309623,
+        "new": 0.1818096234309623,
+        "change_pct": 0.0
+      },
+      "DRIFT": {
+        "previous": 0.6130952380952381,
+        "new": 0.6343612334801763,
+        "change_pct": 3.47
+      },
+      "ETH": {
+        "previous": 0.2970140902385675,
+        "new": 0.2970140902385675,
+        "change_pct": 0.0
+      },
+      "JTO": {
+        "previous": 0.48976493633692453,
+        "new": 0.502721168571092,
+        "change_pct": 2.65
+      },
+      "JUP": {
+        "previous": 0.40779522978475846,
+        "new": 0.4097227717548996,
+        "change_pct": 0.47
+      },
+      "JitoSOL": {
+        "previous": 0.2988656195462478,
+        "new": 0.29215815144072776,
+        "change_pct": -2.24
+      },
+      "KMNO": {
+        "previous": 0.5274459891651979,
+        "new": 0.5599532642033007,
+        "change_pct": 6.16
+      },
+      "ORCA": {
+        "previous": 0.7988077496274217,
+        "new": 0.7988077496274217,
+        "change_pct": 0.0
+      },
+      "PENGU": {
+        "previous": 0.764018691588785,
+        "new": 0.7616534740545293,
+        "change_pct": -0.31
+      },
+      "POPCAT": {
+        "previous": 0.5838582256859188,
+        "new": 0.5616113744075828,
+        "change_pct": -3.81
+      },
+      "PYTH": {
+        "previous": 0.39426823495138574,
+        "new": 0.4071923162832254,
+        "change_pct": 3.28
+      },
+      "RAY": {
+        "previous": 0.5472486649640121,
+        "new": 0.5682888540031397,
+        "change_pct": 3.84
+      },
+      "RENDER": {
+        "previous": 0.43639369772417813,
+        "new": 0.4469967670580228,
+        "change_pct": 2.43
+      },
+      "SOL": {
+        "previous": 0.3045059608001617,
+        "new": 0.3045059608001617,
+        "change_pct": 0.0
+      },
+      "STABLE": {
+        "previous": 0.01,
+        "new": 0.01,
+        "change_pct": 0.0
+      },
+      "TNSR": {
+        "previous": 0.5417607223476297,
+        "new": 0.5417607223476297,
+        "change_pct": 0.0
+      },
+      "W": {
+        "previous": 0.43326039387308546,
+        "new": 0.43326039387308546,
+        "change_pct": 0.0
+      },
+      "WIF": {
+        "previous": 0.5526241534988714,
+        "new": 0.556179341247972,
+        "change_pct": 0.64
+      },
+      "mSOL": {
+        "previous": 0.3446771378708551,
+        "new": 0.3446771378708551,
+        "change_pct": 0.0
+      }
+    }
+  },
+  "stamp": "20261001_060524_sol-v2_prior_2026-10-01",
+  "issued_utc": "2026-10-01T06:05:24Z",
+  "addendum_hash_recipe": {
+    "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_hash": "sha256:f5db99e2fc53f9919b027d9d9112c0b6be2ce7f07890e066aa04a14e6b3098e5"
+}
