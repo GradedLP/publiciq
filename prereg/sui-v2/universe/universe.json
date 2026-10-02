@@ -1,0 +1,599 @@
+{
+ "excluded": [
+  {
+   "legs": "haSUI/SUI",
+   "pool": "0x871d8a227114f375170f149f7e9d45be822dd003eba225e83c05ac80828596bc",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDC/USDY",
+   "pool": "0xdcd762ad374686fa890fc4f3b9bbfe2a244e713d7bffbfbd1b9221cb290da2ed",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDC/BUCK",
+   "pool": "0x4c50ba9d1e60d229800293a4222851c9c3f797aa5ba8a8d32cc67ec7e79fec60",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDC/USDSUI",
+   "pool": "0xa7417fb5f59e23b0a7826d78f025653823c49265be07bbf6dd9e553ba4249a56",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "enzoBTC/xBTC",
+   "pool": "0x3a33be7244f166c5426872d66fbfcbacaae5be229444b5bcc707de6d7656233d",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDB/BUCK",
+   "pool": "0x7a0abae43a864801894c29d72c387ce7681ba752dd331492b32c3c5e1672c973",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDB/USDC",
+   "pool": "0x6dc4048ae8eb73f24b6bc2381c0e6de9e7b06b01d96cee1eac2decd2400ffa46",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDC/USDT",
+   "pool": "0xb8a67c149fd1bc7f9aca1541c61e51ba13bdded64c273c278e50850ae3bff073",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "haWAL/WAL",
+   "pool": "0x313b7c579b95e8021bd2ab1d071ec18615c2f3e2f8da1f9f9e0f6d676b8bea66",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDSUI/USDC",
+   "pool": "0xe9750931401fd6e9592d489760d8ad264cdc0bb41e4ce7b334cd66fbacdd04d6",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "LBTC/wBTC",
+   "pool": "0xaad89a13dee194eb1043e5a34d8f070897d787473c2034647def9d4f43879b60",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDT/USDC",
+   "pool": "0x50d56264dd84f220cf0e872933d4a534069a2b13cc3162d61604029e27e59f28",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "legs": "USDT/USDC",
+   "pool": "0x770010854059edf1dd3d49a97f3054c39b870ec708fe2f408e30a8ef4724caef",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  }
+ ],
+ "pools": [
+  {
+   "asset": "SUI",
+   "coin_type_a": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 6,
+   "decimals_b": 9,
+   "dex": "cetus",
+   "fee_ppm": 2500,
+   "label": "USDC/SUI cetus 0xb8d7d9",
+   "legs": [
+    "USDC",
+    "SUI"
+   ],
+   "mw_coin": "SUI",
+   "pool": "0xb8d7d9e66a60c239e7a60110efcf8de6c705580ed924d0dde141f4a0e2c90105",
+   "quote": "USDC",
+   "symbol_a": "USDC",
+   "symbol_b": "SUI",
+   "tick_spacing": 60,
+   "vol_is_a": false
+  },
+  {
+   "asset": "SUI",
+   "coin_type_a": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 6,
+   "decimals_b": 9,
+   "dex": "cetus",
+   "fee_ppm": 500,
+   "label": "USDC/SUI cetus 0x51e883",
+   "legs": [
+    "USDC",
+    "SUI"
+   ],
+   "mw_coin": "SUI",
+   "pool": "0x51e883ba7c0b566a26cbc8a94cd33eb0abd418a77cc1e60ad22fd9b1f29cd2ab",
+   "quote": "USDC",
+   "symbol_a": "USDC",
+   "symbol_b": "SUI",
+   "tick_spacing": 10,
+   "vol_is_a": false
+  },
+  {
+   "asset": "HAEDAL",
+   "coin_type_a": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "coin_type_b": "0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea::haedal::HAEDAL",
+   "decimals_a": 6,
+   "decimals_b": 9,
+   "dex": "cetus",
+   "fee_ppm": 2500,
+   "label": "USDC/HAEDAL cetus 0x711f5d",
+   "legs": [
+    "USDC",
+    "HAEDAL"
+   ],
+   "mw_coin": null,
+   "pool": "0x711f5d37e3b09b026b182d9e0973d05e9a837d11066ff48f4a55a426d8913359",
+   "quote": "USDC",
+   "symbol_a": "USDC",
+   "symbol_b": "HAEDAL",
+   "tick_spacing": 60,
+   "vol_is_a": false
+  },
+  {
+   "asset": "CETUS",
+   "coin_type_a": "0x06864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b::cetus::CETUS",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "cetus",
+   "fee_ppm": 2500,
+   "label": "CETUS/SUI cetus 0x2e041f",
+   "legs": [
+    "CETUS",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x2e041f3fd93646dcc877f783c1f2b7fa62d30271bdef1f21ef002cebf857bded",
+   "quote": "SUI",
+   "symbol_a": "CETUS",
+   "symbol_b": "SUI",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "SUI",
+   "coin_type_a": "0x2::sui::SUI",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 500,
+   "label": "SUI/USDC turbos 0x0df4f0",
+   "legs": [
+    "SUI",
+    "USDC"
+   ],
+   "mw_coin": "SUI",
+   "pool": "0x0df4f02d0e210169cb6d5aabd03c3058328c06f2c4dbb0804faa041159c78443",
+   "quote": "USDC",
+   "symbol_a": "SUI",
+   "symbol_b": "USDC",
+   "tick_spacing": 10,
+   "vol_is_a": true
+  },
+  {
+   "asset": "DEEP",
+   "coin_type_a": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 6,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 1500,
+   "label": "DEEP/USDC turbos 0x198af6",
+   "legs": [
+    "DEEP",
+    "USDC"
+   ],
+   "mw_coin": "DEEP",
+   "pool": "0x198af6ff81028c6577e94465d534c4e2cfcbbab06a95724ece7011c55a9d1f5a",
+   "quote": "USDC",
+   "symbol_a": "DEEP",
+   "symbol_b": "USDC",
+   "tick_spacing": 30,
+   "vol_is_a": true
+  },
+  {
+   "asset": "MIU",
+   "coin_type_a": "0x32a976482bf4154961bf20bfa3567a80122fdf8e8f8b28d752b609d8640f7846::miu::MIU",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 3,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 10000,
+   "label": "MIU/SUI turbos 0x8ad594",
+   "legs": [
+    "MIU",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x8ad594000a1b822e5295b939813ede94c85b011314472a18a7f4dbb950d6d3f1",
+   "quote": "SUI",
+   "symbol_a": "MIU",
+   "symbol_b": "SUI",
+   "tick_spacing": 200,
+   "vol_is_a": true
+  },
+  {
+   "asset": "WAL",
+   "coin_type_a": "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 2000,
+   "label": "WAL/USDC turbos 0x9490a1",
+   "legs": [
+    "WAL",
+    "USDC"
+   ],
+   "mw_coin": "WAL",
+   "pool": "0x9490a13351e13b133bd8a9c309c47568d6fcbfcbfe7aac0e228b710053583081",
+   "quote": "USDC",
+   "symbol_a": "WAL",
+   "symbol_b": "USDC",
+   "tick_spacing": 40,
+   "vol_is_a": true
+  },
+  {
+   "asset": "NS",
+   "coin_type_a": "0x5145494a5f5100e645e4b0aa950fa6b68f614e8c59e17bc5ded3495123a79178::ns::NS",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 6,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "NS/SUI turbos 0xa0b55c",
+   "legs": [
+    "NS",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0xa0b55c090a286dfc77125231735077bc12a7bf865feb07accdac6f5be03f69b4",
+   "quote": "SUI",
+   "symbol_a": "NS",
+   "symbol_b": "SUI",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "SUI",
+   "coin_type_a": "0x2::sui::SUI",
+   "coin_type_b": "0x5d4b302506645c37ff133b98c4b50a5ae14841659738d6d733d59d0d217a93bf::coin::COIN",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "SUI/USDC turbos 0x5eb2df",
+   "legs": [
+    "SUI",
+    "USDC"
+   ],
+   "mw_coin": "SUI",
+   "pool": "0x5eb2dfcdd1b15d2021328258f6d5ec081e9a0cdcfa9e13a0eaeb9b5f7505ca78",
+   "quote": "USDC",
+   "symbol_a": "SUI",
+   "symbol_b": "USDC",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "WAL",
+   "coin_type_a": "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 2500,
+   "label": "WAL/SUI turbos 0x4f519b",
+   "legs": [
+    "WAL",
+    "SUI"
+   ],
+   "mw_coin": "WAL",
+   "pool": "0x4f519b65c0e394b697d538ae3d6922c10f707a696208ea24cb3a69479aa24528",
+   "quote": "SUI",
+   "symbol_a": "WAL",
+   "symbol_b": "SUI",
+   "tick_spacing": 50,
+   "vol_is_a": true
+  },
+  {
+   "asset": "IKA",
+   "coin_type_a": "0x7262fb2f7a3a14c888c438a3cd9b912469a58cf60f367352c46584262e8299aa::ika::IKA",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 1500,
+   "label": "IKA/USDC turbos 0xdaa881",
+   "legs": [
+    "IKA",
+    "USDC"
+   ],
+   "mw_coin": null,
+   "pool": "0xdaa881332a4f57fe3776e2d3003701b53f83a34dc0dd9192c42ba1557c9a95a8",
+   "quote": "USDC",
+   "symbol_a": "IKA",
+   "symbol_b": "USDC",
+   "tick_spacing": 30,
+   "vol_is_a": true
+  },
+  {
+   "asset": "MAGMA",
+   "coin_type_a": "0x9f854b3ad20f8161ec0886f15f4a1752bf75d22261556f14cc8d3a1c5d50e529::magma::MAGMA",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 20000,
+   "label": "MAGMA/SUI turbos 0x16e803",
+   "legs": [
+    "MAGMA",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x16e80334f12c98ff9eef79a1d538b17c04cf97a03a40ef0ff75a1ee3639eb64d",
+   "quote": "SUI",
+   "symbol_a": "MAGMA",
+   "symbol_b": "SUI",
+   "tick_spacing": 220,
+   "vol_is_a": true
+  },
+  {
+   "asset": "Zeus",
+   "coin_type_a": "0x929df77328f5ee0f045be09d7d1317bf2395084b457094bde1c61120a618247b::zeus::ZEUS",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 100,
+   "label": "Zeus/SUI turbos 0x82fc7d",
+   "legs": [
+    "Zeus",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x82fc7dc438e182f2370b5da38211a6af8d44af45c7be60a10410c00b964de52e",
+   "quote": "SUI",
+   "symbol_a": "Zeus",
+   "symbol_b": "SUI",
+   "tick_spacing": 2,
+   "vol_is_a": true
+  },
+  {
+   "asset": "TATO",
+   "coin_type_a": "0x04deb377c33bfced1ab81cde96918e2538fe78735777150b0064ccf7df5e1c81::tato::TATO",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "TATO/USDC turbos 0x6af03a",
+   "legs": [
+    "TATO",
+    "USDC"
+   ],
+   "mw_coin": null,
+   "pool": "0x6af03a561d3b7367fc549eb46d8d78af38fa0011514052f1ce4bcdec293e32bb",
+   "quote": "USDC",
+   "symbol_a": "TATO",
+   "symbol_b": "USDC",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "IKA",
+   "coin_type_a": "0x7262fb2f7a3a14c888c438a3cd9b912469a58cf60f367352c46584262e8299aa::ika::IKA",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 2000,
+   "label": "IKA/SUI turbos 0x6dd8e2",
+   "legs": [
+    "IKA",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x6dd8e207f9e596ebae103eab1bee5ecf0099bbbea58d390de271a87c0329d5ba",
+   "quote": "SUI",
+   "symbol_a": "IKA",
+   "symbol_b": "SUI",
+   "tick_spacing": 40,
+   "vol_is_a": true
+  },
+  {
+   "asset": "SUI",
+   "coin_type_a": "0x2::sui::SUI",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "SUI/USDC turbos 0x77f786",
+   "legs": [
+    "SUI",
+    "USDC"
+   ],
+   "mw_coin": "SUI",
+   "pool": "0x77f786e7bbd5f93f7dc09edbcffd9ea073945564767b65cf605f388328449d50",
+   "quote": "USDC",
+   "symbol_a": "SUI",
+   "symbol_b": "USDC",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "DEEP",
+   "coin_type_a": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 6,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "DEEP/SUI turbos 0xbca476",
+   "legs": [
+    "DEEP",
+    "SUI"
+   ],
+   "mw_coin": "DEEP",
+   "pool": "0xbca476e3c744648c65b1fae5551b86be8ad7f482ca9c2268dad1d6b4fd0e2635",
+   "quote": "SUI",
+   "symbol_a": "DEEP",
+   "symbol_b": "SUI",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "TURBOS",
+   "coin_type_a": "0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "TURBOS/SUI turbos 0x2c6fc1",
+   "legs": [
+    "TURBOS",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x2c6fc12bf0d093b5391e7c0fed7e044d52bc14eb29f6352a3fb358e33e80729e",
+   "quote": "SUI",
+   "symbol_a": "TURBOS",
+   "symbol_b": "SUI",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "TURBOS",
+   "coin_type_a": "0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "TURBOS/USDC turbos 0x9af62f",
+   "legs": [
+    "TURBOS",
+    "USDC"
+   ],
+   "mw_coin": null,
+   "pool": "0x9af62f727770a4a2ab7fdcc34a42dfe676ca3f00d94990ac46fd91d7fe63f73b",
+   "quote": "USDC",
+   "symbol_a": "TURBOS",
+   "symbol_b": "USDC",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "ETH",
+   "coin_type_a": "0xd0e89b2af5e4910726fbcd8b8dd37bb79b29e5f83f7491bca830e94f7f226d29::eth::ETH",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 8,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 1500,
+   "label": "ETH/USDC turbos 0x30fa14",
+   "legs": [
+    "ETH",
+    "USDC"
+   ],
+   "mw_coin": "ETH",
+   "pool": "0x30fa1443fc56214a3009021f2f0fd53291c8d36fa6e67e745e40fd562eb19001",
+   "quote": "USDC",
+   "symbol_a": "ETH",
+   "symbol_b": "USDC",
+   "tick_spacing": 30,
+   "vol_is_a": true
+  },
+  {
+   "asset": "ETH",
+   "coin_type_a": "0xd0e89b2af5e4910726fbcd8b8dd37bb79b29e5f83f7491bca830e94f7f226d29::eth::ETH",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 8,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 2000,
+   "label": "ETH/USDC turbos 0xd306ac",
+   "legs": [
+    "ETH",
+    "USDC"
+   ],
+   "mw_coin": "ETH",
+   "pool": "0xd306acd1c5d80d19c9fbbe3903110f5141434c17708ad2506ed6aecb0474db6b",
+   "quote": "USDC",
+   "symbol_a": "ETH",
+   "symbol_b": "USDC",
+   "tick_spacing": 40,
+   "vol_is_a": true
+  },
+  {
+   "asset": "SUI",
+   "coin_type_a": "0x2::sui::SUI",
+   "coin_type_b": "0xc060006111016b8a020ad5b33834984a437aaa7d3c74c18e09a95d48aceab08c::coin::COIN",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 3000,
+   "label": "SUI/USDT turbos 0x86ed41",
+   "legs": [
+    "SUI",
+    "USDT"
+   ],
+   "mw_coin": "SUI",
+   "pool": "0x86ed41e9b4c6cce36de4970cfd4ae3e98d6281f13a1b16aa31fc73ec90079c3d",
+   "quote": "USDT",
+   "symbol_a": "SUI",
+   "symbol_b": "USDT",
+   "tick_spacing": 60,
+   "vol_is_a": true
+  },
+  {
+   "asset": "TAKE",
+   "coin_type_a": "0x76a49ebaf991fa2d4cb6a352af14425d453fe2ba6802b5ed2361b227150b6689::take::TAKE",
+   "coin_type_b": "0x2::sui::SUI",
+   "decimals_a": 9,
+   "decimals_b": 9,
+   "dex": "turbos",
+   "fee_ppm": 2500,
+   "label": "TAKE/SUI turbos 0x110397",
+   "legs": [
+    "TAKE",
+    "SUI"
+   ],
+   "mw_coin": null,
+   "pool": "0x110397f2c2425f4439ce743a3c63e694e0f57bd1328175178c6ea7809e823dca",
+   "quote": "SUI",
+   "symbol_a": "TAKE",
+   "symbol_b": "SUI",
+   "tick_spacing": 50,
+   "vol_is_a": true
+  },
+  {
+   "asset": "IKA",
+   "coin_type_a": "0x7262fb2f7a3a14c888c438a3cd9b912469a58cf60f367352c46584262e8299aa::ika::IKA",
+   "coin_type_b": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+   "decimals_a": 9,
+   "decimals_b": 6,
+   "dex": "turbos",
+   "fee_ppm": 2000,
+   "label": "IKA/USDC turbos 0x55bab2",
+   "legs": [
+    "IKA",
+    "USDC"
+   ],
+   "mw_coin": null,
+   "pool": "0x55bab2b40ea7eced7a9fa38fcb75277d3246a49d5823a171ce4c185a56ff2d73",
+   "quote": "USDC",
+   "symbol_a": "IKA",
+   "symbol_b": "USDC",
+   "tick_spacing": 40,
+   "vol_is_a": true
+  }
+ ],
+ "rule": "known Cetus/Turbos CLMM pools, live and unpaused, exactly one stable or SUI quote leg, not two wrappings of one asset",
+ "source": "pools38.json",
+ "version": "sui-v2-universe-1"
+}
