@@ -1,0 +1,1011 @@
+{
+ "as_of": "2026-09-23",
+ "excluded": [
+  {
+   "name": "WBTC / WETH 0.3%",
+   "pool_key": "eth:0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / USDT 0.01%",
+   "pool_key": "eth:0x3416cf6c708da44db2624d63ea0aaef7113527c6",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "WBTC / WETH 0.05%",
+   "pool_key": "eth:0x4585fe77225b41b697c938b018e2ac67ac5a20c0",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "kBTC / WBTC 0.01%",
+   "pool_key": "eth:0x64869c8d4b7c5a6a2f102c9fceea7f7de846b672",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "WBTC / WETH 0.05%",
+   "pool_key": "arbitrum:0x2f5e87c9312fa29aed5c179e456625d79015299c",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "AUSD / USDC 0.01%",
+   "pool_key": "eth:0xbafead7c60ea473758ed6c6021505e8bbd7e8e5d",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "cirBTC / WBTC 0.01%",
+   "pool_key": "eth:0xcceef8a17d01e0097bd1ab51687754c86456363b",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "UNI / WETH 0.3%",
+   "pool_key": "eth:0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "JitoSOL / cbBTC 0.01%",
+   "pool_key": "base:0xe2b8c33ae97658cead06afd47c7f3857e5851871",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "LINK / WETH 0.3%",
+   "pool_key": "eth:0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "cbBTC / WETH 0.3%",
+   "pool_key": "base:0x8c7080564b5a792a33ef2fd473fba6364d5495e5",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "cbBTC / WETH 0.05%",
+   "pool_key": "base:0x7aea2e8a3843516afa07293a10ac8e49906dabd1",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "cbBTC / WBTC 0.01%",
+   "pool_key": "eth:0xe8f7c89c5efa061e340f2d2f206ec78fd8f7e124",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "WBTC / WETH 0.01%",
+   "pool_key": "eth:0xe6ff8b9a37b0fab776134636d9981aa778c4e718",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "wstETH / WETH 0.01%",
+   "pool_key": "eth:0x109830a1aaad605bbf02a9dfa7b0b92ec2fb7daa",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "cirBTC / WETH 0.01%",
+   "pool_key": "eth:0xe12959c09e80f3228c52c517cf70ea6eb13d5e10",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "UNI / WETH 1%",
+   "pool_key": "eth:0x360b9726186c0f62cc719450685ce70280774dc8",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "cirBTC / USDC 0.01%",
+   "pool_key": "eth:0x09c5f9b273de8d41e5dce0867ca67e78c92a3a32",
+   "reason": "only 8 daily snapshots (< 60)"
+  },
+  {
+   "name": "EUROC / EURCV 0.01%",
+   "pool_key": "eth:0x6d074d42d50399581cc3d303b8024000a7897290",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "PAXG / XAUt 0.01%",
+   "pool_key": "eth:0xc756bba710d45647715079ce50aa16aab36ded42",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "AAVE / WETH 0.3%",
+   "pool_key": "eth:0x5ab53ee1d50eef2c1dd3d5402789cd27bb52c1bb",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "weETH / WETH 0.01%",
+   "pool_key": "eth:0x202a6012894ae5c288ea824cbc8a9bfb26a49b93",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "EVA / WBTC 1%",
+   "pool_key": "arbitrum:0x42a4755709dd1bbfe959b3dea7200d4cb4f357d1",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "tBTC / WBTC 0.01%",
+   "pool_key": "eth:0x73a38006d23517a1d383c88929b2014f8835b38b",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "MNT / USDe 0.3%",
+   "pool_key": "eth:0x9aac67deef711d438ad711ae495b8cb43a6ee1a8",
+   "reason": "only 40 daily snapshots (< 60)"
+  },
+  {
+   "name": "USD0++ / USD0 0.01%",
+   "pool_key": "eth:0xabfca96716cf2911bbb50a4cdbcbaffa2ef8ecda",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "BNKR / WETH 1%",
+   "pool_key": "base:0xaec085e5a5ce8d96a7bdd3eb3a62445d4f6ce703",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "EUROC / USDC 0.05%",
+   "pool_key": "eth:0x95dbb3c7546f22bce375900abfdd64a4e5bd73d6",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "RLUSD / USDC 0.01%",
+   "pool_key": "eth:0xcc6d2f26d363836f85a42d249e145ec0320d3e55",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "wTAO / WETH 1%",
+   "pool_key": "eth:0x433a00819c771b33fa7223a5b3499b24fbcd1bbc",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDe / USDC 0.01%",
+   "pool_key": "eth:0xe6d7ebb9f1a9519dc06d557e03c522d53520e76a",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "HEGIC / WETH 0.05%",
+   "pool_key": "arbitrum:0x1dfc1054e0e2a10e33c9ca21aad5aa8a1cce91e3",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "ARB / WETH 0.05%",
+   "pool_key": "arbitrum:0xc6f780497a95e246eb9449f5e4770916dcd6396a",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "DRB / WETH 1%",
+   "pool_key": "base:0x5116773e18a9c7bb03ebb961b38678e45e238923",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "UNI / USDC 0.3%",
+   "pool_key": "eth:0xd0fc8ba7e267f2bc56044a7715a489d851dc6d78",
+   "reason": "only 15 daily snapshots (< 60)"
+  },
+  {
+   "name": "WBTC / WETH 0.05%",
+   "pool_key": "polygon_pos:0x50eaedb835021e4a108b7290636d62e9765cc6d7",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "AERO / WETH 0.3%",
+   "pool_key": "base:0x3d5d143381916280ff91407febeb52f2b60f33cf",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "DAI / USDC 0.01%",
+   "pool_key": "eth:0x5777d92f208679db4b9778590fa3cab3ac9e2168",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "ENA / WETH 0.3%",
+   "pool_key": "eth:0xc3db44adc1fcdfd5671f555236eae49f4a8eea18",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "DAI / USDT 0.01%",
+   "pool_key": "eth:0x48da0965ab2d2cbf1c17c09cfb5cbe67ad5b1406",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "cbBTC / WBTC 0.01%",
+   "pool_key": "arbitrum:0x9b42809aaae8d088ee01fe637e948784730f0386",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "wTAO / USDC 1%",
+   "pool_key": "eth:0xf763bb342eb3d23c02ccb86312422fe0c1c17e94",
+   "reason": "only 30 daily snapshots (< 60)"
+  },
+  {
+   "name": "RAIN / WETH 0.01%",
+   "pool_key": "arbitrum:0xd13040d4fe917ee704158cfcb3338dcd2838b245",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "LINK / WETH 0.3%",
+   "pool_key": "arbitrum:0x468b88941e7cc0b88c1869d68ab6b570bcef62ff",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / USDT 0.01%",
+   "pool_key": "arbitrum:0xbe3ad6a5669dc0b8b12febc03608860c31e2eef6",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "uXRP / WETH 0.3%",
+   "pool_key": "base:0xc8da14d7467814a91384796db3ca2c273b30b361",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / USDT 0.01%",
+   "pool_key": "polygon_pos:0x31083a78e11b18e450fd139f9abea98cd53181b7",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "PENDLE / WETH 0.3%",
+   "pool_key": "arbitrum:0xdbaeb7f0dfe3a0aafd798ccecb5b22e708f7852c",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "wstETH / WETH 0.01%",
+   "pool_key": "arbitrum:0x35218a1cbac5bbc3e57fd9bd38219d37571b3537",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "USDC / USDT 0.01%",
+   "pool_key": "polygon_pos:0xdac8a8e6dbf8c690ec6815e0ff03491b2770255d",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "CODEFORMER / ADS 0.01%",
+   "pool_key": "base:0x8593b7c99073bbb3b305aa8b8392f1c4e43cce18",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "WETH / USDT 0.3%",
+   "pool_key": "polygon_pos:0x4ccd010148379ea531d6c587cfdd60180196f9b1",
+   "reason": "only 49 daily snapshots (< 60)"
+  },
+  {
+   "name": "FISH-SPEECH / ADS 0.01%",
+   "pool_key": "base:0xab0524be0a7fe19ddf4d01a41f911072ee9cd1e5",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "NEAR / USDC 0.3%",
+   "pool_key": "eth:0xee8aaa362a75fbf8e0a38a50ddc27f38551e16ea",
+   "reason": "only 5 daily snapshots (< 60)"
+  },
+  {
+   "name": "MORPHO / WETH 0.3%",
+   "pool_key": "base:0x2f42df4af5312b492e9d7f7b2110d9c7bf2d9e4f",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "ICP / WETH 0.05%",
+   "pool_key": "eth:0x4068038ab5490063a3ead93b3712ed082e62bd59",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "Vollar / USDT 1%",
+   "pool_key": "polygon_pos:0xb27d26155d44a186502de02919d8e8f43b9ed99f",
+   "reason": "only 1 daily snapshots (< 60)"
+  },
+  {
+   "name": "AAVE / WETH 0.3%",
+   "pool_key": "polygon_pos:0x2aceda63b5e958c45bd27d916ba701bc1dc08f7a",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "UNI / WETH 0.3%",
+   "pool_key": "arbitrum:0xc24f7d8e51a64dc1238880bd00bb961d54cbeb29",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "ADGUARDHOME / ADS 0.01%",
+   "pool_key": "base:0x3620c0e9a5bdc9a834e1affe6175fec501a3bdaf",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "LINK / WETH 0.3%",
+   "pool_key": "polygon_pos:0x3e31ab7f37c048fc6574189135d108df80f0ea26",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "CRV / WETH 0.3%",
+   "pool_key": "arbitrum:0xa95b0f5a65a769d82ab4f3e82842e45b8bbaf101",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "BACKGROUNDMUSIC / ADS 0.01%",
+   "pool_key": "base:0x4aff46f24438904f4437b3d69b3f6ac7bf713897",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "SOCIAL-APP / ADS 0.01%",
+   "pool_key": "base:0x40b7c3ffb044d5ec581909e302680232cf9ff3f5",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "EXO / ADS 0.01%",
+   "pool_key": "base:0xebcd9f3bc4ec2542e645a8a9af2526a0b03a3599",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "VIRTUAL / WETH 0.05%",
+   "pool_key": "base:0x9c087eb773291e50cf6c6a90ef0f4500e349b903",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "UBLOCK / ADS 0.01%",
+   "pool_key": "base:0x33684b462d57e81837cee683573a30570f01aa7f",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "STONKEX / WETH 1%",
+   "pool_key": "base:0x7692acc1cdd771d09ebcae3663e1843b2911bec7",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "ESBUILD / ADS 0.01%",
+   "pool_key": "base:0xb0cbf91f2bf7d2eae50d4fb2adceeaa9833cd567",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / WETH 0.01%",
+   "pool_key": "arbitrum:0x6f38e884725a116c9c7fbf208e79fe8828a2595f",
+   "reason": "only 12 daily snapshots (< 60)"
+  },
+  {
+   "name": "AAVE / WETH 0.3%",
+   "pool_key": "arbitrum:0xdd672b3b768a16b9bcb4ee1060d3e8221435beaa",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "TOBETOPJAVAER / ADS 0.01%",
+   "pool_key": "base:0x3aab6c03bd211bc94358e774259de432477f2dac",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "LINK / WETH 0.05%",
+   "pool_key": "eth:0x5d4f3c6fa16908609bac31ff148bd002aa6b8c83",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "SPOTUBE / ADS 0.01%",
+   "pool_key": "base:0x6697a1740814ad828a5f490fe8cdda80855d11df",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "ARB / WETH 0.3%",
+   "pool_key": "arbitrum:0x92c63d0e701caae670c9415d91c474f686298f00",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "ARB / USDC 0.05%",
+   "pool_key": "arbitrum:0xcda53b1f66614552f834ceef361a8d12a0b8dad8",
+   "reason": "only 18 daily snapshots (< 60)"
+  },
+  {
+   "name": "VVV / WETH 1%",
+   "pool_key": "base:0x1d2bdb7117a5a7d7fe4c1d95681a92e4df13bb69",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "PENDLE / USDC 0.3%",
+   "pool_key": "arbitrum:0xc6af8e73e2261264ef95466b97b13e03bd88165e",
+   "reason": "only 53 daily snapshots (< 60)"
+  },
+  {
+   "name": "INFLUXDB / ADS 0.01%",
+   "pool_key": "base:0xfcd18d8a9739edf143123f1c38a8a22bf52790a3",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "CHEAT.SH / ADS 0.01%",
+   "pool_key": "base:0x9e94afe41117710d9d2dcf6169942850c697ba03",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "OP / WETH 0.3%",
+   "pool_key": "optimism:0x68f5c0a2de713a54991e01858fd27a3832401849",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "WBTC / cbBTC 0.01%",
+   "pool_key": "base:0xd960b78f53e8a346c577f2c7b3f0a2394e73afb9",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "LINK / WETH 0.05%",
+   "pool_key": "arbitrum:0x91308bc9ce8ca2db82aa30c65619856cc939d907",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "SPLEETER / ADS 0.01%",
+   "pool_key": "base:0x54bc5c47fb59e9b2595dbf88784e66ade40eeb8d",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / LINK 0.3%",
+   "pool_key": "polygon_pos:0x79e4240e33c121402dfc9009de266356c91f241d",
+   "reason": "only 36 daily snapshots (< 60)"
+  },
+  {
+   "name": "LUX / ADS 0.01%",
+   "pool_key": "base:0xeecc141be8d5611afa233eadf9bdb5eb62e0e1a2",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "GPT-SOVITS / ADS 0.01%",
+   "pool_key": "base:0xa31161978b08b12dce098d0a0b29992d39d31f57",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "YESPLAYMUSIC / ADS 0.01%",
+   "pool_key": "base:0xb82f2ae78834bd0d3eefbb21e7cdfd0f90c05ac0",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "PEAR / WETH 0.3%",
+   "pool_key": "arbitrum:0x68ebadf62ee5acce5f8d64211d24b4710eeb2029",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "UNI / WETH 1%",
+   "pool_key": "base:0xab365f161dd501473a1ff0d2ef0dce94e7398839",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "KOTAEMON / ADS 0.01%",
+   "pool_key": "base:0x0b18dc8062f313cc141168ef0d4367b973c03139",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "GHO / USDC 0.01%",
+   "pool_key": "eth:0x706dcb5e9cb7027d8b0c61f7fa144e65d575064a",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "LINK / WETH 0.05%",
+   "pool_key": "polygon_pos:0x3dc10d7bfb94eeb009203e84a653e5764f71771d",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / USDC 0.01%",
+   "pool_key": "polygon_pos:0xd36ec33c8bed5a9f7b6630855f1533455b98a418",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast"
+  },
+  {
+   "name": "AERO / USDC 0.05%",
+   "pool_key": "base:0xe5b5f522e98b5a2baae212d4da66b865b781db97",
+   "reason": "only 2 daily snapshots (< 60)"
+  },
+  {
+   "name": "WPRL / USDT 1%",
+   "pool_key": "eth:0x89a67c6dee35db9815da2fb9191f0998a8b37c39",
+   "reason": "only 1 daily snapshots (< 60)"
+  },
+  {
+   "name": "AAVE / WETH 0.3%",
+   "pool_key": "base:0x2e86514cfd61fb19c5cf2b879d536d273d6e693d",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "LPT / WETH 0.3%",
+   "pool_key": "arbitrum:0x4fd47e5102dfbf95541f64ed6fe13d4ed26d2546",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "USDC / WPOL 0.05%",
+   "pool_key": "polygon_pos:0xb6e57ed85c4c9dbfef2a68711e9d6f36c56e0fcb",
+   "reason": "only 29 daily snapshots (< 60)"
+  },
+  {
+   "name": "SERVER / ADS 0.01%",
+   "pool_key": "base:0xee7f5d10a6b10c8d9ad6279a3b42bd1d26685f93",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "COMPOSE / ADS 0.01%",
+   "pool_key": "base:0xd18e55f857286546e7cdb00da009a1526f0db34a",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  },
+  {
+   "name": "Basecat / WETH 1%",
+   "pool_key": "base:0xf79478d5a6bae4546f7e489e80b2fc690b558944",
+   "reason": "priced against another volatile token: Poolwatch records the leg's USD price, not the pool's own rate, so the outcome is not measurable from this data"
+  }
+ ],
+ "pools": [
+  {
+   "asset": "WETH",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.003,
+   "mw_coin": "ETH",
+   "name": "WETH / USDC 0.3%",
+   "network": "base",
+   "pool_key": "base:0x6c561b446416e1a00e8e93e221854d6ea4171372",
+   "quote": "USDC",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 153561086
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.003,
+   "mw_coin": "ETH",
+   "name": "WETH / USDT 0.3%",
+   "network": "eth",
+   "pool_key": "eth:0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
+   "quote": "USDT",
+   "snapshots_at_seal": 99,
+   "tvl_usd_at_seal": 101315789
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "WETH / USDC 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+   "quote": "USDC",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 100449291
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.003,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.3%",
+   "network": "eth",
+   "pool_key": "eth:0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+   "quote": "USDC",
+   "snapshots_at_seal": 98,
+   "tvl_usd_at_seal": 37714003
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.05%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0xc6962004f452be9203591991d15f6b388e09e8d0",
+   "quote": "USDC",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 36382371
+  },
+  {
+   "asset": "WBTC",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": "BTC",
+   "name": "WBTC / USDT 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x56534741cd8b152df6d48adf7ac51f75169a83b2",
+   "quote": "USDT",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 30411858
+  },
+  {
+   "asset": "WBTC",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.003,
+   "mw_coin": "BTC",
+   "name": "WBTC / USDT 0.3%",
+   "network": "eth",
+   "pool_key": "eth:0x9db9e0e53058c89e5b94e29621a205198648425b",
+   "quote": "USDT",
+   "snapshots_at_seal": 98,
+   "tvl_usd_at_seal": 26536065
+  },
+  {
+   "asset": "WBTC",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.003,
+   "mw_coin": "BTC",
+   "name": "WBTC / USDC 0.3%",
+   "network": "eth",
+   "pool_key": "eth:0x99ac8ca7087fa4a2a1fb6357269965a2014abc35",
+   "quote": "USDC",
+   "snapshots_at_seal": 97,
+   "tvl_usd_at_seal": 20635138
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "WETH / USDT 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x11b815efb8f581194ae79006d24e0d814b7697f6",
+   "quote": "USDT",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 9771784
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.05%",
+   "network": "base",
+   "pool_key": "base:0xd0b53d9277642d899df5c87a3966a349a798f224",
+   "quote": "USDC",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 9166439
+  },
+  {
+   "asset": "PRIME",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0001,
+   "mw_coin": null,
+   "name": "PRIME / USDC 0.01%",
+   "network": "eth",
+   "pool_key": "eth:0x5b70a1582135bd04e39ca94a6a56fc3a828e3115",
+   "quote": "USDC",
+   "snapshots_at_seal": 82,
+   "tvl_usd_at_seal": 8884029
+  },
+  {
+   "asset": "WBTC",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0005,
+   "mw_coin": "BTC",
+   "name": "USDC / WBTC 0.05%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0x0e4831319a50228b9e450861297ab92dee15b44f",
+   "quote": "USDC",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 7253191
+  },
+  {
+   "asset": "cbBTC",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.0005,
+   "mw_coin": "BTC",
+   "name": "cbBTC / USDC 0.05%",
+   "network": "base",
+   "pool_key": "base:0xfbb6eed8e7aa03b138556eedaf5d271a5e1e43ef",
+   "quote": "USDC",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 7163592
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "WETH / USDT 0.05%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0x641c00a822e8b671738d32a431a4fb6074e5c79d",
+   "quote": "USDT",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 6597780
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0001,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.01%",
+   "network": "eth",
+   "pool_key": "eth:0xe0554a476a092703abdb3ef35c80e0d76d32939f",
+   "quote": "USDC",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 6557537
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.003,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.3%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0xc473e2aee3441bf9240be85eb122abb059a3b57c",
+   "quote": "USDC",
+   "snapshots_at_seal": 103,
+   "tvl_usd_at_seal": 5249461
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_optimism",
+   "fee_tier": 0.003,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.3%",
+   "network": "optimism",
+   "pool_key": "optimism:0xc1738d90e2e26c35784a0d3e3d8a9f795074bca4",
+   "quote": "USDC",
+   "snapshots_at_seal": 99,
+   "tvl_usd_at_seal": 5089821
+  },
+  {
+   "asset": "WBTC",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0005,
+   "mw_coin": "BTC",
+   "name": "WBTC / USDT 0.05%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0x5969efdde3cf5c0d9a88ae51e47d721096a97203",
+   "quote": "USDT",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 4139982
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0001,
+   "mw_coin": "ETH",
+   "name": "WETH / USDT 0.01%",
+   "network": "eth",
+   "pool_key": "eth:0xc7bbec68d12a0d1830360f8ec58fa599ba1b0e9b",
+   "quote": "USDT",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 4007825
+  },
+  {
+   "asset": "cbBTC",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.003,
+   "mw_coin": "BTC",
+   "name": "cbBTC / USDC 0.3%",
+   "network": "base",
+   "pool_key": "base:0xec558e484cc9f2210714e345298fdc53b253c27d",
+   "quote": "USDC",
+   "snapshots_at_seal": 96,
+   "tvl_usd_at_seal": 3284642
+  },
+  {
+   "asset": "XAUt",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": null,
+   "name": "XAUt / USDT 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x6546055f46e866a4b9a4a13e81273e3152bae5da",
+   "quote": "USDT",
+   "snapshots_at_seal": 94,
+   "tvl_usd_at_seal": 3240353
+  },
+  {
+   "asset": "ADI",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": null,
+   "name": "ADI / USDC 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x41a561b972039a9ccb975a4c17b84c9f95099e15",
+   "quote": "USDC",
+   "snapshots_at_seal": 96,
+   "tvl_usd_at_seal": 3115768
+  },
+  {
+   "asset": "UNI",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.003,
+   "mw_coin": "UNI",
+   "name": "UNI / USDT 0.3%",
+   "network": "eth",
+   "pool_key": "eth:0x3470447f3cecffac709d3e783a307790b0208d60",
+   "quote": "USDT",
+   "snapshots_at_seal": 88,
+   "tvl_usd_at_seal": 2260943
+  },
+  {
+   "asset": "PAXG",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": null,
+   "name": "PAXG / USDC 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x5ae13baaef0620fdae1d355495dc51a17adb4082",
+   "quote": "USDC",
+   "snapshots_at_seal": 92,
+   "tvl_usd_at_seal": 2170949
+  },
+  {
+   "asset": "MAG7.ssi",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.003,
+   "mw_coin": null,
+   "name": "MAG7.ssi / USDC 0.3%",
+   "network": "base",
+   "pool_key": "base:0xd364eb55e17700b54bd75feb3f14582ed7a29444",
+   "quote": "USDC",
+   "snapshots_at_seal": 64,
+   "tvl_usd_at_seal": 2007479
+  },
+  {
+   "asset": "deSPXA",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.0005,
+   "mw_coin": null,
+   "name": "deSPXA / USDC 0.05%",
+   "network": "base",
+   "pool_key": "base:0xd08f1fb797bfacded23323178672557034c64cfa",
+   "quote": "USDC",
+   "snapshots_at_seal": 86,
+   "tvl_usd_at_seal": 1638631
+  },
+  {
+   "asset": "WPOL",
+   "dex": "uniswap_v3_polygon_pos",
+   "fee_tier": 0.0005,
+   "mw_coin": null,
+   "name": "WPOL / USDT 0.05%",
+   "network": "polygon_pos",
+   "pool_key": "polygon_pos:0x9b08288c3be4f62bbf8d1c20ac9c5e6f9467d8b7",
+   "quote": "USDT",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 1335753
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "WETH / USDC 0.05%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0xc31e54c7a869b9fcbecc14363cf510d1c41fa443",
+   "quote": "USDC",
+   "snapshots_at_seal": 103,
+   "tvl_usd_at_seal": 1153573
+  },
+  {
+   "asset": "VIRTUAL",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.003,
+   "mw_coin": null,
+   "name": "VIRTUAL / USDC 0.3%",
+   "network": "base",
+   "pool_key": "base:0x529d2863a1521d0b57db028168fde2e97120017c",
+   "quote": "USDC",
+   "snapshots_at_seal": 103,
+   "tvl_usd_at_seal": 1065634
+  },
+  {
+   "asset": "CHIP",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0001,
+   "mw_coin": null,
+   "name": "CHIP / USDC 0.01%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0x49340dbb8fb5ece2f9b594e77ab774e65725e9d8",
+   "quote": "USDC",
+   "snapshots_at_seal": 98,
+   "tvl_usd_at_seal": 979208
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_polygon_pos",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.05%",
+   "network": "polygon_pos",
+   "pool_key": "polygon_pos:0x45dda9cb7c25131df268515131f647d726f50608",
+   "quote": "USDC",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 728732
+  },
+  {
+   "asset": "ZAMA",
+   "dex": "uniswap_v3",
+   "fee_tier": 0.0005,
+   "mw_coin": null,
+   "name": "ZAMA / USDT 0.05%",
+   "network": "eth",
+   "pool_key": "eth:0x4d68b530920d26c3b01c99fecc19e21011b72bbd",
+   "quote": "USDT",
+   "snapshots_at_seal": 99,
+   "tvl_usd_at_seal": 672617
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_polygon_pos",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "WETH / USDT 0.05%",
+   "network": "polygon_pos",
+   "pool_key": "polygon_pos:0xbb98b3d2b18aef63a3178023a920971cf5f29be4",
+   "quote": "USDT",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 658387
+  },
+  {
+   "asset": "WBTC",
+   "dex": "uniswap_v3_polygon_pos",
+   "fee_tier": 0.0005,
+   "mw_coin": "BTC",
+   "name": "WBTC / USDC 0.05%",
+   "network": "polygon_pos",
+   "pool_key": "polygon_pos:0xeef1a9507b3d505f0062f2be9453981255b503c8",
+   "quote": "USDC",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 588109
+  },
+  {
+   "asset": "PENDLE",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.003,
+   "mw_coin": null,
+   "name": "PENDLE / USDT 0.3%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0x50e7b9293aef80c304234e86c84a01be8401c530",
+   "quote": "USDT",
+   "snapshots_at_seal": 104,
+   "tvl_usd_at_seal": 560354
+  },
+  {
+   "asset": "VVV",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.003,
+   "mw_coin": null,
+   "name": "USDC / VVV 0.3%",
+   "network": "base",
+   "pool_key": "base:0x67a11022b7b6ed66f81233f6c8ed6e48f7826530",
+   "quote": "USDC",
+   "snapshots_at_seal": 74,
+   "tvl_usd_at_seal": 461768
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_polygon_pos",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.05%",
+   "network": "polygon_pos",
+   "pool_key": "polygon_pos:0xa4d8c89f0c20efbe54cba9e7e7a7e509056228d9",
+   "quote": "USDC",
+   "snapshots_at_seal": 100,
+   "tvl_usd_at_seal": 446793
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_optimism",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "WETH / USDT 0.05%",
+   "network": "optimism",
+   "pool_key": "optimism:0xc858a329bf053be78d6239c4a4343b8fbd21472b",
+   "quote": "USDT",
+   "snapshots_at_seal": 96,
+   "tvl_usd_at_seal": 443595
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap-v3-base",
+   "fee_tier": 0.0001,
+   "mw_coin": "ETH",
+   "name": "WETH / USDC 0.01%",
+   "network": "base",
+   "pool_key": "base:0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+   "quote": "USDC",
+   "snapshots_at_seal": 71,
+   "tvl_usd_at_seal": 374408
+  },
+  {
+   "asset": "ESP",
+   "dex": "uniswap_v3_arbitrum",
+   "fee_tier": 0.0001,
+   "mw_coin": null,
+   "name": "ESP / USDC 0.01%",
+   "network": "arbitrum",
+   "pool_key": "arbitrum:0x15eb51a325cbce6c1cc8202a6f8a76224c5b7540",
+   "quote": "USDC",
+   "snapshots_at_seal": 105,
+   "tvl_usd_at_seal": 286732
+  },
+  {
+   "asset": "WETH",
+   "dex": "uniswap_v3_optimism",
+   "fee_tier": 0.0005,
+   "mw_coin": "ETH",
+   "name": "USDC / WETH 0.05%",
+   "network": "optimism",
+   "pool_key": "optimism:0x1fb3cf6e48f1e7b10213e7b6d87d4c073c7fdb7b",
+   "quote": "USDC",
+   "snapshots_at_seal": 98,
+   "tvl_usd_at_seal": 275647
+  }
+ ],
+ "rule": "TVL >= $250,000 on 2026-09-23, >= 60 daily snapshots, exactly one stable leg, not two wrappings of one asset",
+ "version": "poolwatch-v2-universe-1"
+}
