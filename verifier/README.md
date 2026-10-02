@@ -1,10 +1,12 @@
 # Public Artifact Verifier
 
-Three scripts, all standalone ():
+Three scripts, all standalone (`pip install jcs`):
 
--  — the envelope hash of any artifact (below).
--  — a pre-registration manifest end to end: every row's , the , the envelope, and that no window opened before its row was created.
--  — published outcomes against the rows that were pre-registered, breach evidence consistency, and (with ) the pool's tick on chain at the reported block.
+- `verify_addendum_hash.py` — the envelope hash of any artifact (below).
+- `verify_manifest.py` — a pre-registration manifest end to end: every row's `prediction_hash`, the
+  `batch_root`, the envelope, and that no window opened before its row was created.
+- `verify_outcomes.py` — published outcomes against the rows that were pre-registered, breach-evidence
+  consistency, and (with `--rpc <archive node>`) the pool's tick on chain at the reported block.
 
 This directory contains a **standalone public verifier** for pre-registration
 artifacts published in `prereg/`. It lets an independent third party — with
