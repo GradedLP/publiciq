@@ -1,0 +1,66 @@
+{
+  "artifact": "prereg_addendum",
+  "chain": "breach-probability-family",
+  "scope": "breach-probability-family",
+  "title": "Breach-probability family addendum 2: a drained pool's later price is not a market price (VOID, not graded)",
+  "outcomes_known_at_issue": false,
+  "disclosure": {
+    "governs": {
+      "standing_acceptance_standard_op_v2": {
+        "artifact": "prereg/disclosures/20260922_133230_standing_acceptance_standard_op_v2_sealed.json",
+        "addendum_hash": "sha256:83377977f089c5da18bec663b14bf773de6d030a7035cfd521650cdd151d37a6"
+      },
+      "standing_acceptance_standard_sui_v2": {
+        "artifact": "prereg/disclosures/20260925_085128_standing_acceptance_standard_sui_v2_sealed.json",
+        "addendum_hash": "sha256:f9961a9a4b6bdb93e77e7ce7c696bdc209ac0f7bc76dcaf2fb338e5119f7c345"
+      },
+      "standing_acceptance_standard_avax_v2": {
+        "artifact": "prereg/disclosures/20260925_085128_standing_acceptance_standard_avax_v2_sealed.json",
+        "addendum_hash": "sha256:5d27195f6079773f16b0c959d000eb0b55198905b32f1d506114023a0de15cfb"
+      },
+      "standing_acceptance_standard_bsc_v2": {
+        "artifact": "prereg/disclosures/20260928_172146_standing_acceptance_standard_bsc_v2_sealed.json",
+        "addendum_hash": "sha256:d2824bd6d672d6ce0ea7e0287394d98f259e288d57a03d5bf6c2c5d41f6e2b93"
+      },
+      "standing_acceptance_standard_base_v2": {
+        "artifact": "prereg/disclosures/20260928_172146_standing_acceptance_standard_base_v2_sealed.json",
+        "addendum_hash": "sha256:d818d2ee316e670a161dc618c8e39aa54ecc92206ad31f398d542a1a0e591da3"
+      },
+      "standing_acceptance_standard_base_v4": {
+        "artifact": "prereg/disclosures/20260930_161914_standing_acceptance_standard_base_v4_sealed.json",
+        "addendum_hash": "sha256:f53c7f1dd6d7f5fe3e7e8b20e57fd68570cc0922f96d244ffd22b131abc72b35"
+      },
+      "standing_acceptance_standard_hyperevm_v2": {
+        "artifact": "prereg/disclosures/20260929_112611_standing_acceptance_standard_hyperevm_v2_sealed.json",
+        "addendum_hash": "sha256:075fa7cfadf859332e430afd9291f8328519f8bfc64168c7e25167654ea21bd3"
+      },
+      "standing_acceptance_standard_monad_v2": {
+        "artifact": "prereg/disclosures/20260929_170601_standing_acceptance_standard_monad_v2_sealed.json",
+        "addendum_hash": "sha256:11398ca1093b4239acda30035109508dcd2f62a6c02b3669a571a52d7350f8bc"
+      }
+    },
+    "effective_from_freeze_day": "2026-10-04",
+    "rule": "For a forecast frozen on or after effective_from_freeze_day: find the first sample in its 14-day window at which the pool's in-range liquidity is below floor_ratio x its liquidity at the forecast's entry sample (the drain point). If the band was left at any sample BEFORE the drain point, the outcome is breach (y = 1), as before. If not, the row is VOID: published with its outcome evidence, but excluded from every test, from the INCOMPLETE share and from every count of resolved items. A row with no drain point is graded exactly as before. Coverage is checked first: a row below the coverage floor is INCOMPLETE whatever its liquidity.",
+    "constants": {
+      "floor_ratio": 0.01,
+      "liquidity_measure": "the pool's in-range (active) liquidity as sampled by the board's collector"
+    },
+    "why": "When nearly all liquidity leaves a concentrated-liquidity pool, its quoted price stops tracking the market: it can freeze, or jump on a dust trade. A frozen price inside the band reads as 'no breach' and would flatter the forecast; a jump could do the opposite. Neither says anything about whether the forecast was right. A breach before the drain point happened while the pool was a real market, so it still counts.",
+    "why_this_threshold": "1% is deliberately extreme: in-range liquidity routinely moves by large factors as LPs re-range (rehearsal on SUI v2 samples found a pool at 1.9% of its entry liquidity mid-window that still traded). The rule removes only near-empty pools. Every row's lowest liquidity and its ratio to entry are published in the daily outcomes regardless, so the threshold can be judged in the open.",
+    "not_covered": "xrpl-v2 (AMM reserves, outcome computed from reserves), poolwatch-v2 (its collector records no liquidity), market-weather and sol-v2 (different families).",
+    "unchanged": "Every forecast field, model, band, coverage floor and verdict rule. Forecasts frozen before effective_from_freeze_day are graded exactly as before.",
+    "immutability": "Sealed before any forecast it governs exists. Any further change is another dated addendum."
+  },
+  "stamp": "20261002_172236_breach_probability_family_addendum_2_drained_pools",
+  "issued_utc": "2026-10-02T17:22:36Z",
+  "addendum_hash_recipe": {
+    "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_hash": "sha256:4862b8edae3ab7b6023d51fca8e814ccd7077f3d09a257a040c4479ff6942fe5"
+}
