@@ -1,0 +1,153 @@
+{
+ "pools": [
+  {
+   "currency": "1MC",
+   "issuer": "rsJvPP7GVdPfe5zmQtvxAJVZAmDUGfhkV1",
+   "label": "1MC",
+   "pool": "rD6BwRhKRtzdiF1miWw7xrxiJwLwnY4PqH",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "BTC",
+   "issuer": "rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B",
+   "label": "BTC.bs",
+   "pool": "rQBeAghWHEwWvKShryBSa5yR3VRX9oyQ5T",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "BTC",
+   "issuer": "rchGBxcD1A1C2tdxF6papQYZ8kjRKMYcL",
+   "label": "BTC.core",
+   "pool": "rJvuDNFkb25GybpHvqCmQzEMjycqBn3uTi",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "CNY",
+   "issuer": "rKiCet8SdvWxPXnAgYarFUXMh1zCPz432Y",
+   "label": "CNY",
+   "pool": "rEKkGGiLMfL28q74W4QAEPeRwXvcxWdutn",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "434F524500000000000000000000000000000000",
+   "issuer": "rcoreNywaoz2ZCQ8Lg2EbSLnGuRBmun6D",
+   "label": "CORE",
+   "pool": "rBu4LXTxM9cfs3JsFCuDbPMzvGBDR66wpi",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "CSC",
+   "issuer": "rCSCManTZ8ME9EoLrSHHYKW8PPwWMgkwr",
+   "label": "CSC",
+   "pool": "rf7g4JWCxu9oE1MKsWTihL9whY75AphCaV",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "ETH",
+   "issuer": "rcA8X3TVMST1n3CJeAdGk1RdRCHii7N2h",
+   "label": "ETH",
+   "pool": "rEDFZUyyikyUbjNoMsSgmXfZNN53rwLLZv",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "EUR",
+   "issuer": "rhub8VRN55s94qWKDv6jmDy1pUykJzF3wq",
+   "label": "EUR.gh",
+   "pool": "rw3tWE23X3Qn43XGKwqVJ7J8QA42rYEGy4",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "FLR",
+   "issuer": "rcxJwVnftZzXqyH9YheB8TgeiZUhNo1Eu",
+   "label": "FLR",
+   "pool": "r9ZKrNu1RJQg1UoqJ24pn5ZqynJg7rifGY",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "RPR",
+   "issuer": "r3qWgpz2ry3BhcRJ8JE6rxM8esrfhuKp4R",
+   "label": "RPR",
+   "pool": "rpnAMBAyBMhK4RN1qDLsgENrLMYNEsx3i4",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "SGB",
+   "issuer": "rctArjqVvTHihekzDeecKo6mkTYTUSBNc",
+   "label": "SGB",
+   "pool": "rEaErQ5vEbHXThFedUrjz9YFotG5HHcxoW",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "534F4C4F00000000000000000000000000000000",
+   "issuer": "rsoLo2S1kiGeCcn6hCUXVrCpGMWLrRrLZz",
+   "label": "SOLO",
+   "pool": "rMEJo9H5XvTe17UoAJzj8jtKVvTRcxwngo",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "STX",
+   "issuer": "rSTAYKxF2K77ZLZ8GoAwTqPGaphAqMyXV",
+   "label": "STX",
+   "pool": "rG5ZYmUUT14RGtU491p3CCfoHzuDRLy8nU",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "5363686D65636B6C657300000000000000000000",
+   "issuer": "rPxw83ZP6thv7KmG5DpAW4cDW55DZRZ9wu",
+   "label": "Schmeckles",
+   "pool": "rsKuiczZKG1jXdTDBJnZombGeENYvrmY2U",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "USD",
+   "issuer": "rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B",
+   "label": "USD.bs",
+   "pool": "rHUpaqUPbwzKZdzQ8ZQCme18FrgW9pB4am",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "USD",
+   "issuer": "rhub8VRN55s94qWKDv6jmDy1pUykJzF3wq",
+   "label": "USD.gh",
+   "pool": "rs9ineLqrCzeAGS1bxsrW8x2n3bRJYAh3Q",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "VGB",
+   "issuer": "rhcyBrowwApgNonehKBj8Po5z4gTyRknaU",
+   "label": "VGB",
+   "pool": "rUw4bsCaZyRiZJLzh2Hb3fujnSXiieHarz",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "586F676500000000000000000000000000000000",
+   "issuer": "rJMtvf5B3GbuFMrqybh5wYVXEH4QE8VyU1",
+   "label": "Xoge",
+   "pool": "rLikwdZqS14VEqtAB43NAYeCv8uJVYQXzJ",
+   "source": "xrpl-mc collector"
+  },
+  {
+   "currency": "4F41520000000000000000000000000000000000",
+   "issuer": "rJf7VZxBt6g2rBTan6uve89U8PRzSUy8bS",
+   "label": "OAR",
+   "pool": "rsR249BtU6Qf5XGLtJZBVZsUa8MczGrnph",
+   "source": "tvl >= 10,000 XRP on 2026-09-22"
+  },
+  {
+   "currency": "5852646F67650000000000000000000000000000",
+   "issuer": "rLqUC2eCPohYvJCEBJ77eCCqVL2uEiczjA",
+   "label": "XRdoge",
+   "pool": "rB3nE2RcnhAqUj3xYczakzvF72uW6ML9UM",
+   "source": "tvl >= 10,000 XRP on 2026-09-22"
+  },
+  {
+   "currency": "584A4F5900000000000000000000000000000000",
+   "issuer": "rJAvx8FtrLR3RyZyM1LyVQFxxsLdT1PmdS",
+   "label": "XJOY",
+   "pool": "rBN8Q6uFCtcR7DcVu4s8yeT96HFCiw5Ha8",
+   "source": "tvl >= 10,000 XRP on 2026-09-22"
+  }
+ ],
+ "rule": "18 XRPL-MC collector pools + XRP AMMs with TVL >= 10,000 XRP (2026-09-22)",
+ "version": "xrpl-v2-universe-1"
+}
