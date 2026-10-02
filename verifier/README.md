@@ -1,5 +1,11 @@
 # Public Artifact Verifier
 
+Three scripts, all standalone ():
+
+-  — the envelope hash of any artifact (below).
+-  — a pre-registration manifest end to end: every row's , the , the envelope, and that no window opened before its row was created.
+-  — published outcomes against the rows that were pre-registered, breach evidence consistency, and (with ) the pool's tick on chain at the reported block.
+
 This directory contains a **standalone public verifier** for pre-registration
 artifacts published in `prereg/`. It lets an independent third party — with
 nothing but this cloned repository — reproduce the `addendum_hash` of every

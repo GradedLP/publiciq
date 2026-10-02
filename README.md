@@ -1,11 +1,47 @@
-## About this repository (updated 2026-09-28)
+## About this repository (updated 2026-10-02)
 
 This is GradedLP's public, append-only pre-registration record: <https://gradedlp.com>.
-It began on 2026-07-06 with the XRPL AMM forward test described below and now carries every
-GradedLP stream: acceptance standards, frozen predictions, manifests and verdicts under `prereg/`.
+It began on 2026-07-06 with the XRPL AMM forward test described further down and now carries every
+GradedLP stream. Nothing here is ever edited or deleted: a correction is a new, dated artifact.
 
-- **Check every hash yourself:** <https://gradedlp.com/verification.html> (verifier in `verifier/`).
+### What is published, per board
+
+| Path | What it is | When it appears |
+|---|---|---|
+| `prereg/disclosures/*_standing_acceptance_standard_<board>_sealed.json` | The sealed grading rule for a board | Before that board's first forecast |
+| `prereg/<board>/universe/universe.json` | The board's sealed pool list, including excluded pools and why (its sha256 is in the standard and in every forecast row) | — |
+| `prereg/<board>/*_preregistered_at_prediction.json` | Each day's frozen forecasts, one row per pool and band, each with its own `prediction_hash`, plus a `batch_root` over the day | Before the forecast window opens |
+| `prereg/<board>/outcomes/*_outcomes.json` | Every forecast whose 14-day window has closed: its frozen fields, its outcome, and evidence (first sample outside the band with its block, lowest liquidity, gap to the exchange price, daily tick extremes with their blocks) | The day after the window closes |
+| `prereg/<board>/*_verdict_*.json` | Cumulative verdicts under the sealed rule | On the rule's cadence |
+| `prereg/disclosures/*` | Addenda and disclosures (corrections, schedules, closures) | Before anything they govern |
+
+Boards: `market-weather`, `sol-v2`, `op-v2`, `xrpl-v2`, `sui-v2`, `avax-v2`, `bsc-v2`, `base-v2`, `base-v4`,
+`hyperevm-v2`, `monad-v2`, `poolwatch-v2`. Closed streams (`solana`, `sui`, `xrpl`, `xrpl-mc`, `op-mc`, `poolwatch`)
+stay exactly as published. Board pages link straight to that day's files.
+
+### Check it yourself (`pip install jcs`)
+
+```bash
+git clone https://github.com/GradedLP/publiciq.git && cd publiciq
+python3 verifier/verify_addendum_hash.py prereg/disclosures/<any sealed standard>.json
+python3 verifier/verify_manifest.py prereg/bsc-v2/*_preregistered_at_prediction.json
+python3 verifier/verify_outcomes.py prereg/bsc-v2/outcomes/*.json --rpc <archive RPC URL>
+```
+
+`verify_manifest.py` recomputes every row's `prediction_hash`, the `batch_root` and the envelope, and checks
+that no window opened before its row was created. `verify_outcomes.py` checks each outcome against the row
+that was pre-registered, checks that its breach evidence is consistent, and with `--rpc` reads the pool's
+price on chain at the reported block (this needs an archive node).
+
+### What is not published, on purpose
+
+The model code is private. What is public is enough to check timing, integrity and outcomes: each row
+commits to its inputs (`input_sha256`) and every forecast is fixed before its window opens, so a forecast
+cannot be changed after the fact even though the code that made it is not shared. Calibration is judged on
+the published outcomes alone.
+
 - **Independent timestamps:** every change to `main` is anchored on the XRP Ledger; see [ANCHORS.md](ANCHORS.md).
+- **Methods in plain language:** <https://gradedlp.com/methodology.html>. (`METHODOLOGY.md` in this repo is Pool IQ's, kept as published.)
 - **Home:** this repository moved from `github.com/sinfun46290-bit/publiciq` to `github.com/GradedLP/publiciq`
   on 2026-09-28. Old links redirect. Files sealed before the move keep the old URL on purpose: changing
   them would change their hashes.
