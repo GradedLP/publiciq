@@ -1,0 +1,254 @@
+{
+ "artifact": "prereg_disclosure",
+ "chain": "all-boards",
+ "scope": "code",
+ "title": "Code fingerprints: the exact code that makes and grades each board's forecasts (code not published)",
+ "outcomes_known_at_issue": false,
+ "stamp": "20261002_175611_code_fingerprints",
+ "issued_utc": "2026-10-02T17:56:11Z",
+ "disclosure": {
+  "what": "For each board, sha256 of every source file its freeze, resolve and judging scripts load (followed through imports), as installed on the production host at issued_utc, and a board fingerprint = sha256 over the sorted 'file:sha256' lines. The code itself is private.",
+  "how_it_is_used": "A daily check compares the installed code with the latest fingerprint and alerts on any difference. Any change to that code is published as a new dated fingerprint disclosure; a change that alters forecasts also gets a new model_version and, where a sealed standard requires it, a new standard or addendum before it is used.",
+  "previous": null,
+  "boards": {
+   "market-weather": {
+    "model_version": "mw-v1.0.0",
+    "fingerprint": "71158f43f6eb120781f641770a6e041d225fb05dc1660b191bbdf09c4c552b07",
+    "files": {
+     "market_weather/candles.py": "b63fc5bd0822e02a771e0985908ba22d92f8cadb4f6be8ff6608c7cb52e010cc",
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/freeze_mw.py": "e1b3f801f8d6d4a39bb88eb2f7931de48f977fd7e13231e4a780ab20f94adf7a",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/har.py": "5c7a3d849d0b7c33efe4cf561edff8f04e3a60fa6b121fa55d086ce8bab55483",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/options.py": "3d323bb078d71cb8ca8c757b7cdf9a53b7c39d807a570e638f76a722bcf1651b",
+     "market_weather/recorders.py": "260b28f813675e7171cc2ce0e1faed82d919003cf7df559cc5ceb107a0c49d5d",
+     "market_weather/recorders_pools.py": "62f5b6cacf6f53db077c7057af88c3b7bb1f204fe64962b313dee40e33d8382f",
+     "market_weather/resolve_mw.py": "b5237f82c3e4b297fec59df870cb968cf8b6b7cdeb69f8d39e60baa281900a9f",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "sol-v2": {
+    "model_version": "bbm-v2.2.0",
+    "fingerprint": "c2c38e2827ee83fcff8ccd56dd8ba58f12ec903264a08ff1a5add90c4634a428",
+    "files": {
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4",
+     "solana_iq/economics/__init__.py": "4a20742661e705281af3afe6864f6c4d560c32b01fbbfa1ed565a46b6e5d7d71",
+     "solana_iq/economics/clmm_fee.py": "55916bb004bbbf3360ef62b9895ede79e0657f448ca41d64bf0d14155099269a",
+     "solana_iq/economics/clmm_il.py": "3dd973fb0d51a8c1b1a9e117d04cb8dfe7d8c849ff207412d0d136ec3c866692",
+     "solana_iq/v2/auto_verdict.py": "6d84a3f6f6c90db0ef8aaaeddadd8873adaf3931c1fa5b1d208d9cda6d06b600",
+     "solana_iq/v2/bbm.py": "ef61455e0d618486af00deb943fd0ccd8070e54975848f80bbc9e75ad70b00f7",
+     "solana_iq/v2/freeze_v2.py": "e2dab432b6bd7fe0739c4ea160fb7b14977fa7e6e9d9843c2f4b01c980c2e29e",
+     "solana_iq/v2/predictions_store_v2.py": "92c5fe8ba520b4f20295e9474dd3327f5b9ec44ca76a6599bdcd703fe11874f5",
+     "solana_iq/v2/prior.py": "fbc16f078dea1ece2defc0ed277d747c43c69b54b470380b9bd10e0cf545f385",
+     "solana_iq/v2/protocol_v2.py": "e9e5c755589f20414b0bf1ae6de05368fec4807daaef4fe8c309a0e2e6bf9f5b",
+     "solana_iq/v2/resolve_v2.py": "b34c9761bcee8cba3382e6ff32b520102d991cd2792f5abef1091cd8af6ac80a",
+     "solana_iq/v2/standards.py": "c42965cec86496ef83da83a386e4dfe477e5e3cc9ca7f24102b2c598cdd5da50",
+     "solana_iq/v2/standing_evaluator_bbm.py": "e6e675d740255998580ebc4b7ff87dd4b445cf16981c34d017ca4b79110c945f",
+     "solana_iq/v2/standing_publish_bbm.py": "8e09bd282f3f603958b1ed8a4ffe4c641a46b6bc4df2a51e8e6e41147af3920b"
+    }
+   },
+   "op-v2": {
+    "model_version": "op-v2.0.0",
+    "fingerprint": "5da2ed95168e671cf62a3dc921a10aad3071c88c4c76faa3133e8836b4140ce7",
+    "files": {
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "op_v2/candles_op.py": "3cb55a1a45d7fc9472d65f9825cfa9385b6b79ac86fb7da428c255c4f86d82a3",
+     "op_v2/economics_op.py": "6bb5b9380c7119d8a28e2e79406e041116c6d741098f2440ea9caba23bef7d41",
+     "op_v2/evaluator_op.py": "5f3efd158bfd774fde80a41bcbd5d712a31bff9e3a1792697b2d8619bf6d1326",
+     "op_v2/freeze_op.py": "7bc44820c0b3594b054a9f93f6b73b3d42d6bbe16c35719b7908d48b8f572358",
+     "op_v2/op_protocol.py": "f81eecb31dcb747199b5c9677b9d1d969d8b07edaff22e751ccc71d9eb1d555e",
+     "op_v2/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "op_v2/resolve_op.py": "1355de6d7a8d91ec5ae22545d0d38357302d013d904a2508d0573800abbd75af",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "xrpl-v2": {
+    "model_version": "xrpl-v2.0.0",
+    "fingerprint": "62c05ed4ea663665b518a0e3922d4a578812466c78383af444c2dc1f7409b644",
+    "files": {
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4",
+     "xrpl_v2/backfill.py": "53ac6036d36516a02c09aa1e4035325ecdd520bae1760f450299fac6b8e92991",
+     "xrpl_v2/evaluator_xv.py": "097e60fb7fc40c41ba9fae5936fdfb338534188cb8db016726661a2b0030f0c2",
+     "xrpl_v2/freeze_xv.py": "d0f7b719af38d5bfcecaa32c53890fb97f19358065f403bbbbe1cd5a565c6b78",
+     "xrpl_v2/model_xv.py": "3918e04842caa755a91ec08e4db211f42add056360e7d684f84bfc6a9535c7b5",
+     "xrpl_v2/resolve_xv.py": "dbb2cebbd3f40c0616cdc96da33db3d20e8dcd9f4a5b8fe924ca4a6f45f21d94",
+     "xrpl_v2/xrpc.py": "3ab551364a4ca84a8b5614a7a507fd07f64e7ccb45a8fb7a40c01e7a4fd7b4ae",
+     "xrpl_v2/xv_protocol.py": "c5ab7ad8f9ca3ac4215af76c8fa6221e409e8f1b0b34d2b4f11a511f482ba10c"
+    }
+   },
+   "sui-v2": {
+    "model_version": "sui-v2.0.0",
+    "fingerprint": "c28f1e872562eddf8bdb07bbb0bbcbd964ead091a21f341741bec2f4afdea011",
+    "files": {
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4",
+     "sui_v2/candles_sui.py": "b350b9789783e87b1ed224fa832beb745f950e657eb7cc27663714bcf7fb1cb6",
+     "sui_v2/economics_sui.py": "64d4a891b9785b07f8525c476ee3baa199c39344b21b3203bdffebc851450445",
+     "sui_v2/evaluator_sui.py": "695bc1ce98396461aba20d59cb385996d405c33bca809b7ebaa4b507415db659",
+     "sui_v2/freeze_sui.py": "7ea21b464d7835bd8c94a1027411d92d3455d62020cf7b0a04edf84a50b347ba",
+     "sui_v2/pricing_sui.py": "90233c5efbe32d4c2f21542c36db50720dd36cc875ab2fc57d5bb628084b1e94",
+     "sui_v2/resolve_sui.py": "9600bf81f07aa9a9b63dfa163fc904ffc41e78703f1acd8504ce90f52a3bea0e",
+     "sui_v2/sv_protocol.py": "13c8227cfcf0749799af3cc5277a4a90e99757cd8545e708c40c21fa62f1b453"
+    }
+   },
+   "poolwatch-v2": {
+    "model_version": "pw-v2.0.0",
+    "fingerprint": "e4cb8f95241da25991a64a95cc5628576d54df16f229a8947b66acac3e85129f",
+    "files": {
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "poolwatch_v2/evaluator_pw.py": "a0ce3c95dfd3970a4473c01ee633018d516754b7b197d41d2b9a3c72efa9ac93",
+     "poolwatch_v2/freeze_pw.py": "606fa40b9add441b234d45a819e00202b037333a0a690fb16a7fdd058d8e72f0",
+     "poolwatch_v2/model_pw.py": "e1ca9dff4224af368a09f09b21fb84c075dbb4a560eae4b2590dbc0a5724a9b4",
+     "poolwatch_v2/pw_collector.py": "70d6d434cb941028549d06d2560a6bfef839bafd220ef3217e8b7da36d0cd4c2",
+     "poolwatch_v2/pw_protocol.py": "e86f82ba7faac95815a824a32edeeca138058e41f8a06d3a4bc662ea4d6c6e6c",
+     "poolwatch_v2/resolve_pw.py": "26d8167a99d1f4953481bf6374c4268f19781f51ff8b25a6860b2dd7e73cae7b",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "avax-v2": {
+    "model_version": "avax-v2.0.0",
+    "fingerprint": "efc78c4614a872172d9a27225fa59162fdc1e02d457ddfedaf7a26808dbe2cfb",
+    "files": {
+     "avax_v2/av_protocol.py": "2acfe4f92d42b800ca2525ffc89b78e8a26fc03402e8125073c9c49af0d8d079",
+     "avax_v2/candles_av.py": "76e8903b1c6ee7e8b47d7d43975077b5cf73dafda580bf0ee42fa5cce5520d61",
+     "avax_v2/economics_av.py": "5508f1197e2d79b6cde1ad09599f047518ade4a930348c410af69f01f9f4b597",
+     "avax_v2/evaluator_av.py": "6559b5a75aba88a1d9a05714784e8be2592b3bdc8bb99a231e2b7678d1c2be82",
+     "avax_v2/freeze_av.py": "111057f8b19cddd507e4940b3809bf202ec7b8abfc110fdb30f5eae639ebee72",
+     "avax_v2/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "avax_v2/resolve_av.py": "52fbc450564e92621a17761d2b863de53b48adbe036faf9432ecb79fee4412c9",
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "bsc-v2": {
+    "model_version": "bsc-v2.0.0",
+    "fingerprint": "5fe1614f9855d4eec5da2f2c74100c6c1b6eac655e67a5b03eba4fcdbb6f50e9",
+    "files": {
+     "bsc_v2/bs_protocol.py": "7303403809eeaa5fc44647d8d36d8de9dcce008bd00e58868540f2f8883f21c2",
+     "bsc_v2/candles_bs.py": "af5934e1cc78a0673e0d229ec8a35890aaf1444b6a9819886ce26e39a6c3c79f",
+     "bsc_v2/economics_bs.py": "27bfc3a52fb8dc9f2c592ff1580426a788f8da2c570f500ebf0dfc05839ef30a",
+     "bsc_v2/evaluator_bs.py": "b641957949265c5ee9d693669aa6d36481be2a6abba077d869de37e98278656c",
+     "bsc_v2/freeze_bs.py": "2bad953abf45b258b28b731d92b45df1a4a4e59385d212968e2a9d15a80dd966",
+     "bsc_v2/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "bsc_v2/resolve_bs.py": "12c8d554d6202ccb0b34e47c5ed0488b1102f4a0c8c5d4101629d24122b17760",
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "base-v2": {
+    "model_version": "base-v2.0.0",
+    "fingerprint": "8f41415750f6275b6e381eb8ba8cc518163e0b49b6833abc13352ceceb6c15e4",
+    "files": {
+     "base_v2/ba_protocol.py": "e11932ab0996fd1faeb11bee46d94ac268a543bdef0e4a3f4274338eca0462b0",
+     "base_v2/candles_ba.py": "eb5fb5fe13ea1aacd5880d40ca6daf2ff64d0c39f05174d178e69344e15aea6c",
+     "base_v2/economics_ba.py": "2d6b0c85a579114885166774608ac6122adeeb093717459e30c4c8453d63ee40",
+     "base_v2/evaluator_ba.py": "cfb86942e08ef566a0e2f100db5f5a3f4827a4924393997916124eec53ff204e",
+     "base_v2/freeze_ba.py": "e4f5af142781d2a21a8ebc46c099af3af645a3e4df268d148d5d1717d5cc4bd8",
+     "base_v2/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "base_v2/resolve_ba.py": "e380b1b7bfa4a136dab06a71d0f53c1aef80af4dcec5018cc953d4ad130be7b8",
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "base-v4": {
+    "model_version": "base-v4.0.0",
+    "fingerprint": "0449b5577281e984c061749630c3b85219dddcc57c02243091a6d0c19953d0fc",
+    "files": {
+     "base_v4/b4_protocol.py": "3ee7f26ed511d1e713fad9d608d7e92675b3f3aea0689780d64f6ef63ebbfc59",
+     "base_v4/candles_b4.py": "2ff3a7d768d27e15cc432e2437b73d6b9f73e911d07e9c414b32640177ce6cbd",
+     "base_v4/economics_b4.py": "ce7112490869cd81bb46f75f8eabb2c22dc466b6092a150c287bace7a712f69e",
+     "base_v4/evaluator_b4.py": "5914059363bff54bd87e1075b8421db73fcd3073de6fa34616952da0bc1c05c7",
+     "base_v4/freeze_b4.py": "d4dd4f46bf726dfd2804588450ba0f95caea51e1442d0b4bf997e2f4a61b7980",
+     "base_v4/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "base_v4/resolve_b4.py": "e4b9c9da93b0fc5fd0061ae0183c69e3bd89d8c18734aceb3d9562dbae69a47c",
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "hyperevm-v2": {
+    "model_version": "hyperevm-v2.0.0",
+    "fingerprint": "6c30006be48238cdbd34a8fca2a608cceab6dd2b882239274e0ac5775b7fc869",
+    "files": {
+     "hyperevm_v2/candles_hv.py": "df7aafc2ef1b8871bfd799f09d5b75a8a1aae4066c88ce1fafadfee0cbbf40fa",
+     "hyperevm_v2/economics_hv.py": "1cb7fbf1cc061823913d74baf30d9c14857bca040f32dc3838955461d86d2963",
+     "hyperevm_v2/evaluator_hv.py": "a47adbb6503f3916d5ff975b3c42198761d825633f718b50beb5bab6e02a3824",
+     "hyperevm_v2/freeze_hv.py": "15dfc3730b4cfb7a0204db65c74edeaa36bc2f8178e96f064871cfbc8058c86f",
+     "hyperevm_v2/hv_protocol.py": "9ef3ee2feb845a19645e13fd767c5a878a99248c4c56146dc23a9920a03bee62",
+     "hyperevm_v2/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "hyperevm_v2/resolve_hv.py": "651ddbc54346d8c3722cc7b757ff34f593402c5cb395121cb62b46eec4b8906c",
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   },
+   "monad-v2": {
+    "model_version": "monad-v2.0.0",
+    "fingerprint": "04f3c3bcce7b45b59f431e80cd8e6ab45a444c5e4b0b687b8a35b435d81c2367",
+    "files": {
+     "market_weather/evaluator_mw.py": "aa0f819c97043897321b3c938e6bc5bb19bcb8245c525142afacecf7c1fb1643",
+     "market_weather/grid_mw.py": "0ff844c5c1558009fa748b22cd9822c53dbf434e7f0d8fd1a07ad3f797c8ad4c",
+     "market_weather/model_b1.py": "2fe62c7fdc525bc0e8a2bfaaf4f794d16bda000c49aa77c44f4cb163ad7c1d6d",
+     "market_weather/mw_protocol.py": "cbae045c165b49d9dffd3f8792d241059f928db938abbf32e42aa870ab4d4cf8",
+     "market_weather/store.py": "507cf0e0a1aa298df471c1eda25bbe82037631374f7691ca4f85737dcb6d256d",
+     "monad_v2/candles_mn.py": "ab2147f3757eeaa7b7a5ce8cac48b7f56bf7db8638f062349ebe2a3eebd8c68d",
+     "monad_v2/economics_mn.py": "2b39748d31839e81a6646c868b444867e20a7cbb48369b1975185b3fc4eba7b4",
+     "monad_v2/evaluator_mn.py": "336458db141aeaf90aaaaa45e925dc8c5633a1a4db4668e2b08f45946b31a14d",
+     "monad_v2/freeze_mn.py": "bc0d4ded48b00d1c21bf41575726d631ebd3ee748f8688e7763a8b621ce7ff47",
+     "monad_v2/mn_protocol.py": "4e906f3439ed6b167fc4893b126249f8d55085250d8e79b8805b59304f2ba027",
+     "monad_v2/pricing.py": "e63f1e80ffa397411871ef59073b77372832861fc2dd15f426aaf5275b2373ca",
+     "monad_v2/resolve_mn.py": "ac90b787c3215656950fcbee1c2fc6c65c09ee0d495fd278c9db657b1e57ca3a",
+     "prereg_common/prereg_hash.py": "83b74f1c570f1341e7e1aef86ffec94ad3c980b89544797c871c0130ee92c3b4"
+    }
+   }
+  }
+ },
+ "addendum_hash_recipe": {
+  "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+  "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+  "digest": "sha256",
+  "excluded_fields": [
+   "addendum_hash"
+  ],
+  "tooling": "prereg_common/prereg_hash.py"
+ },
+ "addendum_hash": "sha256:76cdbba63cec49e9865cacbaff24fbac209aa731fa3c67327f3ae7cddafb6167"
+}
