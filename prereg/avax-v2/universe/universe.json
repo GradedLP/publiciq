@@ -1,0 +1,472 @@
+{
+ "excluded": [
+  {
+   "base": "WAVAX",
+   "dex": "pharaoh",
+   "pool": "0x8ac5707f8d4bde1d771d34c7afd81c3922b73379",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 12136180
+  },
+  {
+   "base": "UTY",
+   "dex": "pharaoh",
+   "pool": "0xca7bd86983a2474f3c7cb45207bc16760cee07cf",
+   "quote": "USDC",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast",
+   "tvl_usd": 3393745
+  },
+  {
+   "base": "BTC.b",
+   "dex": "traderjoe",
+   "pool": "0x4224f6f4c9280509724db2dbac314621e4465c29",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 741115
+  },
+  {
+   "base": "WAVAX",
+   "dex": "traderjoe",
+   "pool": "0x864d4e5ee7318e97483db7eb0912e09f161516ea",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 680154
+  },
+  {
+   "base": "WAVAX",
+   "dex": "traderjoe",
+   "pool": "0xed8cbd9f0ce3c6986b22002f03c6475ceb7a6256",
+   "quote": "USDT.e",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 597993
+  },
+  {
+   "base": "WETH.e",
+   "dex": "traderjoe",
+   "pool": "0xfe15c2695f1f920da45c30aae47d11de51007af9",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 570822
+  },
+  {
+   "base": "HUNDRED",
+   "dex": "traderjoe",
+   "pool": "0x7f2c8b6f5f93959db40c0ae7655c8b9e901345d6",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 531064
+  },
+  {
+   "base": "USDe",
+   "dex": "uniswap",
+   "pool": "0x833e0ff43a8691f623cb8730ddb3e3180c7de08b",
+   "quote": "USDC",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast",
+   "tvl_usd": 502316
+  },
+  {
+   "base": "WAVAX",
+   "dex": "traderjoe",
+   "pool": "0xa389f9430876455c36478deea9769b7ca4e3ddb1",
+   "quote": "USDC.e",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 449909
+  },
+  {
+   "base": "WAVAX",
+   "dex": "traderjoe",
+   "pool": "0xf4003f4efbe8691b60249e6afbd307abe7758adb",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 439576
+  },
+  {
+   "base": "XAVA",
+   "dex": "traderjoe",
+   "pool": "0x78e5e1dbb5f663b21af2b6969e1be2892a91297d",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 386098
+  },
+  {
+   "base": "SUPER",
+   "dex": "blackhole",
+   "pool": "0x9d848cf080c46b92b797218835ae7e89e04c1515",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 306279
+  },
+  {
+   "base": "JOE",
+   "dex": "traderjoe",
+   "pool": "0x454e67025631c065d3cfad6d71e6892f74487a15",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 301561
+  },
+  {
+   "base": "JOE",
+   "dex": "traderjoe",
+   "pool": "0x67926d973cd8ee876ad210faaf7dffa99e414acf",
+   "quote": "USDC.e",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 294392
+  },
+  {
+   "base": "sAVAX",
+   "dex": "traderjoe",
+   "pool": "0x4b946c91c2b1a7d7c40fb3c130cdfbaf8389094d",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 275095
+  },
+  {
+   "base": "XSGD",
+   "dex": "pharaoh",
+   "pool": "0x00a743da6d4ee17ac3c34a13d0ff8f9cf86b9f07",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 266864
+  },
+  {
+   "base": "tAVAX",
+   "dex": "pharaoh",
+   "pool": "0x8f818360a1a4b5919639d383f0cb507f5be90a48",
+   "quote": "sAVAX",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast",
+   "tvl_usd": 235790
+  },
+  {
+   "base": "WETH.e",
+   "dex": "pangolin",
+   "pool": "0x7c05d54fc5cb6e4ad87c6f5db3b807c94bb89c52",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 231229
+  },
+  {
+   "base": "WAVAX",
+   "dex": "traderjoe",
+   "pool": "0xd446eb1660f766d533beceef890df7a69d26f7d1",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 206611
+  },
+  {
+   "base": "BTC.b",
+   "dex": "traderjoe",
+   "pool": "0xd9fa522f5bc6cfa40211944f2c8da785773ad99d",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 200871
+  },
+  {
+   "base": "BTC.b",
+   "dex": "pharaoh",
+   "pool": "0xcd4d8252854ac05d0f7c50f1b0718f5c51d189f2",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 195134
+  },
+  {
+   "base": "BTC.b",
+   "dex": "traderjoe",
+   "pool": "0x2fd81391e30805cc7f2ec827013ce86dc591b806",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 157454
+  },
+  {
+   "base": "WAVAX",
+   "dex": "traderjoe",
+   "pool": "0x87eb2f90d7d0034571f343fb7429ae22c1bd9f72",
+   "quote": "USDt",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 139840
+  },
+  {
+   "base": "PHAR",
+   "dex": "pharaoh",
+   "pool": "0x74db36f3814132c463eb83e36e28f0a47fda48cd",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 123157
+  },
+  {
+   "base": "EURC",
+   "dex": "blackhole",
+   "pool": "0x65f83ccacabaac4ed2f80289a02df4d35d744ae8",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 122904
+  },
+  {
+   "base": "UST",
+   "dex": "pangolin",
+   "pool": "0x3c0ecf5f430bbe6b16a8911cb25d898ef20805cf",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 113963
+  },
+  {
+   "base": "SIERRA",
+   "dex": "traderjoe",
+   "pool": "0x2a15d6f7a271624ff64a608ac4010183b20e16f3",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 112233
+  },
+  {
+   "base": "sAVAX",
+   "dex": "traderjoe",
+   "pool": "0x883ea72c2a46f7acb3820855344c43666c6cc5c0",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 105720
+  },
+  {
+   "base": "WAVAX",
+   "dex": "pangolin",
+   "pool": "0x0e0100ab771e9288e0aa97e11557e6654c3a9665",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 103749
+  },
+  {
+   "base": "BLACK",
+   "dex": "blackhole",
+   "pool": "0x0d9fd6dd9b1ff55fb0a9bb0e5f1b6a2d65b741a3",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 91852
+  },
+  {
+   "base": "WAVAX",
+   "dex": "pangolin",
+   "pool": "0xe3ba3d5e3f98eeff5e9eddd5bd20e476202770da",
+   "quote": "USDt",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 81285
+  },
+  {
+   "base": "FATE",
+   "dex": "traderjoe",
+   "pool": "0x32510bf6e8437a80d487db5aaae62fb1e10f425f",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 79462
+  },
+  {
+   "base": "WETH.e",
+   "dex": "blackhole",
+   "pool": "0x5e128ebc09c918ddae3ca1668d4ee9527dc00d78",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 78934
+  },
+  {
+   "base": "sAVAX",
+   "dex": "pharaoh",
+   "pool": "0x65b9016c376604fe0af38c1e336ffcec0f8ecbbd",
+   "quote": "WAVAX",
+   "reason": "two wrappings of the same asset \u2014 a band on a peg is not a forecast",
+   "tvl_usd": 70642
+  },
+  {
+   "base": "WAVAX",
+   "dex": "pangolin",
+   "pool": "0xbd918ed441767fe7924e99f6a0e0b568ac1970d9",
+   "quote": "USDC.e",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 60796
+  },
+  {
+   "base": "JOE",
+   "dex": "traderjoe",
+   "pool": "0x1643de2efb8e35374d796297a9f95f64c082a8ce",
+   "quote": "USDT.e",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 59039
+  },
+  {
+   "base": "p33",
+   "dex": "pharaoh",
+   "pool": "0x35ff620a2c44193260e7c3bd787f2e131223242e",
+   "quote": "USDC",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 57305
+  },
+  {
+   "base": "USDC",
+   "dex": "uniswap",
+   "pool": "0xa7141c79d3d4a9ad67ba95d2b97fe7eed9fb92b3",
+   "quote": "DAI.e",
+   "reason": "stable/stable pair \u2014 a band on a peg is not a forecast",
+   "tvl_usd": 52519
+  },
+  {
+   "base": "JOE",
+   "dex": "traderjoe",
+   "pool": "0x9f8973fb86b35c307324ec31fd81cf565e2f4a63",
+   "quote": "WAVAX",
+   "reason": "not a concentrated-liquidity pool (no tickSpacing/slot0) \u2014 Trader Joe Liquidity Book and v2-style AMMs price in bins or full range, so a tick band is not the right question",
+   "tvl_usd": 50496
+  }
+ ],
+ "pools": [
+  {
+   "asset": "WETH.e",
+   "decimals0": 18,
+   "decimals1": 18,
+   "dex": "pharaoh",
+   "fee_ppm": 800,
+   "label": "WETH.e/WAVAX pharaoh 0xff0855",
+   "mw_coin": "ETH",
+   "pair_class": "CROSS",
+   "pool": "0xff0855a9027f5f5c2bbacc4aac477afbeeefbea9",
+   "quote": "WAVAX",
+   "symbol0": "WETH.e",
+   "symbol1": "WAVAX",
+   "tick_spacing": 5,
+   "token0": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+   "token1": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+   "tvl_usd_at_seal": 4792745,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "BTC.b",
+   "decimals0": 8,
+   "decimals1": 18,
+   "dex": "pharaoh",
+   "fee_ppm": 1200,
+   "label": "BTC.b/WAVAX pharaoh 0x5ca009",
+   "mw_coin": "BTC",
+   "pair_class": "CROSS",
+   "pool": "0x5ca009013f6b898d134b6798b336a4592f3b4af2",
+   "quote": "WAVAX",
+   "symbol0": "BTC.b",
+   "symbol1": "WAVAX",
+   "tick_spacing": 5,
+   "token0": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+   "token1": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+   "tvl_usd_at_seal": 3569148,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "WAVAX",
+   "decimals0": 18,
+   "decimals1": 6,
+   "dex": "pharaoh",
+   "fee_ppm": 800,
+   "label": "WAVAX/USDC pharaoh 0xf01449",
+   "mw_coin": "AVAX",
+   "pair_class": "USD",
+   "pool": "0xf01449c0ba930b6e2caca3def3ccbd7a3e589534",
+   "quote": "USDC",
+   "symbol0": "WAVAX",
+   "symbol1": "USDC",
+   "tick_spacing": 10,
+   "token0": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+   "token1": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+   "tvl_usd_at_seal": 2475033,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "WAVAX",
+   "decimals0": 18,
+   "decimals1": 6,
+   "dex": "uniswap",
+   "fee_ppm": 500,
+   "label": "WAVAX/USDC uniswap 0xfae3f4",
+   "mw_coin": "AVAX",
+   "pair_class": "USD",
+   "pool": "0xfae3f424a0a47706811521e3ee268f00cfb5c45e",
+   "quote": "USDC",
+   "symbol0": "WAVAX",
+   "symbol1": "USDC",
+   "tick_spacing": 10,
+   "token0": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+   "token1": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+   "tvl_usd_at_seal": 1093585,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "BTC.b",
+   "decimals0": 8,
+   "decimals1": 6,
+   "dex": "uniswap",
+   "fee_ppm": 500,
+   "label": "BTC.b/USDC uniswap 0x2e587b",
+   "mw_coin": "BTC",
+   "pair_class": "USD",
+   "pool": "0x2e587b9e7aa638d7eb7db5fe7447513bc4d0d28b",
+   "quote": "USDC",
+   "symbol0": "BTC.b",
+   "symbol1": "USDC",
+   "tick_spacing": 10,
+   "token0": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+   "token1": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+   "tvl_usd_at_seal": 312450,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "WETH.e",
+   "decimals0": 18,
+   "decimals1": 18,
+   "dex": "uniswap",
+   "fee_ppm": 500,
+   "label": "WETH.e/WAVAX uniswap 0x7b602f",
+   "mw_coin": "ETH",
+   "pair_class": "CROSS",
+   "pool": "0x7b602f98d71715916e7c963f51bfebc754ade2d0",
+   "quote": "WAVAX",
+   "symbol0": "WETH.e",
+   "symbol1": "WAVAX",
+   "tick_spacing": 10,
+   "token0": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+   "token1": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+   "tvl_usd_at_seal": 223157,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "WETH.e",
+   "decimals0": 18,
+   "decimals1": 18,
+   "dex": "uniswap",
+   "fee_ppm": 3000,
+   "label": "WETH.e/WAVAX uniswap 0x724f6a",
+   "mw_coin": "ETH",
+   "pair_class": "CROSS",
+   "pool": "0x724f6a02ed2eb82d8d45034b280903cf663731ab",
+   "quote": "WAVAX",
+   "symbol0": "WETH.e",
+   "symbol1": "WAVAX",
+   "tick_spacing": 60,
+   "token0": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+   "token1": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+   "tvl_usd_at_seal": 116953,
+   "vol_is_token0": true
+  },
+  {
+   "asset": "HEFE",
+   "decimals0": 18,
+   "decimals1": 6,
+   "dex": "pharaoh",
+   "fee_ppm": 10000,
+   "label": "HEFE/USDC pharaoh 0x9b214d",
+   "mw_coin": null,
+   "pair_class": "USD",
+   "pool": "0x9b214d9c2872b5cd33f548aadb9c5396fa7e8546",
+   "quote": "USDC",
+   "symbol0": "HEFE",
+   "symbol1": "USDC",
+   "tick_spacing": 100,
+   "token0": "0x18e3605b13f10016901eac609b9e188cf7c18973",
+   "token1": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+   "tvl_usd_at_seal": 97609,
+   "vol_is_token0": true
+  }
+ ],
+ "rule": "Avalanche concentrated-liquidity pools, TVL >= $50,000 at seal, exactly one dollar-stable or AVAX leg, not two wrappings of one asset",
+ "version": "avax-v2-universe-1"
+}
