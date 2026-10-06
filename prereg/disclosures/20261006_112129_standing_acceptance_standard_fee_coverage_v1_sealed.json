@@ -1,0 +1,123 @@
+{
+  "addendum_hash": "sha256:75477d37c3af12b866ecfb30308eb470c54641437c5d651140f62785ebf4718f",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_disclosure_acceptance_standard",
+  "boards": {
+    "avax-v2": {
+      "freeze_utc": "14:44",
+      "universe_sha256": "9c0428f1005819f33f28218beb265122998aa10d778370929dd1a3ff1962cbba"
+    },
+    "base-v2": {
+      "freeze_utc": "13:44",
+      "universe_sha256": "ef0d73e8c1d83f3f24b595e8a05a72e6c512a12371cfa906e99d9c01691396d1"
+    },
+    "base-v4": {
+      "freeze_utc": "13:59",
+      "universe_sha256": "5be77245c95c7271f654531347e05635ece12701c7fe726b2aef6a18a3faf24a"
+    },
+    "bsc-v2": {
+      "freeze_utc": "13:14",
+      "universe_sha256": "e903c1a3cbaf576c5a52c1ffa3fb69d355b66ad4517515276c9cc7e9fb0c5446"
+    },
+    "hyperevm-v2": {
+      "freeze_utc": "14:14",
+      "universe_sha256": "ca337ceab4f0f0c94714c4177ca290449b71219dfb7ce241604f4bdb44c18127"
+    },
+    "monad-v2": {
+      "freeze_utc": "14:29",
+      "universe_sha256": "4d15cbb9b745194904fc1dc68e574e4defcdc4db1cd76e96480dcf505c906c13"
+    },
+    "op-v2": {
+      "freeze_utc": "15:28",
+      "universe_sha256": "745f853b0f939645188abb8daa950d5c34bf9747fd000d923163f6455e576597"
+    }
+  },
+  "fixed_rule": {
+    "boards": "bsc-v2, base-v2, base-v4, hyperevm-v2, monad-v2, avax-v2, op-v2 - each board's universe as sealed for that board (sha256 recorded per board at seal). Pools without a candle series of at least the board's minimum number of 14-day windows, or without 7 days of fee data at the board's minimum coverage, are skipped (logged), never estimated.",
+    "cadence": "One verdict every 28 days, judged on the CUMULATIVE matured record since the first freeze. Earlier verdicts are never revised.",
+    "confident_calls_rule": {
+      "applies": "from the first freeze day (built in; same constants as breach_probability_family_addendum_1)",
+      "ci": 0.99,
+      "high_min": 0.98,
+      "low_max": 0.02,
+      "min_abs_gap": 0.05,
+      "min_items": 30,
+      "min_matured_days": 42,
+      "seed_offset": 7
+    },
+    "evaluation_order": "INVALID first; then EVIDENCE AGAINST (calibration or confident calls); then CALIBRATED; else UNTESTED. The first that fires decides. The promotion test is reported with every verdict.",
+    "forecast_object": "p_lose = P(net < 0) and p_lose1 = P(net < -1%) for a position of liquidity 1 on the frozen band ticks, opened at the entry price, over [created_at_ts, created_at_ts + 14 d). Model FC-B1: over the pool's trailing 730 historical 14-day windows (exactly MW-B1's windows on the board's own daily H/L/C series, asset/quote, cross pools as hourly-built ratio series), net = (V_lp(end) + fee_rate_14d x time_in_range x V_0) / V_hold(end) - 1, with V in asset/quote space at entry price 1; time_in_range = mean over the 14 days of the share of each day's [L, H] inside the band (uniform-in-price within a day; H == L counts 1 if C is inside); fee_rate_14d = the pool's own trailing-7-day fee growth per unit of active liquidity (feeGrowthGlobal0/1 over sample intervals no longer than the board's MAX_GAP_FOR_FEES_S, valued in token1 at the entry price) x 14 d / the band's value per unit liquidity at entry. p = share of windows; also published: exp_net, net_p05, net_p50.",
+    "freeze": "Once per UTC day per board, at the board's freeze + 3-4 minutes (bsc-v2 13:14, base-v2 13:44, base-v4 13:59, hyperevm-v2 14:14, monad-v2 14:29, avax-v2 14:44, op-v2 15:28 UTC). A board whose own freeze for the day is more than 1800 s old is not frozen that day (the pair would no longer be same-moment). Entry = the pool's latest collector sample, no older than the board's MAX_SAMPLE_AGE_S at created_at. Band = the board's own rule: +/-w around the entry asset price, snapped outward to the pool's tick spacing. Widths 5%, 15%, 35%.",
+    "invalid_battery": [
+      "any frozen row whose window_start_ts differs from its created_at_ts",
+      "any row whose prediction_hash does not recompute",
+      "INCOMPLETE share above incomplete_max_share",
+      "froze on fewer than running_min_share of the period's calendar days"
+    ],
+    "known_limits": [
+      "The forecast uses CEX daily candles (hourly-built ratios for cross pools) for the price path; the outcome uses the pool's own on-chain price. Intraday extremes of ratio series are understated (as in the boards' standards).",
+      "Time in range within a day is approximated as uniform in price; fee income is assumed proportional to time in range at the trailing-7-day in-range rate.",
+      "Outcome fees are measured from 5-minute samples; fee_bound states the largest possible sampling error per row.",
+      "Fee tokens are valued at the end price; token0 fees accrued earlier at other prices are not revalued.",
+      "Covered boards share assets (ETH, BTC, native coins), so the pooled stream is not many independent tests."
+    ],
+    "outcome": "From the board's own collector samples with window_start_ts <= ts < window_end_ts (window_start_ts == created_at_ts): position of liquidity 1 on the frozen ticks opened at the frozen entry sqrt price; fees = sum over sample intervals no longer than the board's MAX_GAP_FOR_FEES_S of the feeGrowthGlobal0/1 deltas (mod 2^256) / 2^128, valued in token1 at the last window sample's price: an interval with both endpoints in range counts in full, with exactly one endpoint in range counts half, with neither endpoint in range counts zero. fee_bound = the half-counted amounts plus any interval whose endpoints lie on opposite sides of the band: the largest error 5-minute sampling can cause, published per row; |net| <= fee_bound marks the row 'ambiguous' (still graded at the midpoint). net = (V_lp(end) + fees) / V_hold(end) - 1 at the last window sample. y_lose = net < 0; y_lose1 = net < -0.01. INCOMPLETE if samples < the board's COVERAGE_FLOOR x (14 d / the board's SAMPLE_PERIOD_S) or the last sample is more than 600 s before window_end_ts. VOID if the pool's liquidity at any window sample is below 1% of its liquidity at the entry sample (a drained pool's price is not a market); VOID rows are published, never graded.",
+    "pre_seal_checks": [
+      "FC-B1's 14-day windows reproduce MW-B1's (max up, max down, end move) exactly (test_windows_match_mw_b1_pairs); a drift refuses the freeze.",
+      "FC-B1's in-range fee rate for a +/-5% band agrees with the board's own fee_14d_est to within rounding on the 2026-10-05 freezes (e.g. SNX/ETH op-v2: 0.0960 vs 0.0959).",
+      "Outcome sampling error measured on 642 real 7- and 10-day windows (bsc, op, base, avax, hyperevm boards, 2026-10-05): median fee_bound 0; rows that fee_bound could flip: 2.3% at +/-5%, 0.5% at +/-15%, 0% at +/-35%."
+    ],
+    "promotion_test": {
+      "board_call": "the board's same-day row for the same pool and width: champion_call = 1 (LP beats holding) if its fee_14d_est / -exp_il (fir) > 1, else 0; rows where the board shows no fir are excluded",
+      "ci": 0.95,
+      "fc_call": "LP beats holding if p_lose < 0.5",
+      "min_days": 84,
+      "question": "Is FC-B1's LP-vs-HOLD call right more often than the board's own (ungraded) fees-vs-IL figure, on the same rows?",
+      "rule": "PROMOTION-ELIGIBLE only if this verdict is CALIBRATED and the statistic's 95% moving-block CI lies above 0 over at least 84 matured days. Eligibility allows (does not require) the board to display FC-B1's p_lose in place of its ungraded fees-vs-IL figure, announced by a dated disclosure. It never changes a board's breach forecast, standard or verdicts.",
+      "seed_offset": 11,
+      "statistic": "mean over paired rows of [fc_call correct] - [board_call correct]; correct = the call matches (y_lose == 0)"
+    },
+    "protocol_constants": {
+      "against_ci": 0.99,
+      "against_min_abs_gap": 0.1,
+      "against_min_days": 42,
+      "block_days": 14,
+      "calibrated_ci": 0.95,
+      "calibrated_min_days": 84,
+      "calibration_tolerance": 0.1,
+      "gap_definition": "gap(group) = mean over informative resolved items of (y - p); groups 'lose' (p_lose vs y_lose) and 'lose1' (p_lose1 vs y_lose1)",
+      "incomplete_max_share": 0.1,
+      "informative_item": "an item with 0.02 <= p <= 0.98 (near-certain items are tested by the confident-calls rule instead)",
+      "min_informative_items": 30,
+      "resamples": 2000,
+      "running_min_share": 0.7,
+      "seed": 42
+    },
+    "serial_dependence": "Daily 14-day windows overlap and pools co-move, so rows are NOT independent. All inference resamples whole freeze DAYS in moving blocks of 14 consecutive days (2000 resamples, seed 42).",
+    "streams": [
+      "FEE_COVERAGE (all covered boards pooled; per-board results reported, not separately judged)"
+    ],
+    "tiers": "AVOID if p_lose >= 0.60; OK if p_lose < 0.30; else WATCH. Display only; never a grading input.",
+    "verdicts": [
+      "INVALID",
+      "UNTESTED",
+      "EVIDENCE AGAINST",
+      "CALIBRATED"
+    ]
+  },
+  "issued_utc": "2026-10-06T11:21:29Z",
+  "one_line_commitment": "Every day, a few minutes after each covered board freezes, for every pool and width that board froze, the probability that a fresh concentrated position on that band loses to simply holding over the next 14 days (fees included) is frozen and published before its window; the cumulative record is judged mechanically on calibration, and a sealed paired test decides whether it may ever replace the board's ungraded fees-vs-IL figure. It never replaces or alters any board's own forecast.",
+  "relationship_to_the_boards": "A parallel CHALLENGER answering a different question from the boards' breach probability. The boards' forecasts, standards and verdicts are untouched. Promotion (if ever earned) changes only what the board DISPLAYS as its LP-vs-HOLD figure; the breach forecast stays the board's headline either way.",
+  "scope": "fee-coverage",
+  "stamp": "20261006_112129_standing_acceptance_standard_fee_coverage_v1_sealed",
+  "standard_id": "standing_acceptance_standard_fee_coverage_v1",
+  "status": "STANDING STANDARD (Fee Coverage v1 / LP-vs-HOLD challenger) - COMMITTED. Governs every fc-v1.0.0 forecast. Sealed before the first freeze.",
+  "title": "GradedLP STANDING Acceptance Standard - Fee Coverage v1 (LP-vs-HOLD challenger, FC-B1)"
+}
