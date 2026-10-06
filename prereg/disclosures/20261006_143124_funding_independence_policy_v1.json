@@ -1,0 +1,39 @@
+{
+  "artifact": "prereg_disclosure_policy",
+  "chain": "all",
+  "scope": "funding and independence (all boards and pages)",
+  "title": "GradedLP Funding and Independence Policy v1",
+  "outcomes_known_at_issue": "Not applicable: this policy governs outside funding and changes no forecast, standard or verdict.",
+  "disclosure": {
+    "standard_id": "funding_independence_policy_v1",
+    "operator": "Nathen Wright",
+    "funding_at_issue": "None. As of issued_utc GradedLP has accepted no grants, sponsorships, donations, advertising, affiliate income or investment. It is operated and paid for by the operator.",
+    "one_line_commitment": "GradedLP may accept outside funding, but no funder can buy, shape, preview or delay any forecast, tier, standard, verdict or coverage decision, and every source of funding is disclosed.",
+    "rules": {
+      "1_no_payment_for_outcomes": "No funding agreement may make any payment, milestone, renewal or continuation depend on the value of a forecast, a tier, a verdict, a calibration result, or the inclusion, exclusion or ordering of any specific pool, asset, protocol or chain. Funded milestones may cover only the delivery and adoption of tools, data feeds, documentation, reports or infrastructure (for example: a release shipped, a feed kept available, third-party integrations, usage).",
+      "2_no_influence_over_method": "Funders have no say over pool universes, models, sealed standards, tier thresholds, grading, or what is published. Funded work may extend coverage only through an objective inclusion rule (for example, a liquidity threshold) that is sealed and published before it is used; funders may not add, remove or choose specific pools. Any change to models or standards follows the existing process: a new model version and a new sealed standard, applied going forward only, never retroactively.",
+      "3_no_early_access": "Funders receive forecasts, outcomes and verdicts no earlier and in no greater detail than the public.",
+      "4_code_access": "Where a funder requires code access for technical review, that access is read-only, time-limited and disclosed. It confers no right to change code, models or methods.",
+      "5_disclosure": "Every accepted source of funding is listed on gradedlp.com/funding.html within 7 days of acceptance, with: the funder; the form (grant, sponsorship, donation, advertising, affiliate); the amount, or the terms where the amount is variable; the asset or currency of payment; the date; the scope of the funded work; any restrictions; and whether the funder, or an asset it issues or holds, is covered by any GradedLP board. Each acceptance is also recorded in a dated disclosure in the public pre-registration repository.",
+      "6_right_to_disclose": "GradedLP does not accept funding on terms that prevent it from disclosing the existence of the funding, the funder, the amount and the scope. Where an agreement requires a funder's approval for public announcements, written permission for this disclosure is obtained before the funding is accepted.",
+      "7_advertising_and_affiliates": "Advertising and affiliate links, if any, are labelled as such and never placed inside a forecast, tier, verdict or outcome. Excluded categories: gambling; token sales and presales; leveraged or derivatives trading; liquidity-management, vault or DEX products; and any protocol, pool or token covered by a GradedLP board.",
+      "8_ending_an_arrangement": "If a funder seeks to influence any matter in rules 1 to 3, GradedLP ends the arrangement and discloses that it has done so.",
+      "9_changes": "This policy changes only by a new, dated, sealed version that applies going forward. Earlier versions remain on the public record.",
+      "10_change_of_ownership": "Nothing in this policy restricts a sale of GradedLP or a change in its ownership or control. Any such change is disclosed on gradedlp.com/funding.html and in a dated disclosure. Records already published remain verifiable against their hashes and XRP Ledger anchors."
+    },
+    "not_covered": "This policy governs outside funding. It does not change any board's forecasts, standards or verdicts, all of which remain governed by their own sealed standards.",
+    "contact": "commits@gradedlp.com"
+  },
+  "stamp": "20261006_143124_funding_independence_policy_v1",
+  "issued_utc": "2026-10-06T14:31:24Z",
+  "addendum_hash_recipe": {
+    "call": "prereg_hash.canonical_row_hash(artifact, exclude=('addendum_hash',))",
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_hash": "sha256:901bd8f304c64f358e1955e70639a2dd42d502a45075c2fb96fdd4d592a85103"
+}
