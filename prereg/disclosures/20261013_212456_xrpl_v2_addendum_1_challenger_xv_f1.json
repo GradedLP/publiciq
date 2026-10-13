@@ -1,0 +1,46 @@
+{
+  "addendum_hash": "sha256:8ce2c208d646a99c5a513a079a471e0f6d6d5ce9959b0b2cea247ecf7ab808f7",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+    "note": "Recompute from this committed file alone; depends on every field except addendum_hash.",
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "amendment_rule": "Sealed before the first XV-F1 freeze (16:00 UTC on the effective day). Any further change is another dated addendum.",
+  "artifact": "prereg_addendum_standing_standard",
+  "challenger_xv_f1": {
+    "abstains": "XV-F1 writes no row for a pool (the champion row is kept) if the daily point for today or 30 days ago is missing, the pool has fewer than 60 own 14-day starts, or fewer than 50 daily returns in the last 60 days.",
+    "model_id": "XV-F1",
+    "model_version": "xrpl-v2-f1.0.0",
+    "never_the_headline": "XV-F1 never sets the tier or the headline number, and is not scored by family addendum 3 (that scores the headline forecast). It is not shown on the board; it is in the daily manifest, the outcome files and every verdict's promotion_tests.",
+    "storage_and_publication": "Its own table and record_id, joined to the champion row by source_record_id; champion rows and their prediction_hash are unchanged. Published in the SAME pre-window daily manifest as the champion, under 'challengers', with its own batch_root and per-row prediction_hash. Graded on exactly the champion row's outcome (same pool, same window).",
+    "what": "The champion's own payoff, (1 + fee14) x (1 + IL(r)) - 1, with two inputs changed. fee14 is the pool's fee return over the last 30 days (from the on-chain 00:00 UTC daily points), scaled to 14 days as (1 + fee30)^(14/30) - 1, instead of 2 x the last 7 days. The price moves r are the pool's own historical 14-day moves (the champion's trailing <= 730 starts), standardized by their own log standard deviation and rescaled to the last 60 days' daily log-return volatility x sqrt(14), instead of being used as they were. p_lose = share of outcomes below 0; p_lose1 = share below -1%."
+  },
+  "cites_standard": "prereg/disclosures/20260923_151756_standing_acceptance_standard_xrpl_v2_sealed.json",
+  "cites_standard_hash": "sha256:6b47740f593f3b408346a3e11b49ded9fd3659c3bb3b6e50a42c242a67869a03",
+  "effective_from_freeze_day": "2026-10-16",
+  "issued_utc": "2026-10-13T21:24:56Z",
+  "promotion_rule": {
+    "ci": 0.95,
+    "min_days": 120,
+    "min_skill": 0.05,
+    "seed_offset": 22,
+    "text": "XV-F1 replaces XV-B1 as the headline only if, over >= min_days matured freeze days since effective_from_freeze_day, its paired Brier skill vs XV-B1 on 'lose' (1 - Brier(XV-F1) / Brier(XV-B1) over the same rows) is >= min_skill with the moving-block 95% CI (whole freeze days, the standard's block_days and resamples, seed = the standard's seed + seed_offset) entirely above 0, AND its Brier on 'lose1' is not worse (point estimate). This is the XV-H1 rule of the sealed standard, unchanged. If XV-H1 and XV-F1 both qualify at the same verdict, the one with the larger paired skill on 'lose' is promoted. A promotion is a new sealed model version, effective from a later freeze, never back-applied; every result of this test is published in each verdict, pass or not."
+  },
+  "research_disclosure": {
+    "caveats": "Historical outcomes use 00:00 UTC daily points, not the 16:00 collector samples the live board grades on. The holdout's last week (anchors 2026-09-23..29) overlaps the first live XRPL v2 windows. A backtest is not a forecast record: XV-F1 counts only from its first pre-registered freeze, and on history it sits near, not clearly above, the 0.05 skill bar of family addendum 3.",
+    "dev": "5,775 items. Skill vs climatology: champion -0.041, XV-H1 +0.062, 30-day fees +0.051, 60-day vol +0.019, both (picked, = XV-F1) +0.071, both with 30-day vol +0.031.",
+    "holdout": "5,712 items, 272 days. Skill vs climatology: champion -0.049 (95% CI -0.118..+0.002), XV-H1 +0.008, XV-F1 +0.048 (95% CI +0.001..+0.086). Brier on 'lose': champion 0.2269, XV-F1 0.2032 (paired skill about +10%); on 'lose1': 0.0683 vs 0.0646.",
+    "protocol": "Walk-forward on the on-chain daily history (21 pools, 00:00 UTC points from the full-history ledger); inputs from days <= the anchor only; outcome = exact LP-vs-HOLD net over the next 14 days. Four variants of the champion (30-day fees; 60-day volatility rescaling; both; both with 30-day volatility) were compared on DEV anchors 2025-04-01..2025-12-31 only; the best by pooled Brier skill vs per-stratum climatology was picked; HOLDOUT anchors 2026-01-01..2026-09-29 were scored once, for the picked variant, the champion and XV-H1.",
+    "why_now": "On the first graded XRPL v2 rows the champion was right on average but no better than one number for every pool. Instead of loosening any test, this adds a better-founded challenger that must earn promotion under the rule already sealed for XV-H1."
+  },
+  "scope": "xrpl-v2",
+  "stamp": "20261013_212456_xrpl_v2_addendum_1_challenger_xv_f1",
+  "standard_id": "standing_acceptance_standard_xrpl_v2",
+  "title": "XRPL v2 addendum 1: a second pre-registered challenger, XV-F1 (30-day fees, 60-day volatility)",
+  "what_does_not_change": "The champion (XV-B1), its tiers, every published row, the standard's verdict rule, the XV-H1 challenger and its promotion rule, family addenda 1 to 3. Nothing frozen before effective_from_freeze_day is affected."
+}
