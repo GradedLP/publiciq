@@ -1,0 +1,50 @@
+{
+ "addendum_hash": "sha256:05065e2d4090bd7eaa26c8d17456765d1e50ae724683eff09a3421fab19df518",
+ "addendum_hash_recipe": {
+  "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+  "digest": "sha256",
+  "excluded_fields": [
+   "addendum_hash"
+  ],
+  "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+  "tooling": "prereg_common/prereg_hash.py"
+ },
+ "amendment_rule": "Sealed before the first MARKET freeze it governs. Any further change is another dated addendum.",
+ "archive": {
+  "addendum_hash": "sha256:d7c30de52bad37dd950bd977d3fbed2afa04987f9ad23fc1967e0c17993f6fc5",
+  "artifact": "prereg/market-weather/20261013_214446_market-weather_mw_h1_archive_not_preregistered.json",
+  "batch_root": "69f4b25bf866b522c0ce9e258101e4a9e87c4fc0603fda00d7120494238e3dcf",
+  "n": 646
+ },
+ "artifact": "prereg_addendum_standing_standard",
+ "cites": {
+  "standing_acceptance_standard_mw_v1": {
+   "addendum_hash": "sha256:15f28985adf632bc8ca3232eb31ecc61c8255ef86aa1ab7b21310eb2326fdb7b",
+   "artifact": "prereg/disclosures/20260921_135454_standing_acceptance_standard_mw_v1_sealed.json"
+  },
+  "standing_acceptance_standard_mw_v1_1": {
+   "addendum_hash": "sha256:4ebf3cda4bb8fd4f01f90638fc847f5be74e91baddcc63e4c3e0cbc799311e3e",
+   "artifact": "prereg/disclosures/20260923_205507_standing_acceptance_standard_mw_v1_1_sealed.json"
+  }
+ },
+ "effective_from_anchor_day": "2026-10-13",
+ "issued_utc": "2026-10-13T21:44:46Z",
+ "promotion_rule": {
+  "ci": 0.95,
+  "min_days": 120,
+  "min_skill": 0.05,
+  "seed_offset": 31,
+  "text": "MW-H1 replaces MW-B1 as the headline only if, over >= min_days matured freeze days counted from effective_from_anchor_day, its paired Brier skill vs MW-B1 at the +/-15% width (1 - Brier(MW-H1) / Brier(MW-B1) over the same rows) is >= min_skill with the moving-block 95% CI (whole freeze days, the standard's block_days and resamples, seed = the standard's seed + seed_offset) entirely above 0, AND it is not worse (point estimate) at +/-5% or +/-35%. A promotion is a new sealed model version, never back-applied."
+ },
+ "scope": "market-weather",
+ "stamp": "20261013_214446_mw_v1_addendum_mw_h1_publication",
+ "standard_id": "standing_acceptance_standard_mw_v1",
+ "title": "Market Weather addendum: the MW-H1 challenger is published before its windows open, and only those rows can earn its promotion",
+ "what_changes": {
+  "archive": "Every MW-H1 row with an earlier anchor day is published once, at seal time, in the archive file named under 'archive' below, marked NOT pre-registered. Those rows are never counted in any test or promotion.",
+  "promotion_test": "The mw_v1_1 promotion rule for MW-H1 is unchanged in every threshold, but it counts ONLY MW-H1 rows with anchor_day >= effective_from_anchor_day. Its >= 120 matured freeze days are counted from that day. Every verdict reports the test, pass or not.",
+  "publication": "From effective_from_anchor_day (the first MARKET freeze after this addendum is sealed, filled in at seal), every MW-H1 row is published in that day's MARKET pre-registration manifest under challengers.MW-H1, with its own batch_root and per-row prediction_hash, before its window opens. The public verifier (verifier/verify_manifest.py) checks those rows like the champion's."
+ },
+ "what_does_not_change": "The champion MW-B1, its published rows, the mw_v1 verdict rule, the MW-IV1 challenger (its values have always been published inside the champion rows as c_p_*), the grid, and family addenda 1 to 3.",
+ "what_was_wrong": "MW-H1, the second challenger added by mw_v1_1 (sealed 2026-09-23), has been frozen daily for every coin since anchor day 2026-09-24, each row written before its window opened and hashed - but kept only in GradedLP's private store. No MW-H1 row was ever placed in a public pre-window manifest. So nothing public proves when any MW-H1 forecast was made, and the mw_v1_1 promotion test could have promoted a model whose record is not publicly pre-registered. Found in a GradedLP internal audit on 2026-10-13; disclosed here."
+}
