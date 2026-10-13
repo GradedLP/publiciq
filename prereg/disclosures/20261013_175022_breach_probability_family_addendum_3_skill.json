@@ -1,0 +1,123 @@
+{
+  "addendum_hash": "sha256:9c48db78d8e54cc8618b491784b3770675846f1d5541d9d33e58f64cd57a7d7c",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+    "note": "Recompute from this committed file alone; depends on every field except addendum_hash.",
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "addendum_number": "family-3",
+  "amendment_rule": "Sealed before the effective day's first freeze; governs only forecasts frozen on or after it. Any further change is another dated addendum.",
+  "applies_to": [
+    {
+      "addendum_hash": "sha256:15f28985adf632bc8ca3232eb31ecc61c8255ef86aa1ab7b21310eb2326fdb7b",
+      "artifact": "prereg/disclosures/20260921_135454_standing_acceptance_standard_mw_v1_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_mw_v1"
+    },
+    {
+      "addendum_hash": "sha256:83377977f089c5da18bec663b14bf773de6d030a7035cfd521650cdd151d37a6",
+      "artifact": "prereg/disclosures/20260922_133230_standing_acceptance_standard_op_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_op_v2"
+    },
+    {
+      "addendum_hash": "sha256:6b47740f593f3b408346a3e11b49ded9fd3659c3bb3b6e50a42c242a67869a03",
+      "artifact": "prereg/disclosures/20260923_151756_standing_acceptance_standard_xrpl_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_xrpl_v2"
+    },
+    {
+      "addendum_hash": "sha256:f734678a452d9e8401ddd2b7295219f97e3d6b737546a0e8db2170c72af8e7f2",
+      "artifact": "prereg/disclosures/20260924_074559_standing_acceptance_standard_poolwatch_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_poolwatch_v2"
+    },
+    {
+      "addendum_hash": "sha256:f9961a9a4b6bdb93e77e7ce7c696bdc209ac0f7bc76dcaf2fb338e5119f7c345",
+      "artifact": "prereg/disclosures/20260925_085128_standing_acceptance_standard_sui_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_sui_v2"
+    },
+    {
+      "addendum_hash": "sha256:5d27195f6079773f16b0c959d000eb0b55198905b32f1d506114023a0de15cfb",
+      "artifact": "prereg/disclosures/20260925_085128_standing_acceptance_standard_avax_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_avax_v2"
+    },
+    {
+      "addendum_hash": "sha256:d2824bd6d672d6ce0ea7e0287394d98f259e288d57a03d5bf6c2c5d41f6e2b93",
+      "artifact": "prereg/disclosures/20260928_172146_standing_acceptance_standard_bsc_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_bsc_v2"
+    },
+    {
+      "addendum_hash": "sha256:d818d2ee316e670a161dc618c8e39aa54ecc92206ad31f398d542a1a0e591da3",
+      "artifact": "prereg/disclosures/20260928_172146_standing_acceptance_standard_base_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_base_v2"
+    },
+    {
+      "addendum_hash": "sha256:075fa7cfadf859332e430afd9291f8328519f8bfc64168c7e25167654ea21bd3",
+      "artifact": "prereg/disclosures/20260929_112611_standing_acceptance_standard_hyperevm_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_hyperevm_v2"
+    },
+    {
+      "addendum_hash": "sha256:11398ca1093b4239acda30035109508dcd2f62a6c02b3669a571a52d7350f8bc",
+      "artifact": "prereg/disclosures/20260929_170601_standing_acceptance_standard_monad_v2_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_monad_v2"
+    },
+    {
+      "addendum_hash": "sha256:f53c7f1dd6d7f5fe3e7e8b20e57fd68570cc0922f96d244ffd22b131abc72b35",
+      "artifact": "prereg/disclosures/20260930_161914_standing_acceptance_standard_base_v4_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_base_v4"
+    },
+    {
+      "addendum_hash": "sha256:75477d37c3af12b866ecfb30308eb470c54641437c5d651140f62785ebf4718f",
+      "artifact": "prereg/disclosures/20261006_112129_standing_acceptance_standard_fee_coverage_v1_sealed.json",
+      "effective_from_freeze_day": "2026-10-16",
+      "standard_id": "standing_acceptance_standard_fee_coverage_v1"
+    }
+  ],
+  "artifact": "prereg_addendum_standing_standard",
+  "disclosure_of_timing": "Written after the first outcomes existed. On the first 126 graded XRPL v2 rows (6 freeze days, 2026-09-23..28), the forecast was right on average (37.0% forecast vs 36.5% observed) while its Brier skill against hindsight climatology was -0.16. That early, overlapping sample decides nothing; it showed the gap. Because this rule only adds a test, scores only forecasts frozen after it is sealed, and cannot make any forecast look better, the timing cannot flatter any board.",
+  "effective_from_freeze_day": "2026-10-16",
+  "issued_utc": "2026-10-13T17:50:22Z",
+  "not_covered": "standing_acceptance_standard_mw_grid_v1 (a calibration probe of the same Market Weather forecasts whose MARKET stream is covered here; its groups are forecast-probability bins, for which a per-group climatology is not a meaningful baseline). SOL v2 (BBM tier family): its sealed standard already has EVIDENCE OF SKILL. The retired MC-forecast family (SOL v1 cohorts) keeps its sealed rule.",
+  "scope": "breach-probability-family",
+  "skill_rule": {
+    "baseline": "Per stratum, sample climatology: the stratum's own outcome rate over the same items, used as a constant forecast for every item in that stratum. This is the best constant forecast in hindsight, so it is harder to beat than any constant fixed in advance; a stratum where the outcome never happened has a perfect baseline and still counts the model's errors.",
+    "inference": "Moving-block bootstrap over whole freeze days, blocks of the standard's block_days, the standard's resamples, seed = the standard's seed + seed_offset (99% interval: + seed_offset + 1). Climatology is re-estimated inside every resample.",
+    "items": "Every RESOLVED item of the standard's own streams frozen on or after effective_from_freeze_day and inside the verdict's period. Near-certain forecasts are included: skill is scored on every forecast. VOID and INCOMPLETE rows are excluded exactly as the standard already excludes them.",
+    "min_items": 30,
+    "results": {
+      "NO SKILL SHOWN": ">= shown_min_days matured freeze days since the effective day and neither of the above.",
+      "SKILL SHOWN": ">= shown_min_days matured freeze days since the effective day, skill >= shown_min_skill and the shown_ci interval lies entirely above 0.",
+      "SKILL UNTESTED": "Fewer than shown_min_days matured freeze days since the effective day (and not WORSE THAN CLIMATOLOGY), fewer than min_items items, or no stratum saw both outcomes.",
+      "WORSE THAN CLIMATOLOGY": ">= worse_min_days matured freeze days since the effective day and the worse_ci interval of skill lies entirely below 0. Checked first."
+    },
+    "seed_offset": 11,
+    "shown_ci": 0.95,
+    "shown_min_days": 84,
+    "shown_min_skill": 0.05,
+    "statistic": "skill = 1 - sum over strata of sum (p - y)^2 / sum over strata of n_g * ybar_g * (1 - ybar_g). Pooled over strata (summed, not averaged). 0 = no better than climatology; 1 = perfect.",
+    "strata": "The standard's own groups: the band widths (and Market Weather's held positions), or the XRPL v2 / Fee Coverage events lose and lose1. Market Weather is judged per stream (MARKET, POOLS).",
+    "worse_ci": 0.99,
+    "worse_min_days": 42
+  },
+  "stamp": "20261013_175022_breach_probability_family_addendum_3_skill",
+  "title": "Breach-probability family addendum 3: skill is tested (a forecast that is right on average but tells pools apart no better than one number is not called useful)",
+  "what_changes": {
+    "display": "Wherever GradedLP shows a governed board's verdict, the SKILL result is shown next to it. CALIBRATED without SKILL SHOWN is described as right on average, not as useful for choosing between pools.",
+    "new_result": "Every verdict of a governed standard carries a 'skill' block per stream: the result (one of the four above), the deciding condition, pooled skill with its 95% and 99% intervals, and per-stratum n, outcome rate, Brier, climatology Brier and skill. Reported whether or not a result can fire yet."
+  },
+  "what_does_not_change": "Each standard's own verdict (INVALID / EVIDENCE AGAINST / CALIBRATED / UNTESTED), its conditions, thresholds, cadence and evaluation order; every forecast object, model, outcome rule, addendum 1 (confident calls) and addendum 2 (drained pools). The SKILL result never blocks, upgrades or downgrades a verdict. Items frozen before the effective day are never scored by this rule - it is not applied to any forecast or outcome that existed when it was sealed.",
+  "why": "Every governed standard tests calibration only: whether outcomes happen about as often as forecast. Brier skill against climatology is reported but never gated, so a forecaster that gives every pool the same number can earn CALIBRATED while telling a user nothing about which pool is riskier. The question a user actually has - does this forecast tell pools apart better than a single number - had no sealed answer."
+}
