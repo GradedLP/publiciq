@@ -5,9 +5,12 @@ Three scripts, all standalone (`pip install jcs`):
 - `verify_addendum_hash.py` — the envelope hash of any artifact (below).
 - `verify_manifest.py` — a pre-registration manifest end to end: every row's `prediction_hash`, the
   `batch_root`, the envelope, and that no window opened before its row was created — for the champion
-  rows and for any pre-registered challenger rows (`challengers.<model_id>`, e.g. XRPL v2's XV-F1).
-  Legacy pre-v2 manifests (solana, sui, xrpl, xrpl-mc, poolwatch) publish a redacted subset of each row
-  and no envelope hash: for them only the `batch_root` can be checked, and the result is `LEGACY`.
+  rows and for any pre-registered challenger rows (`challengers.<model_id>`, e.g. XRPL v2's XV-F1 or
+  Market Weather's MW-H1); a challenger row's timing is checked against its champion row's window.
+  Legacy pre-v2 manifests (only the solana, sui, xrpl, xrpl-mc and poolwatch chains) publish a redacted
+  subset of each row and no envelope hash: for them only the `batch_root` can be checked, and the result
+  is `LEGACY`. Any other manifest without an envelope or `batch_root` fails. Rows with no window field
+  (e.g. Market Weather pool positions) are reported as timing-unchecked rather than silently passed.
 - `verify_outcomes.py` — published outcomes against the rows that were pre-registered, breach-evidence
   consistency, and (with `--rpc <archive node>`) the pool's tick on chain at the reported block.
 
