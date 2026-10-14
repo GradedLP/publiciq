@@ -1,6 +1,7 @@
 # Public Artifact Verifier
 
-Three scripts, all standalone (`pip install jcs`):
+MIT-licensed (see `LICENSE` in this folder). Four scripts, all standalone. The first three need `pip install jcs`;
+`verify_anchor.py` needs only the Python standard library and `git`.
 
 - `verify_addendum_hash.py` — the envelope hash of any artifact (below).
 - `verify_manifest.py` — a pre-registration manifest end to end: every row's `prediction_hash`, the
@@ -13,6 +14,10 @@ Three scripts, all standalone (`pip install jcs`):
   (e.g. Market Weather pool positions) are reported as timing-unchecked rather than silently passed.
 - `verify_outcomes.py` — published outcomes against the rows that were pre-registered, breach-evidence
   consistency, and (with `--rpc <archive node>`) the pool's tick on chain at the reported block.
+- `verify_anchor.py` — the XRP Ledger anchors of this repository. It reads every anchor transaction from public XRPL
+  nodes, recomputes each anchored commit's `tree_sha256` from your clone, and with `--file <path>` reports the earliest
+  ledger close time that proves a file's exact bytes. It is GradedLP's configuration of the open-source verifier in
+  [xrpl-git-anchor](https://github.com/GradedLP/xrpl-git-anchor). See `../ANCHORS.md`.
 
 This directory contains a **standalone public verifier** for pre-registration
 artifacts published in `prereg/`. It lets an independent third party — with

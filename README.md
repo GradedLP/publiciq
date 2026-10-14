@@ -26,6 +26,7 @@ git clone https://github.com/GradedLP/publiciq.git && cd publiciq
 python3 verifier/verify_addendum_hash.py prereg/disclosures/<any sealed standard>.json
 python3 verifier/verify_manifest.py prereg/bsc-v2/*_preregistered_at_prediction.json
 python3 verifier/verify_outcomes.py prereg/bsc-v2/outcomes/*.json --rpc <archive RPC URL>
+python3 verifier/verify_anchor.py --repo .        # XRP Ledger anchors of this repo (no pip needed); see ANCHORS.md
 ```
 
 `verify_manifest.py` recomputes every row's `prediction_hash`, the `batch_root` and the envelope, and checks
@@ -110,7 +111,7 @@ from a fresh clone using only RFC-8785 JSON Canonicalization (JCS) + SHA-256 —
 other dependency. The verifier is a self-contained script in `verifier/`:
 
 ```bash
-git clone https://github.com/sinfun46290-bit/publiciq.git
+git clone https://github.com/GradedLP/publiciq.git
 cd publiciq
 pip install jcs
 python3 verifier/verify_addendum_hash.py prereg/solana/20260817_140500_sol_verdict_20260813.json

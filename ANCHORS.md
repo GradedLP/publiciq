@@ -24,9 +24,17 @@ existence rests on GitHub's push history, not on the ledger.
 
 ## Verify it yourself (Python 3 standard library + git; trusts no GradedLP server)
 
-    git clone https://github.com/GradedLP/publiciq.git
-    curl -O https://gradedlp.com/anchors/verify_anchor.py
-    python3 verify_anchor.py --repo publiciq
-    python3 verify_anchor.py --repo publiciq --file prereg/<some file>.json   # earliest proof for that file
+    git clone https://github.com/GradedLP/publiciq.git && cd publiciq
+    python3 verifier/verify_anchor.py --repo .
+    python3 verifier/verify_anchor.py --repo . --file prereg/<some file>.json   # earliest proof for that file
+
+`verifier/verify_anchor.py` (MIT) is GradedLP's configuration of the verifier from
+[xrpl-git-anchor](https://github.com/GradedLP/xrpl-git-anchor), the open-source tool that sends these anchors.
+It reads the account from the toml above and uses memo type `gradedlp/anchor/v1`. The generic verifier checks the
+same anchors with `--account rPUig22h1mAiCsiRT2C9TGpqotHGCS8Y3K --memo-type gradedlp/anchor/v1`. The same script is
+also served at <https://gradedlp.com/anchors/verify_anchor.py>.
+
+The earliest anchors (until the repository moved to the GradedLP organisation) name its earlier GitHub URL, which
+redirects here. `--json` shows the repo URL of every anchor; with the generic verifier's `--expect-repo`, list both.
 
 Proof index (convenience copy; the ledger is the source of truth): <https://gradedlp.com/anchors/index.json>
