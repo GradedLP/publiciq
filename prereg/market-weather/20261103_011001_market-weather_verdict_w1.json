@@ -1,0 +1,562 @@
+{
+  "addendum_hash": "sha256:4ea502c0d693975ad0c6ea9e4c67fc57e7cf1dbf9814a7bc29777f2597dada27",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_market_weather_verdict",
+  "chain": "market-weather",
+  "cites_family_addendum": {
+    "addendum_hash": "sha256:3680f6513dbdd712ea738f49a6cdc762ae2e77087ba196d54ae375c85449a740",
+    "artifact": "prereg/disclosures/20260928_162719_breach_probability_family_addendum_1_confident_calls.json"
+  },
+  "cites_family_addendum_3": {
+    "addendum_hash": "sha256:9c48db78d8e54cc8618b491784b3770675846f1d5541d9d33e58f64cd57a7d7c",
+    "artifact": "prereg/disclosures/20261013_175022_breach_probability_family_addendum_3_skill.json",
+    "effective_from_freeze_day": "2026-10-16"
+  },
+  "cites_mw_h1_publication": {
+    "addendum_hash": "sha256:05065e2d4090bd7eaa26c8d17456765d1e50ae724683eff09a3421fab19df518",
+    "artifact": "prereg/disclosures/20261013_214446_mw_v1_addendum_mw_h1_publication.json",
+    "effective_from_anchor_day": "2026-10-13"
+  },
+  "cites_standard": "prereg/disclosures/20260921_135454_standing_acceptance_standard_mw_v1_sealed.json",
+  "cites_standard_hash": "sha256:15f28985adf632bc8ca3232eb31ecc61c8255ef86aa1ab7b21310eb2326fdb7b",
+  "issued_utc": "2026-11-03T01:10:01Z",
+  "k": 1,
+  "ledger_hash": "c33806a50ece054829be81c10e050eafc8a60f1e4081eb74000b404a7f24f5e2",
+  "maturity_ts": 1793577600,
+  "maturity_utc": "2026-11-02T00:00:00Z",
+  "period": [
+    "2026-09-21",
+    "2026-10-18"
+  ],
+  "streams": {
+    "MARKET": {
+      "confident_calls": {
+        "effective_from_freeze_day": "2026-09-29",
+        "groups": {
+          "w05": {
+            "confident_breach": {
+              "ci": [
+                0.0031,
+                0.0031
+              ],
+              "expected": 578.195,
+              "gap": 0.0031,
+              "n": 580,
+              "outcomes": 580
+            }
+          },
+          "w35": {
+            "confident_safe": {
+              "expected": 0.082,
+              "gap": -0.0041,
+              "n": 20,
+              "outcomes": 0
+            }
+          }
+        },
+        "n_matured_days_since": 20
+      },
+      "deciding_condition": "27 matured days < 84; a width's 95% CI is not inside the tolerance",
+      "groups": {
+        "w05": {
+          "brier": 0.03561,
+          "brier_skill_vs_climatology": 0.2518,
+          "challenger_h1": {
+            "brier_challenger": 0.02079,
+            "brier_champion": 0.03193,
+            "n": 850,
+            "skill": 0.349
+          },
+          "challenger_iv1": {
+            "brier_challenger": 0.07647,
+            "brier_champion": 0.14985,
+            "n": 189,
+            "skill": 0.4897
+          },
+          "ci95": [
+            -0.2598,
+            -0.2065
+          ],
+          "ci99": [
+            -0.2655,
+            -0.2053
+          ],
+          "gap": -0.2411,
+          "n": 918,
+          "n_informative": 135,
+          "reliability": [
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 0.1481,
+              "mean_p": 0.7557,
+              "n": 27
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.9742,
+              "mean_p": 0.9895,
+              "n": 891
+            }
+          ]
+        },
+        "w15": {
+          "brier": 0.18519,
+          "brier_skill_vs_climatology": 0.245,
+          "challenger_h1": {
+            "brier_challenger": 0.17352,
+            "brier_champion": 0.18568,
+            "n": 850,
+            "skill": 0.0655
+          },
+          "challenger_iv1": {
+            "brier_challenger": 0.14476,
+            "brier_champion": 0.21013,
+            "n": 189,
+            "skill": 0.3111
+          },
+          "ci95": [
+            -0.1032,
+            -0.0424
+          ],
+          "ci99": [
+            -0.1115,
+            -0.0413
+          ],
+          "gap": -0.1034,
+          "n": 918,
+          "n_informative": 918,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0741,
+              "mean_p": 0.1502,
+              "n": 54
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.0,
+              "mean_p": 0.327,
+              "n": 27
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.2521,
+              "mean_p": 0.5233,
+              "n": 242
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 0.6516,
+              "mean_p": 0.7096,
+              "n": 244
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.849,
+              "mean_p": 0.8554,
+              "n": 351
+            }
+          ]
+        },
+        "w35": {
+          "brier": 0.06838,
+          "brier_skill_vs_climatology": -0.4077,
+          "challenger_h1": {
+            "brier_challenger": 0.05577,
+            "brier_champion": 0.06664,
+            "n": 850,
+            "skill": 0.1632
+          },
+          "challenger_iv1": {
+            "brier_challenger": 0.00064,
+            "brier_champion": 0.01,
+            "n": 189,
+            "skill": 0.9361
+          },
+          "ci95": [
+            -0.146,
+            -0.108
+          ],
+          "ci99": [
+            -0.1504,
+            -0.1071
+          ],
+          "gap": -0.1288,
+          "n": 918,
+          "n_informative": 891,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.037,
+              "mean_p": 0.1117,
+              "n": 568
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.0743,
+              "mean_p": 0.2812,
+              "n": 350
+            }
+          ]
+        }
+      },
+      "n_items": 2754,
+      "n_matured_days": 27,
+      "period": [
+        "2026-09-21",
+        "2026-10-18"
+      ],
+      "promotion_test_mw_h1": {
+        "ci95_w15": null,
+        "effective_from_anchor_day": "2026-10-13",
+        "n": 204,
+        "n_matured_days": 6,
+        "other_widths": {
+          "w05": {
+            "brier_challenger": 0.02833,
+            "brier_champion": 0.02307
+          },
+          "w35": {
+            "brier_challenger": 0.02373,
+            "brier_champion": 0.04116
+          }
+        },
+        "paired_skill_w15": 0.1271,
+        "result": "NOT YET TESTABLE (6 of 120 matured days)"
+      },
+      "skill": {
+        "ci95": null,
+        "ci99": null,
+        "deciding_condition": "3 matured days since 2026-10-16 < 84",
+        "effective_from_freeze_day": "2026-10-16",
+        "n_items": 306,
+        "n_matured_days_since": 3,
+        "result": "SKILL UNTESTED",
+        "skill": -0.0147,
+        "strata": {
+          "w05": {
+            "brier": 0.00265,
+            "brier_climatology": 0.0,
+            "n": 102,
+            "outcome_rate": 1.0,
+            "skill": null
+          },
+          "w15": {
+            "brier": 0.202,
+            "brier_climatology": 0.24221,
+            "n": 102,
+            "outcome_rate": 0.5882,
+            "skill": 0.166
+          },
+          "w35": {
+            "brier": 0.04112,
+            "brier_climatology": 0.0,
+            "n": 102,
+            "outcome_rate": 0.0,
+            "skill": null
+          }
+        }
+      },
+      "standard_id": "standing_acceptance_standard_mw_v1",
+      "stream": "MARKET",
+      "verdict": "UNTESTED"
+    },
+    "POOLS": {
+      "confident_calls": {
+        "effective_from_freeze_day": "2026-09-29",
+        "groups": {
+          "held": {
+            "confident_safe": {
+              "ci": [
+                -0.0098,
+                -0.0089
+              ],
+              "expected": 0.762,
+              "gap": -0.0095,
+              "n": 80,
+              "outcomes": 0
+            }
+          },
+          "w05": {
+            "confident_breach": {
+              "ci": [
+                0.0028,
+                0.0028
+              ],
+              "expected": 358.99,
+              "gap": 0.0028,
+              "n": 360,
+              "outcomes": 360
+            }
+          },
+          "w35": {
+            "confident_safe": {
+              "ci": [
+                -0.0041,
+                -0.0041
+              ],
+              "expected": 0.164,
+              "gap": -0.0041,
+              "n": 40,
+              "outcomes": 0
+            }
+          }
+        },
+        "n_matured_days_since": 20
+      },
+      "deciding_condition": "28 matured days < 84; a width's 95% CI is not inside the tolerance",
+      "groups": {
+        "held": {
+          "brier": 0.06813,
+          "brier_skill_vs_climatology": 0.043,
+          "ci95": [
+            -0.0259,
+            0.0649
+          ],
+          "ci99": [
+            -0.0433,
+            0.0668
+          ],
+          "gap": 0.0045,
+          "n": 363,
+          "n_informative": 253,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0703,
+              "mean_p": 0.0514,
+              "n": 327
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.0333,
+              "mean_p": 0.2628,
+              "n": 30
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.6,
+              "mean_p": 0.5053,
+              "n": 5
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 1.0,
+              "mean_p": 0.6711,
+              "n": 1
+            }
+          ]
+        },
+        "w05": {
+          "brier": 0.05295,
+          "brier_skill_vs_climatology": 0.1241,
+          "ci95": [
+            -0.3766,
+            -0.2679
+          ],
+          "ci99": [
+            -0.4123,
+            -0.255
+          ],
+          "gap": -0.374,
+          "n": 588,
+          "n_informative": 84,
+          "reliability": [
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.9354,
+              "mean_p": 0.9864,
+              "n": 588
+            }
+          ]
+        },
+        "w15": {
+          "brier": 0.17751,
+          "brier_skill_vs_climatology": 0.2766,
+          "ci95": [
+            -0.1346,
+            -0.0619
+          ],
+          "ci99": [
+            -0.162,
+            -0.0587
+          ],
+          "gap": -0.1346,
+          "n": 588,
+          "n_informative": 588,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0,
+              "mean_p": 0.1573,
+              "n": 56
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.1429,
+              "mean_p": 0.5407,
+              "n": 140
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 0.75,
+              "mean_p": 0.7555,
+              "n": 56
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.8095,
+              "mean_p": 0.8522,
+              "n": 336
+            }
+          ]
+        },
+        "w35": {
+          "brier": 0.0924,
+          "brier_skill_vs_climatology": -0.2096,
+          "ci95": [
+            -0.15,
+            -0.0748
+          ],
+          "ci99": [
+            -0.1614,
+            -0.069
+          ],
+          "gap": -0.1123,
+          "n": 588,
+          "n_informative": 532,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0807,
+              "mean_p": 0.0836,
+              "n": 285
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.0858,
+              "mean_p": 0.281,
+              "n": 303
+            }
+          ]
+        }
+      },
+      "n_items": 2127,
+      "n_matured_days": 28,
+      "period": [
+        "2026-09-21",
+        "2026-10-18"
+      ],
+      "skill": {
+        "ci95": null,
+        "ci99": null,
+        "deciding_condition": "3 matured days since 2026-10-16 < 84",
+        "effective_from_freeze_day": "2026-10-16",
+        "n_items": 228,
+        "n_matured_days_since": 3,
+        "result": "SKILL UNTESTED",
+        "skill": -0.0416,
+        "strata": {
+          "held": {
+            "brier": 0.0036,
+            "brier_climatology": 0.0,
+            "n": 39,
+            "outcome_rate": 0.0,
+            "skill": null
+          },
+          "w05": {
+            "brier": 0.00134,
+            "brier_climatology": 0.0,
+            "n": 63,
+            "outcome_rate": 1.0,
+            "skill": null
+          },
+          "w15": {
+            "brier": 0.209,
+            "brier_climatology": 0.24994,
+            "n": 63,
+            "outcome_rate": 0.5079,
+            "skill": 0.1638
+          },
+          "w35": {
+            "brier": 0.04777,
+            "brier_climatology": 0.0,
+            "n": 63,
+            "outcome_rate": 0.0,
+            "skill": null
+          }
+        }
+      },
+      "standard_id": "standing_acceptance_standard_mw_v1",
+      "stream": "POOLS",
+      "verdict": "UNTESTED"
+    }
+  }
+}
