@@ -1,0 +1,226 @@
+{
+  "addendum_hash": "sha256:2bf7d4bf0fa8aad9f117f3257f09c0d46715c79f473f847fbf0d56561819a3f8",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_market_weather_grid_verdict",
+  "chain": "market-weather",
+  "cites_family_addendum": {
+    "addendum_hash": "sha256:3680f6513dbdd712ea738f49a6cdc762ae2e77087ba196d54ae375c85449a740",
+    "artifact": "prereg/disclosures/20260928_162719_breach_probability_family_addendum_1_confident_calls.json"
+  },
+  "cites_standard": "prereg/disclosures/20260924_153852_standing_acceptance_standard_mw_grid_v1_sealed.json",
+  "cites_standard_hash": "sha256:5fd224392408673a6af303fe1b7f575041f2479fd3cba4135e48f74473fa3bf5",
+  "grids_judged": {
+    "2026-09-24": "6acda552b5ce98480e3d85348310dd993194179f79f697c00f140967a518eed0",
+    "2026-09-25": "92d71e4709768f4cdff38361433467091c97d3a6b66ef9aed44d8b7eecb2ea9f",
+    "2026-09-26": "45e88b43a1c59153a5848980bfd7b5020b7f15903e534b40538f9b501f34e61e",
+    "2026-09-27": "5a8498de949c0270bf4413e6ce780ae095a8e958712970e0438fc92b4a9528c6",
+    "2026-09-28": "f7794670b7b446739f841b76807afc7069d0de080c9ca7f36c16d63f31f0cc12",
+    "2026-09-29": "408b340011fa2ec35854b7eccfe414c35e66da86874668db0a5af347c908c89d",
+    "2026-09-30": "ede199a19c93c687c9a72ed6ec51efe3f0223ac05a2ae77aa467748baf9ec73b",
+    "2026-10-01": "782bb031f3952cee8f338de3c78a3c4f1090516d12f9fa3909e42050a32b78aa",
+    "2026-10-02": "54551a3bb6bb0e5adff256cf72b34b56cfd5051ae89f076efb946c646cb96dbe",
+    "2026-10-03": "9a0c95846ec1849cf272bf8124b4e178870b2303284d6bf33671ccdd8d03b389",
+    "2026-10-04": "1f600905f55ddff7c29f228f47948f986fee33c9cc2e57b496657132e8f406c6",
+    "2026-10-05": "a3bb6407fa585afc150f99d0b3cc0e9377fe17ebef1494b93731625b2e395ff3",
+    "2026-10-06": "b92d2f020981926d743d7916443997e32ce3a729aa0f0f548ffc662fe4f42df9",
+    "2026-10-07": "4a86341e9de7321fe1947ddb76ed200b02487c662a743ab01616dbafe19408f9",
+    "2026-10-08": "97e124b4c51e77440b0c5764f68c7e0282e8033dd41bd0a41bb95974251d4a05",
+    "2026-10-09": "ca36c6ce4aa844c91465438158eede289f993c96c11b3a2c41ad718ed5a80e19",
+    "2026-10-10": "e8217b691058f9cbf9631c7039d878ec76f046a7a3387204d2adabd425077cec",
+    "2026-10-11": "0ab54f57da9373c3c235ee53fae48b279c13629ca1ddcec91dcd9e12ac4e8193",
+    "2026-10-12": "733f3f9e77df5958a6de7a4150f56dd1766a9a3a8a0bbcd9d0436ae40a51c5bf",
+    "2026-10-13": "904ba34820b61517f9f070b825acd92554a1d21ca9e4222433077fc1a951001c",
+    "2026-10-14": "e820d16c78caf498097c407886b6190b47bd7ccd2ea32c9b00a61d75b2e1c5cf",
+    "2026-10-15": "a1b28a4d42196191daf32dda0c52ca2bf89c547dae348d0aaa5797574d617b13",
+    "2026-10-16": "65dd4e52f918d7d226830f5fddb7e71f9ab258f35ec31368152eb3f2e5137d6d",
+    "2026-10-17": "a04c3472f5f58aea5775ff2d401101d768994d8aeb162392cdc2e26b6dccfba7",
+    "2026-10-18": "a9841bfbdfa093422c21ead34d032f9884fd674a51cc2d02af0429fb3265fd56",
+    "2026-10-19": "4d4271981a6c822c4d9f3083f531719992d633e4caac66bc7ce178699f5eae98",
+    "2026-10-20": "c1ad06feb3627fefb165f1b1c6abad38edc87713af2c0ceb42eee118eef1be9e",
+    "2026-10-21": "fe3e332f24e1a802ce9ff449d8ed457b81fc7988030ffd21a680a80d267ebf9e"
+  },
+  "issued_utc": "2026-11-06T01:10:01Z",
+  "k": 1,
+  "ledger_hash": "440a53e3ae1346b5d599f90600d1800f3264235ee09dc3c779dfec05245db1c2",
+  "maturity_ts": 1793836800,
+  "maturity_utc": "2026-11-05T00:00:00Z",
+  "period": [
+    "2026-09-24",
+    "2026-10-21"
+  ],
+  "streams": {
+    "GRID": {
+      "confident_calls": {
+        "effective_from_freeze_day": "2026-09-29",
+        "groups": {
+          "p[0.0,0.2]": {
+            "confident_safe": {
+              "ci": [
+                -0.008,
+                -0.0079
+              ],
+              "expected": 2.562,
+              "gap": -0.008,
+              "n": 322,
+              "outcomes": 0
+            }
+          },
+          "p[0.8,1.0]": {
+            "confident_breach": {
+              "ci": [
+                0.0001,
+                0.0019
+              ],
+              "expected": 6709.368,
+              "gap": 0.0019,
+              "n": 6740,
+              "outcomes": 6722
+            }
+          }
+        },
+        "n_matured_days_since": 23
+      },
+      "deciding_condition": "28 matured grid days < 84; a p-bin's 95% CI is not inside the tolerance",
+      "groups": {
+        "p[0.0,0.2]": {
+          "brier": 0.03346,
+          "ci95": [
+            -0.0897,
+            -0.0843
+          ],
+          "ci99": [
+            -0.0903,
+            -0.084
+          ],
+          "freq": 0.0263,
+          "gap": -0.0843,
+          "mean_p": 0.105,
+          "n": 5431,
+          "n_informative": 5031
+        },
+        "p[0.2,0.4]": {
+          "brier": 0.13721,
+          "ci95": [
+            -0.2106,
+            -0.1366
+          ],
+          "ci99": [
+            -0.2152,
+            -0.1359
+          ],
+          "freq": 0.1252,
+          "gap": -0.1722,
+          "mean_p": 0.2974,
+          "n": 5271,
+          "n_informative": 5271
+        },
+        "p[0.4,0.6]": {
+          "brier": 0.24475,
+          "ci95": [
+            -0.1909,
+            -0.095
+          ],
+          "ci99": [
+            -0.1935,
+            -0.0924
+          ],
+          "freq": 0.3595,
+          "gap": -0.1397,
+          "mean_p": 0.4992,
+          "n": 5875,
+          "n_informative": 5875
+        },
+        "p[0.6,0.8]": {
+          "brier": 0.2388,
+          "ci95": [
+            -0.1312,
+            -0.0508
+          ],
+          "ci99": [
+            -0.1315,
+            -0.0448
+          ],
+          "freq": 0.6185,
+          "gap": -0.0849,
+          "mean_p": 0.7035,
+          "n": 7788,
+          "n_informative": 7788
+        },
+        "p[0.8,1.0]": {
+          "brier": 0.05979,
+          "ci95": [
+            -0.0454,
+            -0.0101
+          ],
+          "ci99": [
+            -0.0469,
+            -0.0087
+          ],
+          "freq": 0.9308,
+          "gap": -0.0132,
+          "mean_p": 0.9384,
+          "n": 22283,
+          "n_informative": 14076
+        }
+      },
+      "n_items": 46648,
+      "n_matured_days": 28,
+      "period": [
+        "2026-09-24",
+        "2026-10-21"
+      ],
+      "reported": {
+        "asymmetric": {
+          "ci95": [
+            -0.1018,
+            -0.0567
+          ],
+          "gap": -0.0747,
+          "n_informative": 33457
+        },
+        "near_edge5-15%": {
+          "ci95": [
+            -0.1261,
+            -0.0422
+          ],
+          "gap": -0.0804,
+          "n_informative": 15148
+        },
+        "near_edge<=5%": {
+          "ci95": [
+            -0.0888,
+            -0.0461
+          ],
+          "gap": -0.0453,
+          "n_informative": 14725
+        },
+        "near_edge>15%": {
+          "ci95": [
+            -0.1624,
+            -0.1109
+          ],
+          "gap": -0.1365,
+          "n_informative": 8168
+        },
+        "symmetric": {
+          "ci95": [
+            -0.1473,
+            -0.075
+          ],
+          "gap": -0.109,
+          "n_informative": 4584
+        }
+      },
+      "standard_id": "standing_acceptance_standard_mw_grid_v1",
+      "stream": "GRID",
+      "verdict": "UNTESTED"
+    }
+  }
+}
