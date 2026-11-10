@@ -1,0 +1,183 @@
+{
+ "addendum_hash": "sha256:92742800d409c11b6494dfabb0a84d4a4e4607f3b094ce39e22d9cb616e744b2",
+ "addendum_hash_recipe": {
+  "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+  "digest": "sha256",
+  "excluded_fields": [
+   "addendum_hash"
+  ],
+  "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+  "tooling": "prereg_common/prereg_hash.py"
+ },
+ "amendment_rule": "Sealed before the first freeze it governs: the 2026-11-11 POOLS freeze at 15:20Z. Any further change is another dated addendum.",
+ "archive": {
+  "addendum_hash": "sha256:596ee628e5af3c16c5a59f3da4a240af8c46ac9a85e0061ca0b86e2a8f0b678f",
+  "artifact": "prereg/market-weather/20261110_222006_market-weather_20261109_freeze_archive_not_preregistered.json",
+  "batch_root": "b1ee58f7bc13f2c9b788bef3ec12b85762f97908b4eeef1828107f39b1fecdfc",
+  "grid_sha256": "0d76e9082e9635c70adec63566c8fdc4a27ddcd210f4f47308174d2299762830",
+  "n": 33,
+  "n_mw_h1": 33
+ },
+ "artifact": "prereg_addendum_standing_standard",
+ "cites": {
+  "mw_v1_addendum_mw_h1_publication": {
+   "addendum_hash": "sha256:05065e2d4090bd7eaa26c8d17456765d1e50ae724683eff09a3421fab19df518",
+   "artifact": "prereg/disclosures/20261013_214446_mw_v1_addendum_mw_h1_publication.json"
+  },
+  "standing_acceptance_standard_mw_v1": {
+   "addendum_hash": "sha256:15f28985adf632bc8ca3232eb31ecc61c8255ef86aa1ab7b21310eb2326fdb7b",
+   "artifact": "prereg/disclosures/20260921_135454_standing_acceptance_standard_mw_v1_sealed.json"
+  },
+  "standing_acceptance_standard_mw_v1_1": {
+   "addendum_hash": "sha256:4ebf3cda4bb8fd4f01f90638fc847f5be74e91baddcc63e4c3e0cbc799311e3e",
+   "artifact": "prereg/disclosures/20260923_205507_standing_acceptance_standard_mw_v1_1_sealed.json"
+  }
+ },
+ "disclosed_not_changed": "The four TNSR/USDC POOLS rows frozen at 2026-11-10T15:20:01Z took their probabilities from TNSR's 2026-11-08 MARKET forecast (candles to 2026-11-07), one day older than every other pool's, because no TNSR forecast existed for 2026-11-09. They were published before their window and stand as published; they are listed under tnsr_pools_rows_on_a_stale_forecast.",
+ "issued_utc": "2026-11-10T22:20:06Z",
+ "open_tnsr_market_rows": {
+  "anchor_days": [
+   "2026-10-27",
+   "2026-11-08"
+  ],
+  "last_stored_candle_day": "2026-11-09",
+  "n": 13,
+  "rows": [
+   {
+    "anchor_day": "2026-10-27",
+    "prediction_hash": "53872e59de7831e58429070bc71597d11941616a4ade580856dcb2dd91b15dd8",
+    "record_id": "ba0cfec9b16f1688d0c172d488616e9558c750cc9468528a1f0598568052042b"
+   },
+   {
+    "anchor_day": "2026-10-28",
+    "prediction_hash": "e0d02c08110e483c7d5d4150c88ee57b534e3d960304cdf36e9072d3ae0a1204",
+    "record_id": "5be51314656ea776c1de302be4ecec775a3361698b8c482eaf1d4b69f860cc7f"
+   },
+   {
+    "anchor_day": "2026-10-29",
+    "prediction_hash": "de49c1959184675280e1edb20349b3fae94cb6de3249e2c475a94c037d698209",
+    "record_id": "2eabbf1e0d4df462ac58716b50e1d708bd90a3bf3ca206b1cf8d3a83c761ca9a"
+   },
+   {
+    "anchor_day": "2026-10-30",
+    "prediction_hash": "6b7981ec9ab50fa901c86ad9fd7392f4a383ddd872b8686fc9dc792a3fc90175",
+    "record_id": "957c14469a9f86276d0e1738c9194021277840a11ef88749b63ba30a2471a77f"
+   },
+   {
+    "anchor_day": "2026-10-31",
+    "prediction_hash": "9b80fdaa3a7ae83bd7feb1819e495c110737aa9e206b4f625de42e0d99aa2fa6",
+    "record_id": "7be9eb1a8b81420e582b6140579328b20c330a16ba007c288efa2630f98da593"
+   },
+   {
+    "anchor_day": "2026-11-01",
+    "prediction_hash": "64d8155da2191863cee1dbcd9c5005652070810017f487760931d1e29cd79fe8",
+    "record_id": "0c8e78465def199342fb2f3018deb992e7ec0d108d0ce46a266065207548ecae"
+   },
+   {
+    "anchor_day": "2026-11-02",
+    "prediction_hash": "1913fd2379c59abbd6997e863a3aa3664dcf72561df86a07f12aee143396d578",
+    "record_id": "6627dae3188b349efde9c4660209578c8d939db4f3c8bfc3c3106da22b330d24"
+   },
+   {
+    "anchor_day": "2026-11-03",
+    "prediction_hash": "ac9840ed61bb23417b5225c231f782a785003ef50dbd657004919ad3dac6d6bd",
+    "record_id": "af35e19ae43feac8fbb3468093603976182286979e15df9af0676fd11efe1be3"
+   },
+   {
+    "anchor_day": "2026-11-04",
+    "prediction_hash": "fe7ab41483633b7e12916538a1d06e7efdfbaef167a128945667355b80f8bc2d",
+    "record_id": "b5b5586982430a27fe906da57b8ebddd37f278f0af7f7caf373a38f54e9cd3c8"
+   },
+   {
+    "anchor_day": "2026-11-05",
+    "prediction_hash": "cb0283c2d29e04f6babf2d625d8a626270ab849265e1d28df19714637a52d4fd",
+    "record_id": "462da6e0e7af5a22d1c634cf6c48cbaffc62c9ffd29bb63b576727a3b67bb556"
+   },
+   {
+    "anchor_day": "2026-11-06",
+    "prediction_hash": "451b290363c144c9a2dbf3c14866b13556f0487a5da7dc8ecce033c8efc19ea2",
+    "record_id": "0b6aee7ffe9e3e032c3f2d48d48fb95fce0711615a80106c3cd7445bf1be4a67"
+   },
+   {
+    "anchor_day": "2026-11-07",
+    "prediction_hash": "79b4c3883210a54eb95d90a36f08327e32425f50494aec21762da43119b00375",
+    "record_id": "9a3bb3f0a75018c0074eb9976c50c1716f905ddc083fccc8490190eb212f0ccd"
+   },
+   {
+    "anchor_day": "2026-11-08",
+    "prediction_hash": "2e162d866a2dfbba2d46be3ab2db14397d6e4ee96aaec1d411fd4760ecc143b6",
+    "record_id": "5587370b31c5e12e81bc3d6b59307bdc7d6c31776c1c0b4127927ca1994f4e3d"
+   }
+  ],
+  "rule": "rows whose 14-day window needs a TNSR day after the last stored Coinbase candle; resolved only from Coinbase"
+ },
+ "outcomes_known_at_issue": "Whether a row is left out depends only on whether a manifest carried it, never on its outcome. 0 of the 14 window days of the 2026-11-09 rows had closed at issue. No other rule or row is changed.",
+ "record_at_issue": {
+  "market_rows": 1698,
+  "market_rows_left_out": 33,
+  "market_rows_left_out_anchor_days": [
+   "2026-11-09"
+  ],
+  "pools_rows": 3893,
+  "pools_rows_left_out": 0
+ },
+ "retired": {
+  "TNSR": {
+   "fixed_venue": "coinbase TNSR-USD",
+   "from_day": "2026-11-11",
+   "streams": {
+    "MARKET": "anchor day >= 2026-11-11",
+    "POOLS": "TNSR/USDC, freeze day >= 2026-11-11"
+   }
+  }
+ },
+ "scope": "market-weather",
+ "stamp": "20261110_222006_mw_v1_addendum_tnsr_retired",
+ "standard_id": "standing_acceptance_standard_mw_v1",
+ "title": "Market Weather addendum: TNSR is retired because its fixed venue delisted it; a row counts only if a manifest published it in time; the unpublished 2026-11-09 freeze is archived as NOT pre-registered",
+ "tnsr_pools_rows_on_a_stale_forecast": {
+  "n": 4,
+  "rows": [
+   {
+    "prediction_hash": "a5d51e3dffefbb4d141ce48edfab802f2fa7de0c98068abacce1ab673ca084c7",
+    "record_id": "4465fcfd62677a7c1de23f9d25027ee3a385a0f80f68eb0ea11b4d7c8098ff0d",
+    "source_forecast_id": "5587370b31c5e12e81bc3d6b59307bdc7d6c31776c1c0b4127927ca1994f4e3d",
+    "track": "fresh",
+    "ts": 1794324001,
+    "width": 0.05
+   },
+   {
+    "prediction_hash": "0fd868761eb1a392a17505542e990bd73f367012bff46568156d5ab56d0891a2",
+    "record_id": "77d8b40cf347275642b2a4d25f788b64a765eb94d3bb3e7a2f178e439e518063",
+    "source_forecast_id": "5587370b31c5e12e81bc3d6b59307bdc7d6c31776c1c0b4127927ca1994f4e3d",
+    "track": "fresh",
+    "ts": 1794324001,
+    "width": 0.15
+   },
+   {
+    "prediction_hash": "fff1be6b52daa5761ebb11f5ee2feb917c927e0ffd541b13b3c73163df9016b5",
+    "record_id": "9319224164da330f26662980ff7b03d5bf568e60764787714c49b9f21dada38c",
+    "source_forecast_id": "5587370b31c5e12e81bc3d6b59307bdc7d6c31776c1c0b4127927ca1994f4e3d",
+    "track": "fresh",
+    "ts": 1794324001,
+    "width": 0.35
+   },
+   {
+    "prediction_hash": "4ae80c124967834ac95eb0b60fb13906681166929c6f0d847dcea2d67b17427b",
+    "record_id": "010a1434d3ae32f19afa3b6397ebf89e58307cabaaa6ca143f9b79d3c6002b9d",
+    "source_forecast_id": "5587370b31c5e12e81bc3d6b59307bdc7d6c31776c1c0b4127927ca1994f4e3d",
+    "track": "held",
+    "ts": 1794324001,
+    "width": null
+   }
+  ],
+  "source_forecast_anchor_day": "2026-11-08"
+ },
+ "what_changes": {
+  "archive": "The 2026-11-09 rows and their MW-H1 rows are published once, at seal time, in the archive file named under 'archive', marked NOT pre-registered. They are never counted. That day's range grid is identified there by its sha256 and is never released, because only grids a manifest committed are released.",
+  "published_rows_only": "From this addendum's issue, a verdict counts a MARKET row only if a MARKET pre-registration manifest created before the row's window opened carries it. It counts a POOLS row only if a POOLS pre-registration manifest created no later than ts + 600 s carries it. These are the same creation limits the INVALID battery already applies to the rows themselves. A row that fails this is left out of every test, challenger comparison, promotion test and report block, and each verdict states how many rows it left out. Outcomes are published only for rows that some pre-registration manifest carries. Applied to the record at issue, this leaves out exactly the 33 MARKET rows of anchor day 2026-11-09 (record_at_issue below gives the counts). Their 33 MW-H1 rows are already left out by the MW-H1 publication addendum, because no manifest carried them.",
+  "tnsr_retired": "No TNSR row is frozen from MARKET anchor day 2026-11-11, and no TNSR/USDC position is frozen from the 2026-11-11 POOLS freeze. A TNSR/USDC position takes its probabilities from TNSR's latest MARKET forecast, so without this it would keep reusing the last one (anchor day 2026-11-08) indefinitely. The other 33 coins and every other SOL pool are unchanged."
+ },
+ "what_does_not_change": "Every sealed rule, threshold and model, and every published manifest, outcome file and verdict, is unchanged. Verdict w1 stands as published, and no row in its period fails the new condition. TNSR's open MARKET rows are NOT moved to another venue: they resolve only from Coinbase daily candles, as the standard fixes. If Coinbase never publishes a day such a row needs, the row becomes INCOMPLETE after the 7-day grace and counts toward the INVALID battery's incomplete share, exactly as the standard says. The Coinbase candle for 2026-11-09 covers only the hours before trading stopped, and it is used as the venue published it. TNSR/USDC POOLS rows already frozen resolve from the SOL collector's on-chain snapshots, which are unaffected.",
+ "what_happened": "Coinbase is TNSR's fixed candle and spot venue (mw_protocol: one venue per coin, never mixed). Coinbase disabled trading in TNSR-USD on 2026-11-09. Observed from the production host on 2026-11-10: the product reports status 'delisted' with trading_disabled true, its ticker answers HTTP 400 'Not allowed for delisted products', and its last hourly candle opens at 2026-11-09T18:00Z. With no live spot, the 2026-11-09 and 2026-11-10 MARKET freezes refused TNSR. A defect in the freeze wrapper then stopped the 2026-11-09 freeze from publishing its other 33 rows. Those rows were written before their window opened (2026-11-10T00:00Z), but no manifest carried them before it opened. The 33 rows of the 2026-11-10 freeze were published by hand at 2026-11-10T21:03:38Z, before their window opened. The wrapper was fixed the same day: a refused coin no longer stops the other rows from being published."
+}
