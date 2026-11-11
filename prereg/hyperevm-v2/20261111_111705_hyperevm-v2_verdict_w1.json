@@ -1,0 +1,230 @@
+{
+  "addendum_hash": "sha256:0c978be3a691b2694030d61be8466e930b0e8232b27a3a6e64a5b3d9fdacbfa6",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_hyperevm_v2_verdict",
+  "chain": "hyperevm-v2",
+  "cites_family_addendum": null,
+  "cites_family_addendum_2": {
+    "addendum_hash": "sha256:4862b8edae3ab7b6023d51fca8e814ccd7077f3d09a257a040c4479ff6942fe5",
+    "artifact": "prereg/disclosures/20261002_172236_breach_probability_family_addendum_2_drained_pools.json",
+    "effective_from_freeze_day": "2026-10-04"
+  },
+  "cites_family_addendum_3": {
+    "addendum_hash": "sha256:9c48db78d8e54cc8618b491784b3770675846f1d5541d9d33e58f64cd57a7d7c",
+    "artifact": "prereg/disclosures/20261013_175022_breach_probability_family_addendum_3_skill.json",
+    "effective_from_freeze_day": "2026-10-16"
+  },
+  "cites_standard": "prereg/disclosures/20260929_112611_standing_acceptance_standard_hyperevm_v2_sealed.json",
+  "cites_standard_hash": "sha256:075fa7cfadf859332e430afd9291f8328519f8bfc64168c7e25167654ea21bd3",
+  "issued_utc": "2026-11-11T11:17:05Z",
+  "k": 1,
+  "ledger_hash": "e48af2df0ebe25fe25db0216c4438b834b3e5374c0a0ed332b5e07638d0495c2",
+  "maturity_ts": 1794268800,
+  "maturity_utc": "2026-11-10T00:00:00Z",
+  "period": [
+    "2026-09-29",
+    "2026-10-26"
+  ],
+  "streams": {
+    "HYPEREVM_POOLS": {
+      "by_model": {
+        "HV-B1": {
+          "gap": -0.0971,
+          "n": 756
+        },
+        "HV-B1-x": {
+          "gap": -0.0077,
+          "n": 336
+        }
+      },
+      "by_pair_class": {
+        "CROSS": {
+          "gap": -0.0077,
+          "n": 336
+        },
+        "USD": {
+          "gap": -0.0971,
+          "n": 756
+        }
+      },
+      "confident_calls": {
+        "effective_from_freeze_day": "0000-00-00",
+        "groups": {
+          "w05": {
+            "confident_breach": {
+              "ci": [
+                -0.016,
+                0.0028
+              ],
+              "expected": 227.462,
+              "gap": -0.0064,
+              "n": 228,
+              "outcomes": 226
+            }
+          },
+          "w35": {
+            "confident_safe": {
+              "ci": [
+                -0.004,
+                -0.004
+              ],
+              "expected": 0.338,
+              "gap": -0.004,
+              "n": 84,
+              "outcomes": 0
+            }
+          }
+        },
+        "n_matured_days_since": 28
+      },
+      "deciding_condition": "28 matured days < 84; a width's 95% CI is not inside the tolerance",
+      "groups": {
+        "w05": {
+          "brier": 0.09257,
+          "brier_skill_vs_climatology": 0.0739,
+          "ci95": [
+            -0.3581,
+            -0.1483
+          ],
+          "ci99": [
+            -0.3643,
+            -0.106
+          ],
+          "gap": -0.2012,
+          "n": 364,
+          "n_informative": 136,
+          "reliability": [
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.8874,
+              "mean_p": 0.9665,
+              "n": 364
+            }
+          ]
+        },
+        "w15": {
+          "brier": 0.207,
+          "brier_skill_vs_climatology": 0.0984,
+          "ci95": [
+            -0.3401,
+            0.1757
+          ],
+          "ci99": [
+            -0.341,
+            0.2317
+          ],
+          "gap": -0.0409,
+          "n": 364,
+          "n_informative": 364,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0,
+              "mean_p": 0.1514,
+              "n": 84
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.4107,
+              "mean_p": 0.3396,
+              "n": 112
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.5,
+              "mean_p": 0.5604,
+              "n": 168
+            }
+          ]
+        },
+        "w35": {
+          "brier": 0.01169,
+          "brier_skill_vs_climatology": null,
+          "ci95": [
+            -0.117,
+            -0.1116
+          ],
+          "ci99": [
+            -0.1173,
+            -0.1111
+          ],
+          "gap": -0.1142,
+          "n": 364,
+          "n_informative": 280,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0,
+              "mean_p": 0.0888,
+              "n": 364
+            }
+          ]
+        }
+      },
+      "n_items": 1092,
+      "n_matured_days": 28,
+      "period": [
+        "2026-09-29",
+        "2026-10-26"
+      ],
+      "skill": {
+        "ci95": null,
+        "ci99": null,
+        "deciding_condition": "11 matured days since 2026-10-16 < 84",
+        "effective_from_freeze_day": "2026-10-16",
+        "n_items": 429,
+        "n_matured_days_since": 11,
+        "result": "SKILL UNTESTED",
+        "skill": -0.4396,
+        "strata": {
+          "w05": {
+            "brier": 0.00403,
+            "brier_climatology": 0.0,
+            "n": 143,
+            "outcome_rate": 1.0,
+            "skill": null
+          },
+          "w15": {
+            "brier": 0.24065,
+            "brier_climatology": 0.17751,
+            "n": 143,
+            "outcome_rate": 0.7692,
+            "skill": -0.3557
+          },
+          "w35": {
+            "brier": 0.01086,
+            "brier_climatology": 0.0,
+            "n": 143,
+            "outcome_rate": 0.0,
+            "skill": null
+          }
+        }
+      },
+      "standard_id": "standing_acceptance_standard_hyperevm_v2",
+      "stream": "HYPEREVM_POOLS",
+      "verdict": "UNTESTED"
+    }
+  }
+}
