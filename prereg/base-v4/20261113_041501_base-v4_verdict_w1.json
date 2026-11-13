@@ -1,0 +1,218 @@
+{
+  "addendum_hash": "sha256:9491843dfa55ab891430935d7621feeca8a4aa43f9557e68d7441595da75a7d7",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_base_v4_verdict",
+  "chain": "base-v4",
+  "cites_family_addendum": null,
+  "cites_family_addendum_2": {
+    "addendum_hash": "sha256:4862b8edae3ab7b6023d51fca8e814ccd7077f3d09a257a040c4479ff6942fe5",
+    "artifact": "prereg/disclosures/20261002_172236_breach_probability_family_addendum_2_drained_pools.json",
+    "effective_from_freeze_day": "2026-10-04"
+  },
+  "cites_family_addendum_3": {
+    "addendum_hash": "sha256:9c48db78d8e54cc8618b491784b3770675846f1d5541d9d33e58f64cd57a7d7c",
+    "artifact": "prereg/disclosures/20261013_175022_breach_probability_family_addendum_3_skill.json",
+    "effective_from_freeze_day": "2026-10-16"
+  },
+  "cites_standard": "prereg/disclosures/20260930_161914_standing_acceptance_standard_base_v4_sealed.json",
+  "cites_standard_hash": "sha256:f53c7f1dd6d7f5fe3e7e8b20e57fd68570cc0922f96d244ffd22b131abc72b35",
+  "issued_utc": "2026-11-13T04:15:01Z",
+  "k": 1,
+  "ledger_hash": "d86f22975d69cec4140e00c9240c16fd8196a97a04ce852892365fc8c5624268",
+  "maturity_ts": 1794441600,
+  "maturity_utc": "2026-11-12T00:00:00Z",
+  "period": [
+    "2026-10-01",
+    "2026-10-28"
+  ],
+  "streams": {
+    "BASE_V4_POOLS": {
+      "by_model": {
+        "B4-B1": {
+          "gap": -0.132,
+          "n": 420
+        },
+        "B4-B1-x": {
+          "gap": -0.1735,
+          "n": 84
+        }
+      },
+      "by_pair_class": {
+        "CROSS": {
+          "gap": -0.1735,
+          "n": 84
+        },
+        "USD": {
+          "gap": -0.132,
+          "n": 420
+        }
+      },
+      "confident_calls": {
+        "effective_from_freeze_day": "0000-00-00",
+        "groups": {
+          "w35": {
+            "confident_safe": {
+              "ci": [
+                -0.003,
+                -0.003
+              ],
+              "expected": 0.338,
+              "gap": -0.003,
+              "n": 112,
+              "outcomes": 0
+            }
+          }
+        },
+        "n_matured_days_since": 28
+      },
+      "deciding_condition": "28 matured days < 84; a width's 95% CI is not inside the tolerance",
+      "groups": {
+        "w05": {
+          "brier": 0.19538,
+          "brier_skill_vs_climatology": 0.0174,
+          "ci95": [
+            -0.2873,
+            -0.0942
+          ],
+          "ci99": [
+            -0.2929,
+            -0.0643
+          ],
+          "gap": -0.1565,
+          "n": 168,
+          "n_informative": 168,
+          "reliability": [
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 0.3571,
+              "mean_p": 0.7299,
+              "n": 28
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.8,
+              "mean_p": 0.9133,
+              "n": 140
+            }
+          ]
+        },
+        "w15": {
+          "brier": 0.08274,
+          "brier_skill_vs_climatology": -6.0336,
+          "ci95": [
+            -0.2485,
+            -0.2364
+          ],
+          "ci99": [
+            -0.2487,
+            -0.225
+          ],
+          "gap": -0.2364,
+          "n": 168,
+          "n_informative": 168,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0,
+              "mean_p": 0.1487,
+              "n": 112
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.0357,
+              "mean_p": 0.4475,
+              "n": 56
+            }
+          ]
+        },
+        "w35": {
+          "brier": 0.00143,
+          "brier_skill_vs_climatology": null,
+          "ci95": [
+            -0.0654,
+            -0.0652
+          ],
+          "ci99": [
+            -0.0655,
+            -0.0651
+          ],
+          "gap": -0.0653,
+          "n": 168,
+          "n_informative": 56,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0,
+              "mean_p": 0.0238,
+              "n": 168
+            }
+          ]
+        }
+      },
+      "n_items": 504,
+      "n_matured_days": 28,
+      "period": [
+        "2026-10-01",
+        "2026-10-28"
+      ],
+      "skill": {
+        "ci95": null,
+        "ci99": null,
+        "deciding_condition": "13 matured days since 2026-10-16 < 84",
+        "effective_from_freeze_day": "2026-10-16",
+        "n_items": 234,
+        "n_matured_days_since": 13,
+        "result": "SKILL UNTESTED",
+        "skill": -0.3476,
+        "strata": {
+          "w05": {
+            "brier": 0.09274,
+            "brier_climatology": 0.13018,
+            "n": 78,
+            "outcome_rate": 0.8462,
+            "skill": 0.2876
+          },
+          "w15": {
+            "brier": 0.08125,
+            "brier_climatology": 0.0,
+            "n": 78,
+            "outcome_rate": 0.0,
+            "skill": null
+          },
+          "w35": {
+            "brier": 0.00144,
+            "brier_climatology": 0.0,
+            "n": 78,
+            "outcome_rate": 0.0,
+            "skill": null
+          }
+        }
+      },
+      "standard_id": "standing_acceptance_standard_base_v4",
+      "stream": "BASE_V4_POOLS",
+      "verdict": "UNTESTED"
+    }
+  }
+}
