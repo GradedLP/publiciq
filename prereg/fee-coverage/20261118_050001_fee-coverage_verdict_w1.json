@@ -1,0 +1,271 @@
+{
+  "addendum_hash": "sha256:82e3ce489b2eff2f3a7121812fdb9f09b19e7c4a2ec0fa5a7c0151723523caab",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\""
+  },
+  "artifact": "prereg_fee_coverage_verdict",
+  "chain": "fee-coverage",
+  "cites_family_addendum_3": {
+    "addendum_hash": "sha256:9c48db78d8e54cc8618b491784b3770675846f1d5541d9d33e58f64cd57a7d7c",
+    "artifact": "prereg/disclosures/20261013_175022_breach_probability_family_addendum_3_skill.json",
+    "effective_from_freeze_day": "2026-10-16"
+  },
+  "cites_standard": "prereg/disclosures/20261006_112129_standing_acceptance_standard_fee_coverage_v1_sealed.json",
+  "cites_standard_hash": "sha256:75477d37c3af12b866ecfb30308eb470c54641437c5d651140f62785ebf4718f",
+  "issued_utc": "2026-11-18T05:00:01Z",
+  "k": 1,
+  "ledger_hash": "4ee8d24f376443aade6a67f5de1120677f471a3c44380bbd2f35427386058448",
+  "maturity_ts": 1794873600,
+  "maturity_utc": "2026-11-17T00:00:00Z",
+  "period": [
+    "2026-10-06",
+    "2026-11-02"
+  ],
+  "streams": {
+    "FEE_COVERAGE": {
+      "by_board": {
+        "avax-v2": {
+          "lose_rate": 0.6199,
+          "mean_p_lose": 0.629,
+          "n": 513
+        },
+        "base-v2": {
+          "lose_rate": 0.3925,
+          "mean_p_lose": 0.4931,
+          "n": 2400
+        },
+        "base-v4": {
+          "lose_rate": 0.3418,
+          "mean_p_lose": 0.4956,
+          "n": 474
+        },
+        "bsc-v2": {
+          "lose_rate": 0.3931,
+          "mean_p_lose": 0.4661,
+          "n": 1842
+        },
+        "hyperevm-v2": {
+          "lose_rate": 0.5574,
+          "mean_p_lose": 0.5842,
+          "n": 1080
+        },
+        "monad-v2": {
+          "lose_rate": 0.6312,
+          "mean_p_lose": 0.4788,
+          "n": 648
+        },
+        "op-v2": {
+          "lose_rate": 0.4195,
+          "mean_p_lose": 0.4402,
+          "n": 1485
+        }
+      },
+      "confident_calls": {
+        "effective_from_freeze_day": "2026-10-06",
+        "groups": {
+          "lose": {
+            "confident_breach": {
+              "ci": [
+                0.0,
+                0.0002
+              ],
+              "expected": 443.926,
+              "gap": 0.0002,
+              "n": 444,
+              "outcomes": 444
+            }
+          },
+          "lose1": {
+            "confident_safe": {
+              "ci": [
+                -0.0186,
+                -0.0179
+              ],
+              "expected": 2.041,
+              "gap": -0.0182,
+              "n": 112,
+              "outcomes": 0
+            }
+          }
+        },
+        "n_matured_days_since": 28
+      },
+      "deciding_condition": "28 matured days < 84; a group's 95% CI is not inside the tolerance",
+      "groups": {
+        "lose": {
+          "brier": 0.24037,
+          "brier_skill_vs_climatology": 0.0279,
+          "ci95": [
+            -0.1348,
+            -0.0416
+          ],
+          "ci99": [
+            -0.1409,
+            -0.0165
+          ],
+          "gap": -0.0518,
+          "n": 8442,
+          "n_informative": 7998,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.3571,
+              "mean_p": 0.1479,
+              "n": 112
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.4702,
+              "mean_p": 0.3304,
+              "n": 1593
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.3873,
+              "mean_p": 0.496,
+              "n": 5717
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 0.5865,
+              "mean_p": 0.6387,
+              "n": 561
+            },
+            {
+              "bin": [
+                0.8,
+                1.0
+              ],
+              "freq": 0.976,
+              "mean_p": 0.997,
+              "n": 459
+            }
+          ]
+        },
+        "lose1": {
+          "brier": 0.16755,
+          "brier_skill_vs_climatology": 0.0982,
+          "ci95": [
+            -0.1298,
+            -0.049
+          ],
+          "ci99": [
+            -0.1337,
+            -0.014
+          ],
+          "gap": -0.0595,
+          "n": 8442,
+          "n_informative": 8330,
+          "reliability": [
+            {
+              "bin": [
+                0,
+                0.2
+              ],
+              "freq": 0.0886,
+              "mean_p": 0.1247,
+              "n": 1963
+            },
+            {
+              "bin": [
+                0.2,
+                0.4
+              ],
+              "freq": 0.2171,
+              "mean_p": 0.2989,
+              "n": 4509
+            },
+            {
+              "bin": [
+                0.4,
+                0.6
+              ],
+              "freq": 0.4369,
+              "mean_p": 0.4808,
+              "n": 1774
+            },
+            {
+              "bin": [
+                0.6,
+                0.8
+              ],
+              "freq": 0.7857,
+              "mean_p": 0.6866,
+              "n": 196
+            }
+          ]
+        }
+      },
+      "n_items": 16884,
+      "n_matured_days": 28,
+      "period": [
+        "2026-10-06",
+        "2026-11-02"
+      ],
+      "promotion_eligible": false,
+      "promotion_test": {
+        "accuracy_board_fees_vs_il": 0.4386,
+        "accuracy_fc_b1": 0.5605,
+        "ci": [
+          0.1063,
+          0.218
+        ],
+        "diff": 0.1219,
+        "n": 8442,
+        "n_days": 28
+      },
+      "skill": {
+        "ci95": [
+          0.0729,
+          0.0857
+        ],
+        "ci99": [
+          0.0729,
+          0.0857
+        ],
+        "deciding_condition": "18 matured days since 2026-10-16 < 84",
+        "effective_from_freeze_day": "2026-10-16",
+        "n_items": 10878,
+        "n_matured_days_since": 18,
+        "result": "SKILL UNTESTED",
+        "skill": 0.081,
+        "strata": {
+          "lose": {
+            "brier": 0.23793,
+            "brier_climatology": 0.24955,
+            "n": 5439,
+            "outcome_rate": 0.4788,
+            "skill": 0.0466
+          },
+          "lose1": {
+            "brier": 0.17838,
+            "brier_climatology": 0.20345,
+            "n": 5439,
+            "outcome_rate": 0.2842,
+            "skill": 0.1232
+          }
+        }
+      },
+      "standard_id": "standing_acceptance_standard_fee_coverage_v1",
+      "stream": "FEE_COVERAGE",
+      "verdict": "UNTESTED"
+    }
+  }
+}
