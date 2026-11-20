@@ -1,0 +1,308 @@
+{
+  "addendum_hash": "sha256:17c7fc5ea04f88f2d4f509c7c344c4eb13b898a148f6b86b8ce9c9c413b0b38a",
+  "addendum_hash_recipe": {
+    "canonicalization": "RFC-8785 JCS (jcs.canonicalize)",
+    "digest": "sha256",
+    "excluded_fields": [
+      "addendum_hash"
+    ],
+    "independent_recipe": "python -c \"import json,hashlib,jcs;d=json.load(open('<this file>'));d.pop('addendum_hash');print('sha256:'+hashlib.sha256(jcs.canonicalize(d)).hexdigest())\"",
+    "note": "Recompute from this committed file alone; depends on every field except addendum_hash.",
+    "tooling": "prereg_common/prereg_hash.py"
+  },
+  "against_triggers": {},
+  "artifact": "prereg_tier_forecast_verdict",
+  "chain": "sol-v2",
+  "cites_standard": "prereg/disclosures/20260921_115606_standing_acceptance_standard_bbm_v1_1_sealed.json",
+  "cites_standard_hash": "sha256:641e0b978933eebf484f9ce18af8f49bb1538f5eb78adcb70f9f4099de502921",
+  "cohort_freeze_date": "20261106",
+  "cohort_freeze_ts": 1793978923,
+  "cohort_model_versions": [
+    "bbm-v2.2.0"
+  ],
+  "deciding_condition": "Mann-Whitney p=0.0240<= 0.05 (AVOID worse than OK, effect=0.86), 6 real breach(es), 1/HHI(assets)=10.3>= 4.0, OK protected",
+  "gates": {
+    "completeness_floor": 0.8,
+    "expected_n": 23,
+    "n_judged": 23
+  },
+  "issued_utc": "2026-11-20T19:40:01Z",
+  "ledger_hash": "983b0953f675210c94871f2e0e3aaa1cb5da68b48978f044d72ea7e866f3037e",
+  "maturity_ts": 1795188523,
+  "maturity_utc": "2026-11-20T15:28:43Z",
+  "per_pool": [
+    {
+      "bbm": -1.557225546444304,
+      "breached": false,
+      "pool_id": "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+      "pool_label": "KMNO/USDC",
+      "realized_net": 0.0,
+      "record_id": "c956fffad3e855f0b96508241304ddd54b9434a1a80437964538b1ad9d1d0ba1",
+      "severity": "OK",
+      "tier": "OUT_OF_RANGE",
+      "tier_correct": true
+    },
+    {
+      "bbm": -0.13303884411397499,
+      "breached": false,
+      "pool_id": "4Ui9QdDNuUaAGqCPcDSp191QrixLzQiLxJ1Gnqvz3szP",
+      "pool_label": "JUP/USDC",
+      "realized_net": -0.0007832220784061714,
+      "record_id": "84ec548378462bf3acbb8088a53d1ee98d5ca49277fc2cbde34d7744225a6a13",
+      "severity": "OK",
+      "tier": "AVOID",
+      "tier_correct": false
+    },
+    {
+      "bbm": 1.8976874895095142,
+      "breached": false,
+      "pool_id": "4fuUiYxTQ6QCrdSq9ouBYcTM7bqSwYTSyLueGZLTy4T4",
+      "pool_label": "USDT/USDC",
+      "realized_net": 4.3106301619500525e-05,
+      "record_id": "30758091cb53cf1c373a4b8ad9851038f182c8f090a011795ad2b58185b0b638",
+      "severity": "OK",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": -0.05990971780333492,
+      "breached": true,
+      "pool_id": "55BrDTCLWayM16GwrMEQU57o4PTm6ceF9wavSdNZcEiy",
+      "pool_label": "WBTC/USDC",
+      "realized_net": -0.05008621425185293,
+      "record_id": "c82873ba2358615e39a3286c3d976c0ea19acd1560732583abee4c9757017ba7",
+      "severity": "TRAP",
+      "tier": "AVOID",
+      "tier_correct": true
+    },
+    {
+      "bbm": 1.3912129671376903,
+      "breached": false,
+      "pool_id": "5Z66YYYaTmmx1R4mATAGLSc8aV4Vfy5tNdJQzk1GP9RF",
+      "pool_label": "ORCA/USDC",
+      "realized_net": -0.019660497941498975,
+      "record_id": "68edf0fffc58e96c08fbbfc23eb212585372b7a20019c0772daafd8ea235b6b0",
+      "severity": "OK",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 0.06872971863109076,
+      "breached": true,
+      "pool_id": "5hWJUNTtEtKmKgDXpthJXXRRmJrz5vJ7uJzrUNVdrwLg",
+      "pool_label": "JitoSOL/USDC",
+      "realized_net": -0.0776193990757709,
+      "record_id": "5ca898c5763d85c2eb93fa09236e4d5d81a073caee5f40af5a7232d943dd8edd",
+      "severity": "TRAP",
+      "tier": "AVOID",
+      "tier_correct": true
+    },
+    {
+      "bbm": 1.6016003425423018,
+      "breached": false,
+      "pool_id": "6pLFuygN2yLg6fAJ4JRtdDfKaugcY51ZYK5PTjFZMa5s",
+      "pool_label": "PENGU/USDC",
+      "realized_net": -0.04457750853795027,
+      "record_id": "919b360d534b2aea7ae8deb4492ce844e6bf355a3735ab9c0738ee77a3fddb05",
+      "severity": "GRAZE",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 1.2465990665155633,
+      "breached": true,
+      "pool_id": "82vnbMa6vxm1a9TWy54s1dYRCYeGYZUPQnn7iVLBvmtx",
+      "pool_label": "POPCAT/USDC",
+      "realized_net": -0.0730747749149936,
+      "record_id": "7ee690cc90bb7e033d17fe08e2e4c6a0567dd8180d2dde39560c8c2cf5039fca",
+      "severity": "TRAP",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 2.2726597437846463,
+      "breached": false,
+      "pool_id": "8QaXeHBrShJTdtN1rWCccBxpSVvKksQ2PCu5nufb2zbk",
+      "pool_label": "BONK/USDC",
+      "realized_net": -0.03298732970042227,
+      "record_id": "f0a53004e5a33d1b2a2ebd8657585792f918dabe65498021dc36f836c26a7262",
+      "severity": "GRAZE",
+      "tier": "OK",
+      "tier_correct": true
+    },
+    {
+      "bbm": 1.425187599530652,
+      "breached": false,
+      "pool_id": "91E61RiGhH9b9Ns8wrb4E3oBNdtkQx2k4xb33pSqt5am",
+      "pool_label": "W/USDC",
+      "realized_net": -0.04078915315322518,
+      "record_id": "a0fe4f77a5b8daa88330a67d1a798d365aa1fb1d16c28c8b8e64d3de3e18ae1c",
+      "severity": "GRAZE",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 1.3662252030341089,
+      "breached": false,
+      "pool_id": "A2J7vmG9xAdWUzYscN7oQssxZBFihwD3UonkWB8Kod1A",
+      "pool_label": "RAY/USDC",
+      "realized_net": -0.013569309780409875,
+      "record_id": "8784d3bd53b9d5ae568fd5392c551bbd5b99fb944fd281dec1523092b8885392",
+      "severity": "OK",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": -0.012227407195410213,
+      "breached": true,
+      "pool_id": "AU971DrPyhhrpRnmEBp5pDTWL2ny7nofb5vYBjDJkR2E",
+      "pool_label": "WETH/USDC",
+      "realized_net": -0.08625806946297512,
+      "record_id": "edbcd167f36972537dca7985703c192f589142cbd128bcd0b13293a2903b222f",
+      "severity": "TRAP",
+      "tier": "AVOID",
+      "tier_correct": true
+    },
+    {
+      "bbm": 0.035636128520037565,
+      "breached": true,
+      "pool_id": "AqJ5JYNb7ApkJwvbuXxPnTtKeuizjvC1s2fkp382y9LC",
+      "pool_label": "mSOL/USDC",
+      "realized_net": -0.08068389221251758,
+      "record_id": "e96544e2755eca4fa39cfffe41d3eea111e0a1e4432adb4c826ba4b705ad6b28",
+      "severity": "TRAP",
+      "tier": "AVOID",
+      "tier_correct": true
+    },
+    {
+      "bbm": 1.279597721798808,
+      "breached": true,
+      "pool_id": "AwBhvNXf5X5hNbC1jAqrJ7Stx5xLuG97xDjJ9PNy1h65",
+      "pool_label": "JTO/USDC",
+      "realized_net": -0.06018988433414031,
+      "record_id": "9f1f9f0533de6debcbd42b5b57e9ae7ab5aa22d878b0faf8f0a6480fea5a04e3",
+      "severity": "TRAP",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 1.7653131763238683,
+      "breached": false,
+      "pool_id": "AxqAWNZqozhTn2pkDPgpf5kc5DeBuhLKKNWnt3dLrxdi",
+      "pool_label": "USDS/USDC",
+      "realized_net": 1.5179399379658222e-05,
+      "record_id": "2737a2a3f5e234ee81797abfe7dcf57bd56a9b405faef16d9a4c3a96451db019",
+      "severity": "OK",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 1.8396480510692836,
+      "breached": false,
+      "pool_id": "CN8M75cH57DuZNzW5wSUpTXtMrSfXBFScJoQxVCgAXes",
+      "pool_label": "WIF/USDC",
+      "realized_net": -0.02835045422054806,
+      "record_id": "8fb50503eaea051d622d1842ccfb34cc0c11f7dda00326916e7fb96d0e21e939",
+      "severity": "GRAZE",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": 17.297478262417126,
+      "breached": false,
+      "pool_id": "Cr78qJXZwLFfYTTsLzqeRuRDDRGvQCKXZ3M1G42rr2nV",
+      "pool_label": "DRIFT/USDC",
+      "realized_net": -0.019929927776178056,
+      "record_id": "87f616b955a2e44093da59cc8af0b19a61588bbe9025afec16579797326a0737",
+      "severity": "OK",
+      "tier": "OK",
+      "tier_correct": true
+    },
+    {
+      "bbm": -0.09481508699836205,
+      "breached": true,
+      "pool_id": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+      "pool_label": "SOL/USDC",
+      "realized_net": -0.06460048046273871,
+      "record_id": "aed721481ce0484d7326fca26386b0a02db488109f9db3bd77a874d031e2d883",
+      "severity": "TRAP",
+      "tier": "AVOID",
+      "tier_correct": true
+    },
+    {
+      "bbm": 7.015588956051755,
+      "breached": false,
+      "pool_id": "FoXLQ28dLdQanraVjXFeunGfwyWFjeF8fJZvLFHqmWi1",
+      "pool_label": "TNSR/USDC",
+      "realized_net": -0.009514943214394845,
+      "record_id": "7bd4a707d34940d91fdcd1d0c4728b5da852b911784e935a2be10192b9904a59",
+      "severity": "OK",
+      "tier": "OK",
+      "tier_correct": true
+    },
+    {
+      "bbm": 9.215170994782147,
+      "breached": false,
+      "pool_id": "Fra9rBL1F5eAgtoqjXsBzZocD1UKbxXoERKVs6e23ixn",
+      "pool_label": "PYTH/USDC",
+      "realized_net": -0.012160887712108628,
+      "record_id": "938044d15d37158c432555165a817dec89c9579bfd5e2381b1d46ae23e28e8d6",
+      "severity": "OK",
+      "tier": "OK",
+      "tier_correct": true
+    },
+    {
+      "bbm": 2.748384548000905,
+      "breached": false,
+      "pool_id": "HAWNPF6UZ8YgWisd2gsECNSchdn3hQTEujsZtGxKM1MW",
+      "pool_label": "RENDER/USDC",
+      "realized_net": -0.00334513141845969,
+      "record_id": "670db33c6cafaa0df916441eec9ba3321099024b3af72e1c707ea7a852f97e7e",
+      "severity": "OK",
+      "tier": "OK",
+      "tier_correct": true
+    },
+    {
+      "bbm": 1.8290862872005307,
+      "breached": false,
+      "pool_id": "HGw4exa5vdxhJHNVyyxhCc6ZwycwHQEVzpRXMDPDAmVP",
+      "pool_label": "bSOL/USDC",
+      "realized_net": -0.019807618468703988,
+      "record_id": "ea43db2c90e296345f27f0a331dbc6e3797369fc16c44babdfe42aa6c49d5a75",
+      "severity": "OK",
+      "tier": "WATCH",
+      "tier_correct": null
+    },
+    {
+      "bbm": -0.061752965900834136,
+      "breached": true,
+      "pool_id": "HxA6SKW5qA4o12fjVgTpXdq2YnZ5Zv1s7SB4FFomsyLM",
+      "pool_label": "cbBTC/USDC",
+      "realized_net": -0.0584157306485567,
+      "record_id": "9c6e811a6a36b2e66182603f600ce1969c52565547035e40ba9a6249dc9261e5",
+      "severity": "TRAP",
+      "tier": "AVOID",
+      "tier_correct": true
+    }
+  ],
+  "scope": "sol-v2",
+  "stamp": "20261120_194001_sol-v2_verdict_20261106",
+  "stats": {
+    "avoid_breach": 6,
+    "avoid_rate": 0.8571428571428571,
+    "mwu_effect": 0.857,
+    "mwu_p_avoid_worse": 0.02399,
+    "mwu_p_inverted": 0.98485,
+    "n_avoid": 7,
+    "n_ok": 5,
+    "n_oor": 1,
+    "n_watch": 10,
+    "ok_breach": 0,
+    "ok_rate": 0.0,
+    "one_over_hhi_assets": 10.286,
+    "oor_breach": 0,
+    "oor_p_not_idle": 1.0,
+    "oor_rate": 0.0
+  },
+  "verdict": "EVIDENCE OF SKILL"
+}
